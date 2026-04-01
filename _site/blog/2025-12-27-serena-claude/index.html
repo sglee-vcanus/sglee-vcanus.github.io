@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Serena MCP 및 Claude 연동 - Data Innovator</title>
+
+
+  <meta name="description" content="Serena MCP 및 Claude 연동"/>
+
+
+
+    <meta property="og:type" content="website"/>
+<meta property="og:url" content="http://localhost:4000/blog/2025-12-27-serena-claude/"/>
+
+
+  <meta property="og:title" content="Serena MCP 및 Claude 연동"/>
+
+
+
+  <meta property="og:description" content="Serena MCP 및 Claude 연동"/>
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/gen/blog/blog-5-large.webp"/>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@vcanus" />
+<meta name="twitter:creator" content="@vcanus" />
+    <link rel="alternate" type="application/atom+xml" title="Data Innovator" href="/feed.xml">
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+
+    
+      <script>
+          localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-bs-theme', 'dark');
+      </script>
+    
+
+    
+
+    
+
+    <link href="/assets/css/fonts.css" rel="stylesheet">
+
+
+
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+  
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-home">
+            <a href="/">Home</a>
+          </li>
+        
+          <li class="menu-item-products">
+            <a href="/services/">Products</a>
+          </li>
+        
+          <li class="menu-item-solutions">
+            <a href="/projects/">Solutions</a>
+          </li>
+        
+          <li class="menu-item-blog">
+            <a href="/blog/">Blog</a>
+          </li>
+        
+          <li class="menu-item-career">
+            <a href="/career/">Career</a>
+          </li>
+        
+          <li class="menu-item-visit us">
+            <a href="/visitus/">Visit Us</a>
+          </li>
+        
+          <li class="menu-item-about">
+            <a href="/about/">About</a>
+          </li>
+        
+      </ul>
+    
+  </div>
+
+  <div class="menu-main-mobile-bottom">
+    
+      
+
+<div class="social" id="social">
+  
+  <a href="http://www.vcanus.com" target="blank" title="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Discord">
+    <i class="fab fa-discord"></i>
+  </a>
+  
+</div>
+
+
+    
+    
+      <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z"></path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;" version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z"></path>
+      </g>
+      <g>
+        <path d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z"></path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+  </div>
+
+</div>
+
+
+
+
+<div id="header" class='header header-fixed'>
+  <div class="container">
+    <div class="logos">
+  <div class="logo logo-desktop">
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="132px" alt="Data Innovator Logo" src="/assets/images/logo/logo.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="132px" alt="Data Innovator Logo" src="/assets/images/logo/logo-invert.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="34px" alt="Data Innovator Logo" src="/assets/images/logo/logo-mobile.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="34px" alt="Data Innovator Logo" src="/assets/images/logo/logo-invert-mobile.png"/>
+        </a>
+      </div>
+    
+  
+    
+
+  </div>
+
+</div>
+
+
+    <div class="menu-main">
+  <ul>
+    
+      
+        
+        <li class=" ">
+          <a href="/" >Home</a>
+        </li>
+      
+    
+      
+
+        
+        
+
+        <li class="menu-item-dropdown menu-item-Products ">
+          <a href="/services/">Products <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/services/tsloom/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">TSLoom</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/services/deepvi/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">DeepVi</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/services/vurtx/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">VURT-X</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/services/vrcam/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">VRCAM</div>
+                  
+                </div>
+              </a>
+            
+          </div>
+
+        </li>
+      
+    
+      
+
+        
+        
+
+        <li class="menu-item-dropdown menu-item-Solutions ">
+          <a href="/projects/">Solutions <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/projects/edge-ai/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Edge AI</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/projects/3d-measurement-zeiss/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">3D Measurement with Zeiss</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/projects/intelligent-manufacturing/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Intelligent Manufacturing</div>
+                  
+                </div>
+              </a>
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/blog/" >Blog</a>
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/career/" >Career</a>
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/visitus/" >Visit Us</a>
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/about/" >About</a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+    
+    <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+<div id="wrapper" class="wrapper">     
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+            <div class="post-date">27 December 2025</div>
+          
+          
+          <div class="post-categories">
+          
+
+
+  
+    
+
+
+
+
+<div class="category-link">
+<a href="/category/development">
+  Development
+</a>
+
+</div>
+  
+
+          
+          </div>
+          <div class="post-title">
+            <h1>Serena MCP 및 Claude 연동</h1>
+          </div>
+          
+            <div class="post-description">
+              <p>Serena MCP 및 Claude 연동</p>
+            </div>
+          
+
+          
+            <div class="post-authors">
+              
+              
+              
+              
+
+
+
+
+<div class="author">
+  
+
+  
+</div>
+              
+            </div>
+          
+
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        
+          <div class="post-image">
+            <img src="/assets/images/gen/blog/blog-5-large.webp" alt="Serena MCP 및 Claude 연동" />
+          </div>
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-8">
+        <div class="content"><h1 id="serena-mcp-연동-가이드">Serena MCP 연동 가이드</h1>
+
+<blockquote>
+  <p>Claude Code CLI 및 Claude Desktop에서 Serena를 MCP 서버로 연동하여 시맨틱 코드 분석 기능 활용하기</p>
+</blockquote>
+
+<hr />
+
+<h2 id="목차">목차</h2>
+
+<ol>
+  <li><a href="#1-serena-개요">Serena 개요</a></li>
+  <li><a href="#2-사전-요구사항">사전 요구사항</a></li>
+  <li><a href="#3-serena-설치">Serena 설치</a></li>
+  <li><a href="#4-claude-code-cli-연동">Claude Code CLI 연동</a></li>
+  <li><a href="#5-claude-desktop-연동">Claude Desktop 연동</a></li>
+  <li><a href="#6-설정-옵션-상세">설정 옵션 상세</a></li>
+  <li><a href="#7-사용-예시">사용 예시</a></li>
+  <li><a href="#8-트러블슈팅">트러블슈팅</a></li>
+  <li><a href="#9-참고-자료">참고 자료</a></li>
+</ol>
+
+<hr />
+
+<h2 id="1-serena-개요">1. Serena 개요</h2>
+
+<h3 id="serena란">Serena란?</h3>
+
+<p>Serena는 Language Server 통합을 통해 <strong>시맨틱 코드 이해</strong>와 <strong>지능적 편집 기능</strong>을 제공하는 오픈소스 AI 코딩 에이전트 툴킷입니다.</p>
+
+<h3 id="주요-기능">주요 기능</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>기능</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>시맨틱 코드 분석</strong></td>
+      <td>심볼 수준에서 코드 구조와 관계 이해</td>
+    </tr>
+    <tr>
+      <td><strong>프로젝트 메모리</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">.serena/memories/</code>에 프로젝트 정보 저장</td>
+    </tr>
+    <tr>
+      <td><strong>토큰 절약</strong></td>
+      <td>전체 파일 대신 필요한 부분만 분석</td>
+    </tr>
+    <tr>
+      <td><strong>다국어 지원</strong></td>
+      <td>TypeScript, JavaScript, Python, Java, C# 등</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="claude-code에서-serena가-필요한-이유">Claude Code에서 Serena가 필요한 이유</h3>
+
+<p>일반 AI는 응답 전에 모든 코드를 읽습니다. Serena는 인덱스를 먼저 생성하여 효율적으로 코드를 분석합니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────────┐
+│                      일반 AI 분석 방식                          │
+│  "button.tsx 수정해줘" → button.tsx 파일만 확인                  │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                    Serena + AI 분석 방식                        │
+│  "button.tsx 수정해줘" → 사용 위치, 스타일 정의, 관련 컴포넌트   │
+│                         모두 확인 후 일관성 있게 수정            │
+└─────────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="2-사전-요구사항">2. 사전 요구사항</h2>
+
+<h3 id="필수-항목">필수 항목</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>uv</strong> (Python 패키지 관리자)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Claude Code CLI</strong> 또는 <strong>Claude Desktop</strong></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Git</strong> (로컬 설치 시)</li>
+</ul>
+
+<h3 id="uv-설치">uv 설치</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># macOS (Homebrew)</span>
+brew <span class="nb">install </span>uv
+
+<span class="c"># 또는 공식 설치 스크립트</span>
+curl <span class="nt">-LsSf</span> https://astral.sh/uv/install.sh | sh
+
+<span class="c"># Windows (PowerShell)</span>
+powershell <span class="nt">-ExecutionPolicy</span> ByPass <span class="nt">-c</span> <span class="s2">"irm https://astral.sh/uv/install.ps1 | iex"</span>
+</code></pre></div></div>
+
+<h3 id="설치-확인">설치 확인</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uv <span class="nt">--version</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="3-serena-설치">3. Serena 설치</h2>
+
+<h3 id="방법-a-uvx로-직접-실행-권장">방법 A: uvx로 직접 실행 (권장)</h3>
+
+<p>별도 설치 없이 바로 사용할 수 있습니다. 대부분의 사용자에게 권장합니다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 별도 설치 불필요, MCP 설정 시 자동 다운로드 및 캐시</span>
+uvx <span class="nt">--from</span> git+https://github.com/oraios/serena serena-mcp-server
+</code></pre></div></div>
+
+<p><strong>장점:</strong></p>
+<ul>
+  <li>설치 과정 불필요</li>
+  <li>자동 업데이트 (최신 버전 반영)</li>
+  <li>캐시되어 매번 다운로드하지 않음 (<code class="language-plaintext highlighter-rouge">~/.cache/uv/</code>)</li>
+  <li>관리 부담 없음</li>
+</ul>
+
+<p><strong>참고:</strong> Claude Code CLI나 Claude Desktop과 함께 MCP 모드로 사용할 경우, Serena는 도구만 제공하고 LLM 호출은 Claude가 담당합니다. 따라서 별도의 API 키 설정이 필요 없습니다.</p>
+
+<h3 id="방법-b-로컬-설치">방법 B: 로컬 설치</h3>
+
+<p>Serena를 단독 에이전트(Agno 모드)로 사용하거나, 설정 커스터마이징이 필요한 경우에만 권장합니다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. 원하는 위치에 클론</span>
+<span class="nb">cd</span> ~/workspace
+git clone https://github.com/oraios/serena.git
+<span class="nb">cd </span>serena
+
+<span class="c"># 2. 설정 파일 복사 (선택)</span>
+<span class="nb">cp </span>src/serena/resources/serena_config.template.yml serena_config.yml
+
+<span class="c"># 3. 환경 변수 설정 (Agno 모드 사용 시에만 필요)</span>
+<span class="c"># .env 파일에 API 키 설정</span>
+</code></pre></div></div>
+
+<p><strong>장점:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.env</code>, 설정 파일 커스터마이징 가능</li>
+  <li>Agno 모드로 Serena 단독 에이전트 실행 가능</li>
+  <li>검증된 버전 유지 가능</li>
+</ul>
+
+<p><strong>언제 필요한가?</strong></p>
+<ul>
+  <li>Serena를 단독 에이전트로 사용할 때 (API 키 필요)</li>
+  <li><code class="language-plaintext highlighter-rouge">serena_config.yml</code> 커스터마이징이 필요할 때</li>
+  <li>특정 버전을 고정해서 사용해야 할 때</li>
+</ul>
+
+<hr />
+
+<h2 id="4-claude-code-cli-연동">4. Claude Code CLI 연동</h2>
+
+<h3 id="방법-a-uvx로-직접-실행-권장-1">방법 A: uvx로 직접 실행 (권장)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>claude mcp add serena <span class="nt">--scope</span> user <span class="nt">--</span> uvx <span class="nt">--from</span> git+https://github.com/oraios/serena serena start-mcp-server <span class="nt">--context</span><span class="o">=</span>claude-code <span class="nt">--project-from-cwd</span>
+</code></pre></div></div>
+
+<h3 id="방법-b-로컬-설치-버전-사용">방법 B: 로컬 설치 버전 사용</h3>
+
+<p>로컬에 Serena를 설치한 경우에만 사용:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>claude mcp add serena <span class="nt">--scope</span> user <span class="nt">--</span> uv run <span class="nt">--directory</span> ~/workspace/serena serena start-mcp-server <span class="nt">--context</span><span class="o">=</span>claude-code <span class="nt">--project-from-cwd</span>
+</code></pre></div></div>
+
+<h3 id="설정-파일-직접-편집">설정 파일 직접 편집</h3>
+
+<p><code class="language-plaintext highlighter-rouge">~/.claude.json</code> 파일:</p>
+
+<p><strong>uvx 직접 실행 (권장):</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"serena"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uvx"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"--from"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"git+https://github.com/oraios/serena"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"serena"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"start-mcp-server"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"--context=claude-code"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"--project-from-cwd"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>로컬 설치 버전:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"serena"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uv"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"run"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"--directory"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"/Users/사용자명/workspace/serena"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"serena"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"start-mcp-server"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"--context=claude-code"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"--project-from-cwd"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="연결-확인">연결 확인</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>claude mcp list
+</code></pre></div></div>
+
+<p>출력 예시:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>serena: Scope: User
+  Type: stdio
+  Command: uv
+  Args: run, --directory, /Users/사용자명/workspace/serena, serena, start-mcp-server, --context=claude-code, --project-from-cwd
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="5-claude-desktop-연동">5. Claude Desktop 연동</h2>
+
+<h3 id="설정-파일-위치">설정 파일 위치</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>macOS: ~/Library/Application Support/Claude/claude_desktop_config.json
+Windows: %APPDATA%\Claude\claude_desktop_config.json
+</code></pre></div></div>
+
+<h3 id="설정-파일-편집">설정 파일 편집</h3>
+
+<p><strong>uvx 직접 실행 (권장):</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"serena"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uvx"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"--from"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"git+https://github.com/oraios/serena"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"serena"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"start-mcp-server"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>로컬 설치 버전:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"serena"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/Users/사용자명/.local/bin/uv"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"run"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"--directory"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"/Users/사용자명/workspace/serena"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"serena"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"start-mcp-server"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"--context"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ide"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="uv-경로-확인">uv 경로 확인</h3>
+
+<p>Claude Desktop은 쉘 환경을 상속하지 않을 수 있으므로 <strong>절대 경로</strong> 사용 권장:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which uv
+<span class="c"># 예: /Users/사용자명/.local/bin/uv 또는 /opt/homebrew/bin/uv</span>
+</code></pre></div></div>
+
+<h3 id="재시작">재시작</h3>
+
+<p>설정 저장 후 <strong>Claude Desktop 완전 종료 후 재시작</strong> 필요</p>
+
+<hr />
+
+<h2 id="6-설정-옵션-상세">6. 설정 옵션 상세</h2>
+
+<h3 id="context-옵션">–context 옵션</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>값</th>
+      <th>용도</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">claude-code</code></td>
+      <td>Claude Code CLI</td>
+      <td>CLI 전용 최적화</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ide</code></td>
+      <td>IDE 통합 (Desktop, JetBrains 등)</td>
+      <td>도구 중복 방지</td>
+    </tr>
+    <tr>
+      <td>미지정</td>
+      <td>범용</td>
+      <td>모든 도구 활성화</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="project-관련-옵션">–project 관련 옵션</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>옵션</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--project-from-cwd</code></td>
+      <td>현재 디렉토리를 프로젝트로 인식 (CLI 권장)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--project /path/to/project</code></td>
+      <td>특정 경로를 프로젝트로 지정</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="scope-옵션-claude-code-cli">Scope 옵션 (Claude Code CLI)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scope</th>
+      <th>저장 위치</th>
+      <th>용도</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">user</code></td>
+      <td><code class="language-plaintext highlighter-rouge">~/.claude.json</code></td>
+      <td>모든 프로젝트에서 사용</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">project</code></td>
+      <td>프로젝트/.mcp.json</td>
+      <td>해당 프로젝트만</td>
+    </tr>
+    <tr>
+      <td>(기본)</td>
+      <td>프로젝트/.claude/</td>
+      <td>해당 프로젝트만</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="7-사용-예시">7. 사용 예시</h2>
+
+<h3 id="기본-사용">기본 사용</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/workspace/my-project
+claude
+</code></pre></div></div>
+
+<p>Claude에게:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>이 프로젝트의 구조를 분석해줘
+</code></pre></div></div>
+
+<p>Serena가 자동으로:</p>
+<ol>
+  <li>프로젝트 인덱싱</li>
+  <li><code class="language-plaintext highlighter-rouge">.serena/memories/</code>에 프로젝트 정보 저장</li>
+  <li>시맨틱 분석 결과 제공</li>
+</ol>
+
+<h3 id="시맨틱-코드-분석">시맨틱 코드 분석</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 심볼 찾기
+UserService 클래스의 모든 메서드를 보여줘
+
+# 참조 찾기
+login 함수를 호출하는 모든 코드를 찾아줘
+
+# 관계 분석
+이 클래스들 간의 의존성을 설명해줘
+</code></pre></div></div>
+
+<h3 id="리팩토링">리팩토링</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 컴포넌트 분리
+UserProfile 컴포넌트가 너무 크니 적절히 분리해줘
+
+# 일관성 있는 수정
+다크 모드 기능을 추가하고 모든 컴포넌트에 일관되게 적용해줘
+</code></pre></div></div>
+
+<h3 id="여러-프로젝트-연동-분석">여러 프로젝트 연동 분석</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># workspace 전체를 분석하려면 workspace에서 실행</span>
+<span class="nb">cd</span> ~/workspace
+claude
+
+<span class="c"># 특정 프로젝트만 분석하려면 해당 폴더에서 실행</span>
+<span class="nb">cd</span> ~/workspace/vpy-util
+claude
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="8-트러블슈팅">8. 트러블슈팅</h2>
+
+<h3 id="프로젝트에서-serena가-인식되지-않음">프로젝트에서 Serena가 인식되지 않음</h3>
+
+<p><strong>증상:</strong> <code class="language-plaintext highlighter-rouge">claude mcp list</code>에서 serena가 보이지만, 특정 프로젝트에서 Serena 도구가 작동하지 않음</p>
+
+<p><strong>원인:</strong> <code class="language-plaintext highlighter-rouge">~/.claude.json</code>에 프로젝트별 <code class="language-plaintext highlighter-rouge">mcpServers</code> 설정이 있으면, 해당 프로젝트에서는 <strong>프로젝트 설정이 우선</strong>되어 전역 <code class="language-plaintext highlighter-rouge">mcpServers</code>가 무시됩니다.</p>
+
+<p><strong>문제가 되는 구조:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"serena"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">←</span><span class="w"> </span><span class="err">전역</span><span class="w"> </span><span class="err">설정</span><span class="w"> </span><span class="err">(무시됨)</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"projects"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"/Users/사용자명/workspace/my-project"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="err">//</span><span class="w"> </span><span class="err">←</span><span class="w"> </span><span class="err">비어있거나</span><span class="w"> </span><span class="err">serena가</span><span class="w"> </span><span class="err">없으면</span><span class="w"> </span><span class="err">해당</span><span class="w"> </span><span class="err">프로젝트에서</span><span class="w"> </span><span class="err">serena</span><span class="w"> </span><span class="err">사용</span><span class="w"> </span><span class="err">불가</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>해결 방법 1: 프로젝트별 mcpServers 섹션 제거 (권장)</strong></p>
+
+<p>프로젝트마다 다른 MCP 서버가 필요 없다면, <code class="language-plaintext highlighter-rouge">projects</code> 내의 <code class="language-plaintext highlighter-rouge">mcpServers</code>를 삭제:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"jetbrains"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npx"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"-y"</span><span class="p">,</span><span class="w"> </span><span class="s2">"@jetbrains/mcp-proxy"</span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"serena"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uvx"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"--from"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"git+https://github.com/oraios/serena"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"serena"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"start-mcp-server"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"--context=claude-code"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"--project-from-cwd"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"projects"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"/Users/사용자명/workspace/my-project"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="err">//</span><span class="w"> </span><span class="err">mcpServers</span><span class="w"> </span><span class="err">섹션</span><span class="w"> </span><span class="err">제거</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="err">전역</span><span class="w"> </span><span class="err">설정</span><span class="w"> </span><span class="err">사용</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>해결 방법 2: 각 프로젝트에 serena 추가</strong></p>
+
+<p>프로젝트별 설정을 유지해야 한다면, 각 프로젝트에 serena를 수동으로 추가:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"serena"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"projects"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"/Users/사용자명/workspace/my-project"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"serena"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uvx"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"--from"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"git+https://github.com/oraios/serena"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"serena"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"start-mcp-server"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"--context=claude-code"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"--project-from-cwd"</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p><strong>참고:</strong> <code class="language-plaintext highlighter-rouge">--scope user</code>로 MCP를 추가해도 기존 프로젝트별 설정에는 자동으로 추가되지 않습니다. 새 프로젝트를 생성해도 마찬가지입니다.</p>
+</blockquote>
+
+<h3 id="mcp-서버-연결-실패">MCP 서버 연결 실패</h3>
+
+<p><strong>확인 사항:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># uv 설치 확인</span>
+uv <span class="nt">--version</span>
+
+<span class="c"># 로컬 설치 경로 확인</span>
+<span class="nb">ls</span> ~/workspace/serena
+
+<span class="c"># MCP 목록 확인</span>
+claude mcp list
+</code></pre></div></div>
+
+<p><strong>해결:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># MCP 제거 후 재추가</span>
+claude mcp remove serena
+claude mcp add serena <span class="nt">--scope</span> user <span class="nt">--</span> uvx <span class="nt">--from</span> git+https://github.com/oraios/serena serena start-mcp-server <span class="nt">--context</span><span class="o">=</span>claude-code <span class="nt">--project-from-cwd</span>
+</code></pre></div></div>
+
+<h3 id="claude-desktop에서-serena-인식-안-됨">Claude Desktop에서 Serena 인식 안 됨</h3>
+
+<p><strong>원인:</strong> 환경 변수 미상속</p>
+
+<p><strong>해결:</strong> 설정 파일에서 uv 절대 경로 사용</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"serena"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/opt/homebrew/bin/uv"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"run"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--directory"</span><span class="p">,</span><span class="w"> </span><span class="s2">"/Users/사용자명/workspace/serena"</span><span class="p">,</span><span class="w"> </span><span class="s2">"serena"</span><span class="p">,</span><span class="w"> </span><span class="s2">"start-mcp-server"</span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="language-server-관련-오류">Language Server 관련 오류</h3>
+
+<p>일부 언어 서버는 추가 환경 변수가 필요할 수 있습니다:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"serena"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uv"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"run"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--directory"</span><span class="p">,</span><span class="w"> </span><span class="s2">"/Users/사용자명/workspace/serena"</span><span class="p">,</span><span class="w"> </span><span class="s2">"serena"</span><span class="p">,</span><span class="w"> </span><span class="s2">"start-mcp-server"</span><span class="p">],</span><span class="w">
+      </span><span class="nl">"env"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"DOTNET_ROOT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/opt/homebrew/Cellar/dotnet/9.0.8/libexec"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="로컬-버전-업데이트">로컬 버전 업데이트</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/workspace/serena
+git pull
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="9-참고-자료">9. 참고 자료</h2>
+
+<h3 id="공식-문서">공식 문서</h3>
+
+<ul>
+  <li><a href="https://github.com/oraios/serena">Serena GitHub Repository</a></li>
+  <li><a href="https://oraios.github.io/serena/">Serena Documentation</a></li>
+  <li><a href="https://modelcontextprotocol.io/">Model Context Protocol</a></li>
+</ul>
+
+<h3 id="설정-파일-위치-요약">설정 파일 위치 요약</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>앱</th>
+      <th>설정 파일 위치</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Claude Code CLI</td>
+      <td><code class="language-plaintext highlighter-rouge">~/.claude.json</code></td>
+    </tr>
+    <tr>
+      <td>Claude Desktop (macOS)</td>
+      <td><code class="language-plaintext highlighter-rouge">~/Library/Application Support/Claude/claude_desktop_config.json</code></td>
+    </tr>
+    <tr>
+      <td>Claude Desktop (Windows)</td>
+      <td><code class="language-plaintext highlighter-rouge">%APPDATA%\Claude\claude_desktop_config.json</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="jetbrains-mcp와-함께-사용">JetBrains MCP와 함께 사용</h3>
+
+<p>Serena와 JetBrains MCP를 함께 사용하면 더욱 강력합니다:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"jetbrains"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npx"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"-y"</span><span class="p">,</span><span class="w"> </span><span class="s2">"@jetbrains/mcp-proxy"</span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"serena"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uvx"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"--from"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"git+https://github.com/oraios/serena"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"serena"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"start-mcp-server"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"--context=claude-code"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"--project-from-cwd"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>MCP 서버</th>
+      <th>역할</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>JetBrains</strong></td>
+      <td>IDE 제어 (실행, 리팩토링, 디버깅)</td>
+    </tr>
+    <tr>
+      <td><strong>Serena</strong></td>
+      <td>시맨틱 코드 분석, 심볼 탐색, 프로젝트 이해</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="부록-빠른-시작-체크리스트">부록: 빠른 시작 체크리스트</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. uv 설치 확인</span>
+uv <span class="nt">--version</span>
+
+<span class="c"># 2. Claude Code CLI에 MCP 추가 (uvx 방식)</span>
+claude mcp add serena <span class="nt">--scope</span> user <span class="nt">--</span> uvx <span class="nt">--from</span> git+https://github.com/oraios/serena serena start-mcp-server <span class="nt">--context</span><span class="o">=</span>claude-code <span class="nt">--project-from-cwd</span>
+
+<span class="c"># 3. 확인</span>
+claude mcp list
+
+<span class="c"># 4. 테스트</span>
+<span class="nb">cd</span> ~/workspace/my-project
+claude
+<span class="c"># → "이 프로젝트 구조를 분석해줘"</span>
+</code></pre></div></div>
+
+<hr />
+
+<p><em>문서 작성일: 2025년 12월</em>
+<em>Serena MCP 연동 가이드 v1.0</em></p>
+</div>
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+
+        <div class="col-12 col-md-4">
+          <div class="footer-info">
+            
+              <h2>VCANUS</h2>
+            
+
+            
+              <p>See beyond the data—with AI-driven intelligence.</p>
+            
+          </div>
+
+          
+            
+
+<div class="social" id="social">
+  
+  <a href="http://www.vcanus.com" target="blank" title="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Discord">
+    <i class="fab fa-discord"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Tiktok">
+    <i class="fab fa-tiktok"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Facebook">
+    <i class="fab fa-facebook-square"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Linkedin">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+</div>
+
+
+          
+          
+        </div>
+
+        <div class="col-12 col-md-8 mt-gutter mt-md-0">
+          <div class="row justify-content-end">
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                  
+                    <h3>Product</h3>
+                  
+                  
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/">Home</a>
+      </li>
+    
+      <li class="">
+        <a href="/services/">Products</a>
+      </li>
+    
+      <li class="">
+        <a href="/projects/">Solutions</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                
+                  <h3>Company</h3>
+                
+                
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/blog/">Blog</a>
+      </li>
+    
+      <li class="">
+        <a href="/career/">Career</a>
+      </li>
+    
+      <li class="">
+        <a href="/visitus/">Visit Us</a>
+      </li>
+    
+      <li class="">
+        <a href="/about/">About</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                
+                  <h3>Other</h3>
+                
+                
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/contact/">Contact</a>
+      </li>
+    
+      <li class="">
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </li>
+    
+      <li class="">
+        <a href="/terms-and-conditions/">Terms and Conditions</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+        
+          </div>
+        </div>
+      
+    </div>
+    
+    <div class="row justify-content-end mt-2">
+      <div class="col-12 col-md-4">
+        <h3>Contact Us</h3>
+        
+
+<div class="contact">
+  
+    <div class="contact-email">
+      <strong>Email:</strong>
+      <a href="mailto:info@vcanus.com">info@vcanus.com</a>
+    </div>
+  
+  
+    <div class="contact-phone">
+      <strong>Phone:</strong>
+      +82 31-719-8816</div>
+  
+  
+    <div class="contact-fax">
+      <strong>Fax:</strong>
+      +82 31-719-8817</div>
+  
+  
+    <div class="contact-address">
+      <strong>Address:</strong>
+      RoadlandEZ #603, Sungnamdaero69, Bundang-gu, Sungnam, Gyeonggi-do 13636, Republic of Korea <a href="https://maps.app.goo.gl/oB1rAc3LuXWs6Gwu7" target="_blank" rel="noreferrer">(View Map)</a> 
+    </div>
+  
+</div>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+       
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Privacy Policy">
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </li>
+    
+      <li class="menu-item-Terms and Conditions">
+        <a href="/terms-and-conditions/">Terms and Conditions</a>
+      </li>
+    
+  </ul>
+</div>
+        
+        
+        
+          <div class="copyright">© 2025 VCANUS</div>
+        
+        
+        
+          <a class="feed" href="http://localhost:4000/feed.xml">
+            <i class="fas fa-feed"></i>
+          </a>
+        
+        
+      </div>
+      
+        <div class="col-auto">
+          <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z"></path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;" version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z"></path>
+      </g>
+      <g>
+        <path d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z"></path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+        </div>
+         
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+
+
+
+</body>
+</html>

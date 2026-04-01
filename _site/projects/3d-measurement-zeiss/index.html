@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>3D Measurement with Zeiss - Data Innovator</title>
+
+
+  <meta name="description" content="스마트 팩토리 3D 스캐닝: VURT-X 기반 Zeiss ATOS"/>
+
+
+
+    <meta property="og:type" content="website"/>
+<meta property="og:url" content="http://localhost:4000/projects/3d-measurement-zeiss/"/>
+
+
+  <meta property="og:title" content="3D Measurement with Zeiss"/>
+
+
+
+  <meta property="og:description" content="스마트 팩토리 3D 스캐닝: VURT-X 기반 Zeiss ATOS"/>
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/gen/projects/atos5-large.webp"/>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@vcanus" />
+<meta name="twitter:creator" content="@vcanus" />
+    <link rel="alternate" type="application/atom+xml" title="Data Innovator" href="/feed.xml">
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+
+    
+      <script>
+          localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-bs-theme', 'dark');
+      </script>
+    
+
+    
+
+    
+
+    <link href="/assets/css/fonts.css" rel="stylesheet">
+
+
+
+
+    
+
+  </head>
+<body class="page page-projects has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+  
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-home">
+            <a href="/">Home</a>
+          </li>
+        
+          <li class="menu-item-products">
+            <a href="/services/">Products</a>
+          </li>
+        
+          <li class="menu-item-solutions">
+            <a href="/projects/">Solutions</a>
+          </li>
+        
+          <li class="menu-item-blog">
+            <a href="/blog/">Blog</a>
+          </li>
+        
+          <li class="menu-item-career">
+            <a href="/career/">Career</a>
+          </li>
+        
+          <li class="menu-item-visit us">
+            <a href="/visitus/">Visit Us</a>
+          </li>
+        
+          <li class="menu-item-about">
+            <a href="/about/">About</a>
+          </li>
+        
+      </ul>
+    
+  </div>
+
+  <div class="menu-main-mobile-bottom">
+    
+      
+
+<div class="social" id="social">
+  
+  <a href="http://www.vcanus.com" target="blank" title="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Discord">
+    <i class="fab fa-discord"></i>
+  </a>
+  
+</div>
+
+
+    
+    
+      <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z"></path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;" version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z"></path>
+      </g>
+      <g>
+        <path d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z"></path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+  </div>
+
+</div>
+
+
+
+
+<div id="header" class='header header-fixed'>
+  <div class="container">
+    <div class="logos">
+  <div class="logo logo-desktop">
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="132px" alt="Data Innovator Logo" src="/assets/images/logo/logo.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="132px" alt="Data Innovator Logo" src="/assets/images/logo/logo-invert.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="34px" alt="Data Innovator Logo" src="/assets/images/logo/logo-mobile.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="34px" alt="Data Innovator Logo" src="/assets/images/logo/logo-invert-mobile.png"/>
+        </a>
+      </div>
+    
+  
+    
+
+  </div>
+
+</div>
+
+
+    <div class="menu-main">
+  <ul>
+    
+      
+        
+        <li class=" ">
+          <a href="/" >Home</a>
+        </li>
+      
+    
+      
+
+        
+        
+
+        <li class="menu-item-dropdown menu-item-Products ">
+          <a href="/services/">Products <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/services/tsloom/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">TSLoom</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/services/deepvi/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">DeepVi</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/services/vurtx/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">VURT-X</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/services/vrcam/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">VRCAM</div>
+                  
+                </div>
+              </a>
+            
+          </div>
+
+        </li>
+      
+    
+      
+
+        
+        
+
+        <li class="menu-item-dropdown menu-item-Solutions  active ">
+          <a href="/projects/">Solutions <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/projects/edge-ai/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Edge AI</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/projects/3d-measurement-zeiss/" class="dropdown-item  active ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">3D Measurement with Zeiss</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/projects/intelligent-manufacturing/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Intelligent Manufacturing</div>
+                  
+                </div>
+              </a>
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/blog/" >Blog</a>
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/career/" >Career</a>
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/visitus/" >Visit Us</a>
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/about/" >About</a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+    
+    <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+<div id="wrapper" class="wrapper">     
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="hero 
+  
+  
+ 
+  
+" style="
+  
+ 
+  height: 600px;
+">
+  <div class="hero-background-image" style="
+  background-image: url('http://localhost:4000/assets/images/gen/projects/atos5-large.webp');
+  
+"></div>
+  
+  <div class="container ">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-8">
+        <div class="hero-text" style="color: #ffffff;">
+          <h1>Zeiss ATOS & 로봇 자동화를 활용한 정밀 3D 측정</h1>
+          <p>맞춤형 로봇 스캐닝. 데이터 기반 인사이트.</p>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="section strip-border-top">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-8">
+        
+        <div class="content"><h2 id="vcanus-스마트-제조를-위한-3d-측정-솔루션">VCANUS 스마트 제조를 위한 3D 측정 솔루션</h2>
+
+<p>맞춤형 로봇 스캐닝. 데이터 기반 인사이트.</p>
+
+<p>VCANUS는 Zeiss ATOS 광학 스캐너를 로봇 자동화 및 VURT-X와 통합하여 완전 자동화된 고효율 치수 분석을 구현하는 최첨단 3D 측정 솔루션을 제공합니다. 당사의 솔루션은 Zeiss의 업계 선도적인 3D 스캐닝 기술과 VCANUS의 로봇 전문성 및 고급 소프트웨어를 결합하여 제조업체가 정밀한 3D 데이터를 캡처하고, 치수 편차를 분석하며, 공정 최적화를 위한 데이터 기반 의사결정을 내릴 수 있도록 합니다.
+맞춤형 로봇 설정과 AI 기반 분석으로 복잡한 형상을 디지털화하고, 워크플로우를 자동화하며, 실행 가능한 인사이트를 얻어 생산 환경의 품질, 효율성, 생산성을 향상시킵니다.</p>
+
+<h2 id="vcanus-3d-측정을-선택하는-이유">VCANUS 3D 측정을 선택하는 이유</h2>
+
+<p>VCANUS는 제조업체가 다음을 실현할 수 있도록 합니다:</p>
+<ul>
+  <li>산업용 로봇 또는 협동 로봇에 장착된 Zeiss ATOS 스캐너로 복잡한 부품 형상을 디지털화합니다.</li>
+  <li>VURT-X로 측정 워크플로우를 자동화하여 사이클 타임을 단축하고 수동 작업을 제거합니다.</li>
+  <li>통계 도구와 AI 모델로 측정 데이터를 분석하여 트렌드, 상관관계, 공정 편차를 파악합니다.</li>
+  <li>생산별 공차를 적용하여 사전 정의된 관리 한계에 따라 부품을 자동 분류합니다.</li>
+  <li>폐루프 품질 관리를 위해 MES, ERP, CAD 시스템과 원활하게 통합합니다.</li>
+</ul>
+
+<p>당사의 솔루션은 유연성, 정밀도, 인텔리전스를 위해 설계되어 지속적인 개선을 이끄는 실시간 인사이트를 제공합니다.</p>
+
+<h2 id="zeiss-atos5-스캐너-산업-수요를-위한-다목적-스캐너">Zeiss ATOS5 스캐너: 산업 수요를 위한 다목적 스캐너</h2>
+
+<p>VCANUS는 고해상도 3D 디지타이징의 신뢰할 수 있는 도구인 Zeiss ATOS 스캐너 전체 라인업을 제공합니다:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th><img src="/assets/images/gen/projects/zeiss-atos5.webp" width="150" /></th>
+      <th><img src="/assets/images/gen/projects/zeiss-atos5-airfoil.webp" width="150" /></th>
+      <th><img src="/assets/images/gen/projects/zeiss-atos5x.webp" width="150" /></th>
+      <th><img src="/assets/images/gen/projects/zeiss-atos5-lrx.webp" width="150" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>ATOS 5</td>
+      <td>ATOS 5 for Airfoil</td>
+      <td>ATOS 5X</td>
+      <td>ATOS LRX</td>
+    </tr>
+    <tr>
+      <td>적용 시스템</td>
+      <td>고속 3D 스캐닝 시스템</td>
+      <td>미세 부품의 정밀 스캐닝</td>
+      <td>대용량 자동화 스캐닝</td>
+      <td>초대형 부품 3D 스캐닝</td>
+    </tr>
+    <tr>
+      <td>광원</td>
+      <td>LED</td>
+      <td>LED</td>
+      <td>LASER</td>
+      <td>LASER</td>
+    </tr>
+    <tr>
+      <td>스캔당 측정점</td>
+      <td>8 또는 12m</td>
+      <td>12m</td>
+      <td>12m</td>
+      <td>12m</td>
+    </tr>
+    <tr>
+      <td>작업 거리</td>
+      <td>880 mm</td>
+      <td>530 mm</td>
+      <td>880 mm</td>
+      <td>1810 mm</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="zeiss-atos의-주요-장점">Zeiss ATOS의 주요 장점</h2>
+<p>✅ 상세 부품 분석을 위한 고해상도 3D 데이터.
+<br />
+✅ 산업 환경에서 안정적인 측정을 위한 청색광 및 레이저 기술.
+<br />
+✅ 빠른 데이터 획득 (초당 수백만 포인트).
+<br />
+✅ GOM Inspect, PolyWorks, VCANUS 분석 소프트웨어와의 호환성.</p>
+
+<h2 id="vcanus-맞춤형-로봇-측정-솔루션">VCANUS 맞춤형 로봇 측정 솔루션</h2>
+
+<h3 id="1-로봇-장착-3d-스캐닝">1. 로봇 장착 3D 스캐닝</h3>
+
+<p>1) 유연한 자동화:</p>
+<ul>
+  <li>복잡한 부품의 적응형 스캐닝을 위해 6축 로봇 또는 협동 로봇에 ATOS 스캐너를 장착합니다.</li>
+  <li>맞춤형 고정 장치로 반복 가능한 위치 결정과 부품 표면의 전체 커버리지를 보장합니다.
+2) VURT-X 연동:</li>
+  <li>최적의 스캔 커버리지를 위한 자동화된 경로 계획.</li>
+  <li>다양한 부품 형상에 대한 충돌 회피 및 적응형 스캐닝.
+    <blockquote>
+      <p>적용 사례:</p>
+      <ul>
+        <li>자동차: 차체 패널, 섀시 부품, 조립 검증.</li>
+        <li>항공우주: 에어포일, 구조 부품, 공구 검증.</li>
+        <li>에너지: 터빈 블레이드, 임펠러, 대형 제작 부품.</li>
+      </ul>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="2-ai--통계-분석-소프트웨어">2. AI &amp; 통계 분석 소프트웨어</h3>
+
+<p>VCANUS는 원시 3D 데이터를 실행 가능한 인사이트로 변환하는 고급 소프트웨어 도구를 제공합니다:</p>
+
+<p>1) 공차 기반 분류:</p>
+<ul>
+  <li>생산별 공차를 적용하여 관리 한계 내/외로 부품을 자동 분류합니다.</li>
+  <li>위치 공차(예: GD&amp;T)에 따른 합격/불합격 보고서를 생성합니다.
+2) 통계적 공정 관리(SPC):</li>
+  <li>시간에 따른 치수 변화를 추적하여 트렌드, 이동, 드리프트를 감지합니다.</li>
+  <li>측정 데이터와 공정 파라미터(예: 온도, 압력)를 상관하여 근본 원인을 파악합니다.
+3) AI 기반 이상 탐지:</li>
+  <li>머신러닝 모델을 사용하여 측정 데이터의 예상치 못한 패턴을 감지합니다.</li>
+  <li>생산 품질에 영향을 미치기 전에 잠재적 문제를 예측합니다.
+    <blockquote>
+      <p>예시 워크플로우 (자동차 대량 생산):</p>
+      <ul>
+        <li>스캔: 로봇 장착 ATOS가 차체 패널의 3D 데이터를 캡처.</li>
+        <li>정렬: 소프트웨어가 스캔 데이터를 CAD 기준에 정렬.</li>
+        <li>분석:
+          <ul>
+            <li>측정값을 관리 공차(예: 중요 형상에 대해 ±0.2 mm)와 비교.</li>
+            <li>통계 모델을 적용하여 공정 안정성 평가.</li>
+          </ul>
+        </li>
+        <li>보고:
+          <ul>
+            <li>자동화된 보고서가 공차를 초과하는 영역을 강조.</li>
+            <li>대시보드가 공정 엔지니어를 위한 트렌드와 편차를 시각화.</li>
+          </ul>
+        </li>
+        <li>조치:
+          <ul>
+            <li>데이터를 기반으로 생산 파라미터(예: 고정 장치 설정, 가공 경로) 조정.</li>
+          </ul>
+        </li>
+      </ul>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="3-턴키-로봇-측정-셀">3. 턴키 로봇 측정 셀</h3>
+
+<ul>
+  <li><strong>ScanCell 솔루션</strong>: ATOS 스캐너, VURT-X, 안전 시스템을 갖춘 플러그 앤 플레이 배포를 위한 사전 엔지니어링된 로봇 셀.</li>
+  <li><strong>인라인 측정</strong>: 실시간 치수 분석을 위해 생산 라인에 3D 스캐닝 통합.</li>
+  <li><strong>이동식 시스템</strong>: 대형 또는 이동 불가 부품(예: 차체 프레임, 선체)을 위한 모바일 스캐닝 설정.</li>
+</ul>
+
+<h2 id="성공-사례">성공 사례</h2>
+
+<p><strong>자동차 대량 생산</strong>:
+<br /></p>
+<ul>
+  <li>대량 생산 라인에서 차체 패널 100% 디지털 측정.</li>
+  <li>위치별 공차를 활용한 오류 분류로 수동 판단 오류 감소.</li>
+  <li>측정 데이터 기반 근본 원인 분석을 통한 공정 최적화로 목표 수정 및 수율 개선.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="/assets/images/gen/projects/rscan1.webp" width="200" /></th>
+      <th><img src="/assets/images/gen/projects/rscan2.webp" width="200" /></th>
+      <th><img src="/assets/images/gen/projects/rscan3.webp" width="200" /></th>
+      <th><img src="/assets/images/gen/projects/rscan4.webp" width="200" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="vcanus를-선택하는-이유">VCANUS를 선택하는 이유</h2>
+<p>✅ 맞춤형 솔루션: 제한 없음—귀사의 고유한 부품과 공정에 맞는 시스템 설계.
+<br />
+✅ 자동화 전문성: 무인 24/7 운영을 위한 VURT-X 통합.
+<br />
+✅ 데이터 기반 인사이트: AI 및 SPC 도구가 원시 데이터를 실행 가능한 개선으로 전환.
+<br />
+✅ 원활한 통합: CAD, MES, ERP 시스템과 연동.
+<br />
+✅ 엔드투엔드 지원: 시스템 설계부터 배포 및 분석까지.</p>
+
+<h2 id="서비스-산업">서비스 산업</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>산업</th>
+      <th>적용 사례</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>자동차</td>
+      <td>차체 패널, 섀시, 조립 검증.</td>
+    </tr>
+    <tr>
+      <td>항공우주</td>
+      <td>에어포일, 구조 부품, 공구.</td>
+    </tr>
+    <tr>
+      <td>에너지</td>
+      <td>터빈 블레이드, 임펠러, 대형 제작물.</td>
+    </tr>
+    <tr>
+      <td>중공업</td>
+      <td>주조물, 용접물, 제작 구조물.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="vcanus-3d-측정-시작하기">VCANUS 3D 측정 시작하기</h2>
+
+<p>맞춤형 3D 측정과 데이터 인텔리전스로 제조를 혁신하세요:</p>
+
+<ul>
+  <li>귀사의 부품과 공정에 맞춘 파일럿 프로젝트 협의.</li>
+  <li>Zeiss ATOS 제품 문의.</li>
+  <li>ATOS 솔루션 데모 일정 예약.</li>
+  <li>측정 데이터를 위한 AI 기반 분석 소프트웨어 검토.</li>
+</ul>
+
+</div>
+      </div>
+
+      
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+
+        <div class="col-12 col-md-4">
+          <div class="footer-info">
+            
+              <h2>VCANUS</h2>
+            
+
+            
+              <p>See beyond the data—with AI-driven intelligence.</p>
+            
+          </div>
+
+          
+            
+
+<div class="social" id="social">
+  
+  <a href="http://www.vcanus.com" target="blank" title="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Discord">
+    <i class="fab fa-discord"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Tiktok">
+    <i class="fab fa-tiktok"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Facebook">
+    <i class="fab fa-facebook-square"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Linkedin">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+</div>
+
+
+          
+          
+        </div>
+
+        <div class="col-12 col-md-8 mt-gutter mt-md-0">
+          <div class="row justify-content-end">
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                  
+                    <h3>Product</h3>
+                  
+                  
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/">Home</a>
+      </li>
+    
+      <li class="">
+        <a href="/services/">Products</a>
+      </li>
+    
+      <li class="">
+        <a href="/projects/">Solutions</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                
+                  <h3>Company</h3>
+                
+                
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/blog/">Blog</a>
+      </li>
+    
+      <li class="">
+        <a href="/career/">Career</a>
+      </li>
+    
+      <li class="">
+        <a href="/visitus/">Visit Us</a>
+      </li>
+    
+      <li class="">
+        <a href="/about/">About</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                
+                  <h3>Other</h3>
+                
+                
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/contact/">Contact</a>
+      </li>
+    
+      <li class="">
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </li>
+    
+      <li class="">
+        <a href="/terms-and-conditions/">Terms and Conditions</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+        
+          </div>
+        </div>
+      
+    </div>
+    
+    <div class="row justify-content-end mt-2">
+      <div class="col-12 col-md-4">
+        <h3>Contact Us</h3>
+        
+
+<div class="contact">
+  
+    <div class="contact-email">
+      <strong>Email:</strong>
+      <a href="mailto:info@vcanus.com">info@vcanus.com</a>
+    </div>
+  
+  
+    <div class="contact-phone">
+      <strong>Phone:</strong>
+      +82 31-719-8816</div>
+  
+  
+    <div class="contact-fax">
+      <strong>Fax:</strong>
+      +82 31-719-8817</div>
+  
+  
+    <div class="contact-address">
+      <strong>Address:</strong>
+      RoadlandEZ #603, Sungnamdaero69, Bundang-gu, Sungnam, Gyeonggi-do 13636, Republic of Korea <a href="https://maps.app.goo.gl/oB1rAc3LuXWs6Gwu7" target="_blank" rel="noreferrer">(View Map)</a> 
+    </div>
+  
+</div>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+       
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Privacy Policy">
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </li>
+    
+      <li class="menu-item-Terms and Conditions">
+        <a href="/terms-and-conditions/">Terms and Conditions</a>
+      </li>
+    
+  </ul>
+</div>
+        
+        
+        
+          <div class="copyright">© 2025 VCANUS</div>
+        
+        
+        
+          <a class="feed" href="http://localhost:4000/feed.xml">
+            <i class="fas fa-feed"></i>
+          </a>
+        
+        
+      </div>
+      
+        <div class="col-auto">
+          <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z"></path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;" version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z"></path>
+      </g>
+      <g>
+        <path d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z"></path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+        </div>
+         
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+
+
+
+</body>
+</html>

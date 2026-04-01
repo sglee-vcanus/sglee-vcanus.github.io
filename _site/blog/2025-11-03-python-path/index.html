@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Python Path Management - Data Innovator</title>
+
+
+  <meta name="description" content="Python Path Management"/>
+
+
+
+    <meta property="og:type" content="website"/>
+<meta property="og:url" content="http://localhost:4000/blog/2025-11-03-python-path/"/>
+
+
+  <meta property="og:title" content="Python Path Management"/>
+
+
+
+  <meta property="og:description" content="Python Path Management"/>
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/gen/blog/blog-5-large.webp"/>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@vcanus" />
+<meta name="twitter:creator" content="@vcanus" />
+    <link rel="alternate" type="application/atom+xml" title="Data Innovator" href="/feed.xml">
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+
+    
+      <script>
+          localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-bs-theme', 'dark');
+      </script>
+    
+
+    
+
+    
+
+    <link href="/assets/css/fonts.css" rel="stylesheet">
+
+
+
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+  
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-home">
+            <a href="/">Home</a>
+          </li>
+        
+          <li class="menu-item-products">
+            <a href="/services/">Products</a>
+          </li>
+        
+          <li class="menu-item-solutions">
+            <a href="/projects/">Solutions</a>
+          </li>
+        
+          <li class="menu-item-blog">
+            <a href="/blog/">Blog</a>
+          </li>
+        
+          <li class="menu-item-career">
+            <a href="/career/">Career</a>
+          </li>
+        
+          <li class="menu-item-visit us">
+            <a href="/visitus/">Visit Us</a>
+          </li>
+        
+          <li class="menu-item-about">
+            <a href="/about/">About</a>
+          </li>
+        
+      </ul>
+    
+  </div>
+
+  <div class="menu-main-mobile-bottom">
+    
+      
+
+<div class="social" id="social">
+  
+  <a href="http://www.vcanus.com" target="blank" title="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Discord">
+    <i class="fab fa-discord"></i>
+  </a>
+  
+</div>
+
+
+    
+    
+      <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z"></path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;" version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z"></path>
+      </g>
+      <g>
+        <path d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z"></path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+  </div>
+
+</div>
+
+
+
+
+<div id="header" class='header header-fixed'>
+  <div class="container">
+    <div class="logos">
+  <div class="logo logo-desktop">
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="132px" alt="Data Innovator Logo" src="/assets/images/logo/logo.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="132px" alt="Data Innovator Logo" src="/assets/images/logo/logo-invert.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="34px" alt="Data Innovator Logo" src="/assets/images/logo/logo-mobile.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="34px" alt="Data Innovator Logo" src="/assets/images/logo/logo-invert-mobile.png"/>
+        </a>
+      </div>
+    
+  
+    
+
+  </div>
+
+</div>
+
+
+    <div class="menu-main">
+  <ul>
+    
+      
+        
+        <li class=" ">
+          <a href="/" >Home</a>
+        </li>
+      
+    
+      
+
+        
+        
+
+        <li class="menu-item-dropdown menu-item-Products ">
+          <a href="/services/">Products <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/services/tsloom/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">TSLoom</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/services/deepvi/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">DeepVi</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/services/vurtx/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">VURT-X</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/services/vrcam/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">VRCAM</div>
+                  
+                </div>
+              </a>
+            
+          </div>
+
+        </li>
+      
+    
+      
+
+        
+        
+
+        <li class="menu-item-dropdown menu-item-Solutions ">
+          <a href="/projects/">Solutions <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/projects/edge-ai/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Edge AI</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/projects/3d-measurement-zeiss/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">3D Measurement with Zeiss</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/projects/intelligent-manufacturing/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Intelligent Manufacturing</div>
+                  
+                </div>
+              </a>
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/blog/" >Blog</a>
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/career/" >Career</a>
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/visitus/" >Visit Us</a>
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/about/" >About</a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+    
+    <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+<div id="wrapper" class="wrapper">     
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+            <div class="post-date">04 November 2025</div>
+          
+          
+          <div class="post-categories">
+          
+
+
+  
+    
+
+
+
+
+<div class="category-link">
+<a href="/category/development">
+  Development
+</a>
+
+</div>
+  
+
+          
+          </div>
+          <div class="post-title">
+            <h1>Python Path Management</h1>
+          </div>
+          
+            <div class="post-description">
+              <p>Python Path Management</p>
+            </div>
+          
+
+          
+            <div class="post-authors">
+              
+              
+              
+              
+
+
+
+
+<div class="author">
+  
+
+  
+</div>
+              
+            </div>
+          
+
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        
+          <div class="post-image">
+            <img src="/assets/images/gen/blog/blog-5-large.webp" alt="Python Path Management" />
+          </div>
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-8">
+        <div class="content"><h1 id="python-package-상대-경로-vs-절대-경로-완벽-가이드">Python Package: 상대 경로 vs 절대 경로 완벽 가이드</h1>
+
+<p><strong>작성일:</strong> 2025-11-04<br />
+<strong>Copyright:</strong> VCANUS<br />
+<strong>버전:</strong> 1.0</p>
+
+<hr />
+
+<h2 id="목차">목차</h2>
+
+<ol>
+  <li><a href="#1-개요">개요</a></li>
+  <li><a href="#2-상대-경로-relative-imports">상대 경로 (Relative Imports)</a></li>
+  <li><a href="#3-절대-경로-absolute-imports">절대 경로 (Absolute Imports)</a></li>
+  <li><a href="#4-비교표">비교표</a></li>
+  <li><a href="#5-사용-시나리오별-권장사항">사용 시나리오별 권장사항</a></li>
+  <li><a href="#6-실전-예시">실전 예시</a></li>
+  <li><a href="#7-흔한-실수와-해결방법">흔한 실수와 해결방법</a></li>
+  <li><a href="#8-베스트-프랙티스">베스트 프랙티스</a></li>
+</ol>
+
+<hr />
+
+<h2 id="1-개요">1. 개요</h2>
+
+<p>Python에서 모듈을 import하는 방식은 크게 두 가지입니다:</p>
+
+<ul>
+  <li><strong>상대 경로 (Relative Imports)</strong>: 현재 모듈의 위치를 기준으로 import</li>
+  <li><strong>절대 경로 (Absolute Imports)</strong>: 프로젝트 루트부터 전체 경로로 import</li>
+</ul>
+
+<h3 id="11-기본-문법">1.1 기본 문법</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 상대 경로
+</span><span class="kn">from</span> <span class="n">.module</span> <span class="kn">import</span> <span class="n">Class</span>          <span class="c1"># 같은 디렉토리
+</span><span class="kn">from</span> <span class="n">..module</span> <span class="kn">import</span> <span class="n">Class</span>         <span class="c1"># 상위 디렉토리
+</span><span class="kn">from</span> <span class="n">.subpackage.module</span> <span class="kn">import</span> <span class="n">Class</span>  <span class="c1"># 하위 패키지
+</span>
+<span class="c1"># 절대 경로
+</span><span class="kn">from</span> <span class="n">mypackage.module</span> <span class="kn">import</span> <span class="n">Class</span>
+<span class="kn">from</span> <span class="n">mypackage.subpackage.module</span> <span class="kn">import</span> <span class="n">Class</span>
+</code></pre></div></div>
+
+<h3 id="12-예제-패키지-구조">1.2 예제 패키지 구조</h3>
+
+<p>이 가이드에서 사용할 예제 구조:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mypackage/
+├── __init__.py
+├── models/
+│   ├── __init__.py
+│   ├── user.py
+│   └── product.py
+├── services/
+│   ├── __init__.py
+│   ├── user_service.py
+│   └── product_service.py
+└── utils/
+    ├── __init__.py
+    ├── validators.py
+    └── formatters.py
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="2-상대-경로-relative-imports">2. 상대 경로 (Relative Imports)</h2>
+
+<h3 id="21-기본-개념">2.1 기본 개념</h3>
+
+<p>상대 경로는 <strong>점(.)</strong> 을 사용하여 현재 모듈의 위치를 기준으로 import합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">.module</span> <span class="kn">import</span> <span class="n">Class</span>      <span class="c1"># 현재 패키지의 module
+</span><span class="kn">from</span> <span class="n">..module</span> <span class="kn">import</span> <span class="n">Class</span>     <span class="c1"># 상위 패키지의 module
+</span><span class="kn">from</span> <span class="n">...module</span> <span class="kn">import</span> <span class="n">Class</span>    <span class="c1"># 상위의 상위 패키지의 module
+</span></code></pre></div></div>
+
+<h3 id="22-상대-경로-패턴">2.2 상대 경로 패턴</h3>
+
+<h4 id="패턴-1-같은-디렉토리">패턴 1: 같은 디렉토리</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/models/user.py
+</span>
+<span class="kn">from</span> <span class="n">.product</span> <span class="kn">import</span> <span class="n">Product</span>  <span class="c1"># 같은 models 디렉토리의 product.py
+</span></code></pre></div></div>
+
+<p><strong>디렉토리 구조:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>models/
+├── user.py      ← 여기서
+└── product.py   ← 이것을 import
+</code></pre></div></div>
+
+<h4 id="패턴-2-상위-디렉토리">패턴 2: 상위 디렉토리</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/services/user_service.py
+</span>
+<span class="kn">from</span> <span class="n">..models</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># 상위(mypackage)의 models 패키지
+</span></code></pre></div></div>
+
+<p><strong>디렉토리 구조:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mypackage/
+├── models/
+│   └── user.py     ← 이것을 import
+└── services/
+    └── user_service.py  ← 여기서
+</code></pre></div></div>
+
+<h4 id="패턴-3-형제-패키지">패턴 3: 형제 패키지</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/services/user_service.py
+</span>
+<span class="kn">from</span> <span class="n">..utils.validators</span> <span class="kn">import</span> <span class="n">validate_email</span>  <span class="c1"># 형제 패키지
+</span></code></pre></div></div>
+
+<p><strong>디렉토리 구조:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mypackage/
+├── services/
+│   └── user_service.py  ← 여기서
+└── utils/
+    └── validators.py    ← 이것을 import
+</code></pre></div></div>
+
+<h4 id="패턴-4-복잡한-경로">패턴 4: 복잡한 경로</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/api/v1/endpoints/users.py
+</span>
+<span class="kn">from</span> <span class="n">....models</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># 4단계 상위의 models
+</span><span class="kn">from</span> <span class="n">...services</span> <span class="kn">import</span> <span class="n">UserService</span>  <span class="c1"># 3단계 상위의 services
+</span><span class="kn">from</span> <span class="n">..auth</span> <span class="kn">import</span> <span class="n">authenticate</span>  <span class="c1"># 1단계 상위의 auth
+</span></code></pre></div></div>
+
+<p><strong>디렉토리 구조:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mypackage/
+├── models/
+│   └── user.py
+├── services/
+│   └── user_service.py
+└── api/
+    └── v1/
+        ├── auth.py
+        └── endpoints/
+            └── users.py  ← 여기서
+</code></pre></div></div>
+
+<h3 id="23-상대-경로의-장점-">2.3 상대 경로의 장점 ✅</h3>
+
+<h4 id="1-패키지명-변경-용이">1. 패키지명 변경 용이</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/__init__.py → yourpackage/__init__.py
+# 패키지명을 바꿔도 내부 import는 수정 불필요
+</span>
+<span class="c1"># ✅ 상대 경로 (수정 불필요)
+</span><span class="kn">from</span> <span class="n">.models</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="n">.services</span> <span class="kn">import</span> <span class="n">UserService</span>
+
+<span class="c1"># ❌ 절대 경로 (모두 수정 필요)
+</span><span class="kn">from</span> <span class="n">mypackage.models</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># yourpackage로 변경 필요
+</span><span class="kn">from</span> <span class="n">mypackage.services</span> <span class="kn">import</span> <span class="n">UserService</span>  <span class="c1"># yourpackage로 변경 필요
+</span></code></pre></div></div>
+
+<h4 id="2-패키지-재사용-및-이식성">2. 패키지 재사용 및 이식성</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># other_project에 mypackage 폴더를 복사
+# ✅ 상대 경로: 그대로 작동
+# ❌ 절대 경로: 모든 import 수정 필요
+</span></code></pre></div></div>
+
+<h4 id="3-패키지-구조-명확성">3. 패키지 구조 명확성</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/services/user_service.py
+</span>
+<span class="kn">from</span> <span class="n">..models</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># ← 상위 패키지의 models라는 것이 명확
+</span><span class="kn">from</span> <span class="n">.auth_service</span> <span class="kn">import</span> <span class="n">AuthService</span>  <span class="c1"># ← 같은 services 패키지라는 것이 명확
+</span></code></pre></div></div>
+
+<h4 id="4-순환-참조-감지-용이">4. 순환 참조 감지 용이</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 상대 경로는 순환 참조를 더 명확하게 보여줌
+# mypackage/models/user.py
+</span><span class="kn">from</span> <span class="n">..services</span> <span class="kn">import</span> <span class="n">UserService</span>  <span class="c1"># models → services
+</span>
+<span class="c1"># mypackage/services/user_service.py
+</span><span class="kn">from</span> <span class="n">..models</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># services → models
+# ← 순환 참조 명확!
+</span></code></pre></div></div>
+
+<h3 id="24-상대-경로의-단점-️">2.4 상대 경로의 단점 ⚠️</h3>
+
+<h4 id="1-스크립트로-직접-실행-불가">1. 스크립트로 직접 실행 불가</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/models/user.py
+</span><span class="kn">from</span> <span class="n">.product</span> <span class="kn">import</span> <span class="n">Product</span>
+
+<span class="c1"># ❌ 직접 실행 시 에러
+# python mypackage/models/user.py
+# ValueError: attempted relative import beyond top-level package
+</span></code></pre></div></div>
+
+<p><strong>해결방법:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ✅ 모듈로 실행</span>
+python <span class="nt">-m</span> mypackage.models.user
+</code></pre></div></div>
+
+<h4 id="2-깊은-중첩-시-가독성-저하">2. 깊은 중첩 시 가독성 저하</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 너무 많은 점은 헷갈림
+</span><span class="kn">from</span> <span class="n">....models.user</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="n">.....utils.validators</span> <span class="kn">import</span> <span class="n">validate</span>
+</code></pre></div></div>
+
+<h4 id="3-ide-자동완성-제한">3. IDE 자동완성 제한</h4>
+
+<p>일부 IDE에서는 상대 경로의 자동완성 지원이 약할 수 있습니다.</p>
+
+<hr />
+
+<h2 id="3-절대-경로-absolute-imports">3. 절대 경로 (Absolute Imports)</h2>
+
+<h3 id="31-기본-개념">3.1 기본 개념</h3>
+
+<p>절대 경로는 <strong>프로젝트 루트부터 전체 경로</strong>를 명시합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">mypackage.models.user</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="n">mypackage.services.user_service</span> <span class="kn">import</span> <span class="n">UserService</span>
+</code></pre></div></div>
+
+<h3 id="32-절대-경로-패턴">3.2 절대 경로 패턴</h3>
+
+<h4 id="패턴-1-전체-경로-명시">패턴 1: 전체 경로 명시</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/services/user_service.py
+</span>
+<span class="kn">from</span> <span class="n">mypackage.models.user</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="n">mypackage.utils.validators</span> <span class="kn">import</span> <span class="n">validate_email</span>
+</code></pre></div></div>
+
+<h4 id="패턴-2-패키지-레벨-import">패턴 2: 패키지 레벨 import</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/services/user_service.py
+</span>
+<span class="kn">from</span> <span class="n">mypackage</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="n">mypackage</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="p">.</span><span class="nc">User</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h4 id="패턴-3-선택적-import">패턴 3: 선택적 import</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">mypackage.models</span> <span class="kn">import</span> <span class="n">User</span><span class="p">,</span> <span class="n">Product</span><span class="p">,</span> <span class="n">Category</span>
+<span class="kn">from</span> <span class="n">mypackage.services</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">UserService</span><span class="p">,</span>
+    <span class="n">ProductService</span><span class="p">,</span>
+    <span class="n">CategoryService</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="33-절대-경로의-장점-">3.3 절대 경로의 장점 ✅</h3>
+
+<h4 id="1-명확성">1. 명확성</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 어느 패키지에서 가져오는지 명확
+</span><span class="kn">from</span> <span class="n">mypackage.models.user</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="c1"># ← mypackage의 models 패키지의 user 모듈이라는 것이 분명
+</span></code></pre></div></div>
+
+<h4 id="2-ide-지원-우수">2. IDE 지원 우수</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 대부분의 IDE에서 자동완성, 리팩토링, 코드 탐색 지원 우수
+</span><span class="kn">from</span> <span class="n">mypackage.models.user</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># ← Ctrl+Click으로 이동 가능
+</span></code></pre></div></div>
+
+<h4 id="3-스크립트-직접-실행-가능">3. 스크립트 직접 실행 가능</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/services/user_service.py
+</span><span class="kn">from</span> <span class="n">mypackage.models.user</span> <span class="kn">import</span> <span class="n">User</span>
+
+<span class="c1"># ✅ 직접 실행 가능
+# python mypackage/services/user_service.py
+</span></code></pre></div></div>
+
+<h4 id="4-프로젝트-전체-구조-파악-용이">4. 프로젝트 전체 구조 파악 용이</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># import 문만 봐도 전체 프로젝트 구조 이해 가능
+</span><span class="kn">from</span> <span class="n">mypackage.api.v1.endpoints.users</span> <span class="kn">import</span> <span class="n">UserEndpoint</span>
+<span class="kn">from</span> <span class="n">mypackage.database.repositories.user_repository</span> <span class="kn">import</span> <span class="n">UserRepository</span>
+<span class="kn">from</span> <span class="n">mypackage.services.auth.jwt_service</span> <span class="kn">import</span> <span class="n">JWTService</span>
+</code></pre></div></div>
+
+<h3 id="34-절대-경로의-단점-️">3.4 절대 경로의 단점 ⚠️</h3>
+
+<h4 id="1-패키지명-의존성">1. 패키지명 의존성</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage → yourpackage로 변경 시
+# 모든 절대 경로 import를 수정해야 함
+</span>
+<span class="c1"># ❌ 수정 전
+</span><span class="kn">from</span> <span class="n">mypackage.models</span> <span class="kn">import</span> <span class="n">User</span>
+
+<span class="c1"># ✅ 수정 후
+</span><span class="kn">from</span> <span class="n">yourpackage.models</span> <span class="kn">import</span> <span class="n">User</span>
+</code></pre></div></div>
+
+<h4 id="2-패키지-이식성-저하">2. 패키지 이식성 저하</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 다른 프로젝트에 복사 시 모든 import 수정 필요
+</span><span class="kn">from</span> <span class="n">mypackage.models</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># 패키지명이 hard-coded됨
+</span></code></pre></div></div>
+
+<h4 id="3-타이핑-양-증가">3. 타이핑 양 증가</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 상대 경로
+</span><span class="kn">from</span> <span class="n">.models</span> <span class="kn">import</span> <span class="n">User</span>
+
+<span class="c1"># 절대 경로 (더 김)
+</span><span class="kn">from</span> <span class="n">mypackage.models.user</span> <span class="kn">import</span> <span class="n">User</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="4-비교표">4. 비교표</h2>
+
+<h3 id="41-종합-비교">4.1 종합 비교</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>측면</th>
+      <th>상대 경로</th>
+      <th>절대 경로</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>재사용성</strong></td>
+      <td>✅ 우수 (패키지명 독립)</td>
+      <td>❌ 나쁨 (패키지명 의존)</td>
+    </tr>
+    <tr>
+      <td><strong>이식성</strong></td>
+      <td>✅ 우수 (복사만 하면 됨)</td>
+      <td>❌ 나쁨 (import 수정 필요)</td>
+    </tr>
+    <tr>
+      <td><strong>명확성</strong></td>
+      <td>⚠️ 상대적 위치 파악 필요</td>
+      <td>✅ 우수 (전체 경로 명시)</td>
+    </tr>
+    <tr>
+      <td><strong>IDE 지원</strong></td>
+      <td>⚠️ 제한적</td>
+      <td>✅ 우수 (자동완성, 탐색)</td>
+    </tr>
+    <tr>
+      <td><strong>직접 실행</strong></td>
+      <td>❌ 불가</td>
+      <td>✅ 가능</td>
+    </tr>
+    <tr>
+      <td><strong>순환 참조 감지</strong></td>
+      <td>✅ 명확</td>
+      <td>⚠️ 어려움</td>
+    </tr>
+    <tr>
+      <td><strong>타이핑 양</strong></td>
+      <td>✅ 짧음</td>
+      <td>⚠️ 김</td>
+    </tr>
+    <tr>
+      <td><strong>유지보수</strong></td>
+      <td>✅ 우수 (구조 변경 용이)</td>
+      <td>⚠️ 보통</td>
+    </tr>
+    <tr>
+      <td><strong>가독성 (얕은 구조)</strong></td>
+      <td>✅ 우수</td>
+      <td>✅ 우수</td>
+    </tr>
+    <tr>
+      <td><strong>가독성 (깊은 구조)</strong></td>
+      <td>⚠️ 나쁨 (<code class="language-plaintext highlighter-rouge">....</code>)</td>
+      <td>✅ 우수</td>
+    </tr>
+    <tr>
+      <td><strong>프로젝트 구조 파악</strong></td>
+      <td>⚠️ 어려움</td>
+      <td>✅ 쉬움</td>
+    </tr>
+    <tr>
+      <td><strong>성능</strong></td>
+      <td>동일</td>
+      <td>동일</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="42-사용-위치별-권장">4.2 사용 위치별 권장</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>위치</th>
+      <th>권장 방식</th>
+      <th>이유</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">__init__.py</code></td>
+      <td>⭐ 상대 경로</td>
+      <td>패키지 내부 구조, 재사용성</td>
+    </tr>
+    <tr>
+      <td>개별 모듈 (같은 패키지)</td>
+      <td>⚠️ 상대 경로</td>
+      <td>패키지 내부 응집도</td>
+    </tr>
+    <tr>
+      <td>개별 모듈 (다른 패키지)</td>
+      <td>⭐ 절대 경로</td>
+      <td>명확성, IDE 지원</td>
+    </tr>
+    <tr>
+      <td>테스트 코드</td>
+      <td>⭐ 절대 경로</td>
+      <td>명확성, 직접 실행</td>
+    </tr>
+    <tr>
+      <td>스크립트/CLI</td>
+      <td>⭐ 절대 경로</td>
+      <td>직접 실행 가능</td>
+    </tr>
+    <tr>
+      <td>라이브러리 내부</td>
+      <td>⭐ 상대 경로</td>
+      <td>재사용성, 이식성</td>
+    </tr>
+    <tr>
+      <td>애플리케이션 코드</td>
+      <td>⭐ 절대 경로</td>
+      <td>명확성, 유지보수</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="5-사용-시나리오별-권장사항">5. 사용 시나리오별 권장사항</h2>
+
+<h3 id="51-시나리오-1-__init__py-파일-">5.1 시나리오 1: <code class="language-plaintext highlighter-rouge">__init__.py</code> 파일 ⭐</h3>
+
+<p><strong>권장: 상대 경로</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/__init__.py
+</span>
+<span class="c1"># ✅ 권장: 상대 경로
+</span><span class="kn">from</span> <span class="n">.models</span> <span class="kn">import</span> <span class="n">User</span><span class="p">,</span> <span class="n">Product</span>
+<span class="kn">from</span> <span class="n">.services</span> <span class="kn">import</span> <span class="n">UserService</span><span class="p">,</span> <span class="n">ProductService</span>
+<span class="kn">from</span> <span class="n">.utils</span> <span class="kn">import</span> <span class="n">format_date</span><span class="p">,</span> <span class="n">validate_email</span>
+
+<span class="c1"># ❌ 비권장: 절대 경로
+</span><span class="kn">from</span> <span class="n">mypackage.models</span> <span class="kn">import</span> <span class="n">User</span><span class="p">,</span> <span class="n">Product</span>
+<span class="kn">from</span> <span class="n">mypackage.services</span> <span class="kn">import</span> <span class="n">UserService</span><span class="p">,</span> <span class="n">ProductService</span>
+</code></pre></div></div>
+
+<p><strong>이유:</strong></p>
+<ul>
+  <li>패키지명 변경 시 수정 불필요</li>
+  <li>패키지 재사용 용이</li>
+  <li>내부 구조가 명확</li>
+</ul>
+
+<h3 id="52-시나리오-2-같은-패키지-내-모듈">5.2 시나리오 2: 같은 패키지 내 모듈</h3>
+
+<p><strong>권장: 상대 경로 또는 절대 경로 (팀 컨벤션 따름)</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/models/user.py
+</span>
+<span class="c1"># ✅ 옵션 1: 상대 경로 (짧고 간결)
+</span><span class="kn">from</span> <span class="n">.product</span> <span class="kn">import</span> <span class="n">Product</span>
+<span class="kn">from</span> <span class="n">.category</span> <span class="kn">import</span> <span class="n">Category</span>
+
+<span class="c1"># ✅ 옵션 2: 절대 경로 (명확함)
+</span><span class="kn">from</span> <span class="n">mypackage.models.product</span> <span class="kn">import</span> <span class="n">Product</span>
+<span class="kn">from</span> <span class="n">mypackage.models.category</span> <span class="kn">import</span> <span class="n">Category</span>
+</code></pre></div></div>
+
+<p><strong>선택 기준:</strong></p>
+<ul>
+  <li>라이브러리/패키지 개발: 상대 경로</li>
+  <li>애플리케이션 개발: 절대 경로</li>
+  <li>팀 컨벤션 따르기</li>
+</ul>
+
+<h3 id="53-시나리오-3-다른-패키지의-모듈-">5.3 시나리오 3: 다른 패키지의 모듈 ⭐</h3>
+
+<p><strong>권장: 절대 경로</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/services/user_service.py
+</span>
+<span class="c1"># ✅ 권장: 절대 경로
+</span><span class="kn">from</span> <span class="n">mypackage.models.user</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="n">mypackage.utils.validators</span> <span class="kn">import</span> <span class="n">validate_email</span>
+<span class="kn">from</span> <span class="n">mypackage.database.repositories</span> <span class="kn">import</span> <span class="n">UserRepository</span>
+
+<span class="c1"># ⚠️ 비권장: 상대 경로 (헷갈림)
+</span><span class="kn">from</span> <span class="n">..models.user</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="n">..utils.validators</span> <span class="kn">import</span> <span class="n">validate_email</span>
+<span class="kn">from</span> <span class="n">..database.repositories</span> <span class="kn">import</span> <span class="n">UserRepository</span>
+</code></pre></div></div>
+
+<p><strong>이유:</strong></p>
+<ul>
+  <li>어느 패키지인지 명확</li>
+  <li>IDE 지원 우수</li>
+  <li>리팩토링 시 안전</li>
+</ul>
+
+<h3 id="54-시나리오-4-테스트-코드-">5.4 시나리오 4: 테스트 코드 ⭐</h3>
+
+<p><strong>권장: 절대 경로</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># tests/test_user_service.py
+</span>
+<span class="c1"># ✅ 권장: 절대 경로
+</span><span class="kn">from</span> <span class="n">mypackage.services.user_service</span> <span class="kn">import</span> <span class="n">UserService</span>
+<span class="kn">from</span> <span class="n">mypackage.models.user</span> <span class="kn">import</span> <span class="n">User</span>
+
+<span class="k">def</span> <span class="nf">test_create_user</span><span class="p">():</span>
+    <span class="n">service</span> <span class="o">=</span> <span class="nc">UserService</span><span class="p">()</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nc">User</span><span class="p">(</span><span class="s">"John"</span><span class="p">)</span>
+    <span class="c1"># ...
+</span>
+<span class="c1"># ❌ 비권장: 상대 경로 (테스트는 패키지 외부)
+</span><span class="kn">from</span> <span class="n">..mypackage.services.user_service</span> <span class="kn">import</span> <span class="n">UserService</span>  <span class="c1"># 에러!
+</span></code></pre></div></div>
+
+<p><strong>이유:</strong></p>
+<ul>
+  <li>테스트는 패키지 외부에 위치</li>
+  <li>직접 실행 가능해야 함</li>
+  <li>명확성 중요</li>
+</ul>
+
+<h3 id="55-시나리오-5-cli스크립트-">5.5 시나리오 5: CLI/스크립트 ⭐</h3>
+
+<p><strong>권장: 절대 경로</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># scripts/migrate_data.py
+</span>
+<span class="c1"># ✅ 권장: 절대 경로
+</span><span class="kn">from</span> <span class="n">mypackage.database</span> <span class="kn">import</span> <span class="n">Database</span>
+<span class="kn">from</span> <span class="n">mypackage.models</span> <span class="kn">import</span> <span class="n">User</span><span class="p">,</span> <span class="n">Product</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="nc">Database</span><span class="p">()</span>
+    <span class="c1"># ...
+</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="nf">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><strong>이유:</strong></p>
+<ul>
+  <li>스크립트는 직접 실행됨</li>
+  <li>상대 경로는 작동 안함</li>
+</ul>
+
+<h3 id="56-시나리오-6-라이브러리-개발-">5.6 시나리오 6: 라이브러리 개발 ⭐</h3>
+
+<p><strong>권장: 상대 경로 (내부), 절대 경로 (외부 의존성)</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mylib/core/processor.py
+</span>
+<span class="c1"># ✅ 내부 모듈: 상대 경로
+</span><span class="kn">from</span> <span class="n">.validator</span> <span class="kn">import</span> <span class="n">Validator</span>
+<span class="kn">from</span> <span class="n">..utils.helpers</span> <span class="kn">import</span> <span class="n">format_output</span>
+
+<span class="c1"># ✅ 외부 라이브러리: 절대 경로 (당연)
+</span><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">from</span> <span class="n">typing</span> <span class="kn">import</span> <span class="n">List</span>
+</code></pre></div></div>
+
+<p><strong>이유:</strong></p>
+<ul>
+  <li>라이브러리는 다른 프로젝트에서 재사용</li>
+  <li>내부 구조는 독립적이어야 함</li>
+</ul>
+
+<h3 id="57-시나리오-7-djangoflask-애플리케이션-">5.7 시나리오 7: Django/Flask 애플리케이션 ⭐</h3>
+
+<p><strong>권장: 절대 경로</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># myapp/views/user_views.py
+</span>
+<span class="c1"># ✅ 권장: 절대 경로
+</span><span class="kn">from</span> <span class="n">myapp.models</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="n">myapp.services.user_service</span> <span class="kn">import</span> <span class="n">UserService</span>
+<span class="kn">from</span> <span class="n">myapp.forms</span> <span class="kn">import</span> <span class="n">UserForm</span>
+
+<span class="c1"># ⚠️ 비권장: 상대 경로
+</span><span class="kn">from</span> <span class="n">..models</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="n">..services.user_service</span> <span class="kn">import</span> <span class="n">UserService</span>
+</code></pre></div></div>
+
+<p><strong>이유:</strong></p>
+<ul>
+  <li>애플리케이션은 명확성이 중요</li>
+  <li>프로젝트 구조를 한눈에 파악</li>
+  <li>팀 협업 시 이해 쉬움</li>
+</ul>
+
+<hr />
+
+<h2 id="6-실전-예시">6. 실전 예시</h2>
+
+<h3 id="61-예시-1-라이브러리-패키지-상대-경로-중심">6.1 예시 1: 라이브러리 패키지 (상대 경로 중심)</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mathlib/
+# ├── __init__.py
+# ├── core/
+# │   ├── __init__.py
+# │   ├── algebra.py
+# │   └── calculus.py
+# └── utils/
+#     ├── __init__.py
+#     └── helpers.py
+</span>
+<span class="c1"># ============= mathlib/__init__.py =============
+</span><span class="s">"""MathLib - 재사용 가능한 수학 라이브러리"""</span>
+
+<span class="n">__version__</span> <span class="o">=</span> <span class="s">"1.0.0"</span>
+
+<span class="c1"># ✅ 상대 경로 (패키지 내부)
+</span><span class="kn">from</span> <span class="n">.core</span> <span class="kn">import</span> <span class="n">Algebra</span><span class="p">,</span> <span class="n">Calculus</span>
+<span class="kn">from</span> <span class="n">.utils</span> <span class="kn">import</span> <span class="n">format_result</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Algebra"</span><span class="p">,</span> <span class="s">"Calculus"</span><span class="p">,</span> <span class="s">"format_result"</span><span class="p">]</span>
+
+
+<span class="c1"># ============= mathlib/core/__init__.py =============
+# ✅ 상대 경로
+</span><span class="kn">from</span> <span class="n">.algebra</span> <span class="kn">import</span> <span class="n">Algebra</span>
+<span class="kn">from</span> <span class="n">.calculus</span> <span class="kn">import</span> <span class="n">Calculus</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Algebra"</span><span class="p">,</span> <span class="s">"Calculus"</span><span class="p">]</span>
+
+
+<span class="c1"># ============= mathlib/core/algebra.py =============
+# ✅ 상대 경로 (같은 패키지)
+</span><span class="kn">from</span> <span class="n">.calculus</span> <span class="kn">import</span> <span class="n">derivative</span>
+
+<span class="c1"># ✅ 상대 경로 (상위 패키지)
+</span><span class="kn">from</span> <span class="n">..utils.helpers</span> <span class="kn">import</span> <span class="n">format_result</span>
+
+
+<span class="k">class</span> <span class="nc">Algebra</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">solve</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="nf">derivative</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nf">format_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>장점:</strong></p>
+<ul>
+  <li>패키지명 <code class="language-plaintext highlighter-rouge">mathlib</code> → <code class="language-plaintext highlighter-rouge">mathlib2</code>로 변경해도 내부 수정 불필요</li>
+  <li>다른 프로젝트에 복사해도 그대로 작동</li>
+  <li>내부 구조 변경 용이</li>
+</ul>
+
+<h3 id="62-예시-2-웹-애플리케이션-절대-경로-중심">6.2 예시 2: 웹 애플리케이션 (절대 경로 중심)</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># myapp/
+# ├── __init__.py
+# ├── models/
+# │   ├── __init__.py
+# │   └── user.py
+# ├── views/
+# │   ├── __init__.py
+# │   └── user_views.py
+# ├── services/
+# │   ├── __init__.py
+# │   └── user_service.py
+# └── utils/
+#     ├── __init__.py
+#     └── validators.py
+</span>
+<span class="c1"># ============= myapp/__init__.py =============
+</span><span class="s">"""MyApp - 웹 애플리케이션"""</span>
+
+<span class="n">__version__</span> <span class="o">=</span> <span class="s">"1.0.0"</span>
+
+<span class="c1"># ✅ 상대 경로 (최상위 __init__.py)
+</span><span class="kn">from</span> <span class="n">.models</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="n">.views</span> <span class="kn">import</span> <span class="n">UserView</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s">"User"</span><span class="p">,</span> <span class="s">"UserView"</span><span class="p">]</span>
+
+
+<span class="c1"># ============= myapp/views/user_views.py =============
+# ✅ 절대 경로 (명확성 우선)
+</span><span class="kn">from</span> <span class="n">myapp.models.user</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="n">myapp.services.user_service</span> <span class="kn">import</span> <span class="n">UserService</span>
+<span class="kn">from</span> <span class="n">myapp.utils.validators</span> <span class="kn">import</span> <span class="n">validate_email</span>
+
+
+<span class="k">class</span> <span class="nc">UserView</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">service</span> <span class="o">=</span> <span class="nc">UserService</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nf">validate_email</span><span class="p">(</span><span class="n">email</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="nc">ValueError</span><span class="p">(</span><span class="s">"Invalid email"</span><span class="p">)</span>
+        
+        <span class="n">user</span> <span class="o">=</span> <span class="nc">User</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">service</span><span class="p">.</span><span class="nf">save</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+
+
+<span class="c1"># ============= myapp/services/user_service.py =============
+# ✅ 절대 경로
+</span><span class="kn">from</span> <span class="n">myapp.models.user</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="n">myapp.database</span> <span class="kn">import</span> <span class="n">Database</span>
+
+
+<span class="k">class</span> <span class="nc">UserService</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">db</span> <span class="o">=</span> <span class="nc">Database</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">User</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">db</span><span class="p">.</span><span class="nf">save</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>장점:</strong></p>
+<ul>
+  <li>코드 한눈에 이해 가능</li>
+  <li>IDE 지원 우수</li>
+  <li>리팩토링 안전</li>
+</ul>
+
+<h3 id="63-예시-3-하이브리드-접근-실용적">6.3 예시 3: 하이브리드 접근 (실용적)</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># myproject/
+# ├── __init__.py
+# ├── core/
+# │   ├── __init__.py
+# │   ├── base.py
+# │   └── config.py
+# ├── features/
+# │   ├── __init__.py
+# │   ├── auth/
+# │   │   ├── __init__.py
+# │   │   ├── models.py
+# │   │   └── services.py
+# │   └── users/
+# │       ├── __init__.py
+# │       ├── models.py
+# │       └── services.py
+# └── utils/
+#     ├── __init__.py
+#     └── helpers.py
+</span>
+<span class="c1"># ============= myproject/__init__.py =============
+# ✅ 상대 경로 (패키지 루트)
+</span><span class="kn">from</span> <span class="n">.core</span> <span class="kn">import</span> <span class="n">Config</span>
+<span class="kn">from</span> <span class="n">.utils</span> <span class="kn">import</span> <span class="n">helpers</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Config"</span><span class="p">,</span> <span class="s">"helpers"</span><span class="p">]</span>
+
+
+<span class="c1"># ============= myproject/features/auth/__init__.py =============
+# ✅ 상대 경로 (피처 패키지 내부)
+</span><span class="kn">from</span> <span class="n">.models</span> <span class="kn">import</span> <span class="n">AuthUser</span>
+<span class="kn">from</span> <span class="n">.services</span> <span class="kn">import</span> <span class="n">AuthService</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s">"AuthUser"</span><span class="p">,</span> <span class="s">"AuthService"</span><span class="p">]</span>
+
+
+<span class="c1"># ============= myproject/features/auth/services.py =============
+# ✅ 상대 경로 (같은 피처)
+</span><span class="kn">from</span> <span class="n">.models</span> <span class="kn">import</span> <span class="n">AuthUser</span>
+
+<span class="c1"># ✅ 절대 경로 (다른 피처/모듈)
+</span><span class="kn">from</span> <span class="n">myproject.core.base</span> <span class="kn">import</span> <span class="n">BaseService</span>
+<span class="kn">from</span> <span class="n">myproject.utils.helpers</span> <span class="kn">import</span> <span class="n">hash_password</span>
+<span class="kn">from</span> <span class="n">myproject.features.users.models</span> <span class="kn">import</span> <span class="n">User</span>
+
+
+<span class="k">class</span> <span class="nc">AuthService</span><span class="p">(</span><span class="n">BaseService</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">authenticate</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">username</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">hashed</span> <span class="o">=</span> <span class="nf">hash_password</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+        <span class="c1"># ...
+</span></code></pre></div></div>
+
+<p><strong>규칙:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__init__.py</code>: 상대 경로</li>
+  <li>같은 피처/모듈 내: 상대 경로</li>
+  <li>다른 피처/모듈: 절대 경로</li>
+  <li>공통 유틸리티: 절대 경로</li>
+</ul>
+
+<hr />
+
+<h2 id="7-흔한-실수와-해결방법">7. 흔한 실수와 해결방법</h2>
+
+<h3 id="71-실수-1-__init__py에서-절대-경로-사용">7.1 실수 1: <code class="language-plaintext highlighter-rouge">__init__.py</code>에서 절대 경로 사용</h3>
+
+<h4 id="-나쁜-예">❌ 나쁜 예</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/__init__.py
+</span>
+<span class="kn">from</span> <span class="n">mypackage.models</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># ❌ 절대 경로
+</span><span class="kn">from</span> <span class="n">mypackage.services</span> <span class="kn">import</span> <span class="n">UserService</span>
+</code></pre></div></div>
+
+<p><strong>문제:</strong></p>
+<ul>
+  <li>패키지명 변경 시 수정 필요</li>
+  <li>재사용성 저하</li>
+</ul>
+
+<h4 id="-좋은-예">✅ 좋은 예</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/__init__.py
+</span>
+<span class="kn">from</span> <span class="n">.models</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># ✅ 상대 경로
+</span><span class="kn">from</span> <span class="n">.services</span> <span class="kn">import</span> <span class="n">UserService</span>
+</code></pre></div></div>
+
+<h3 id="72-실수-2-스크립트에서-상대-경로-사용">7.2 실수 2: 스크립트에서 상대 경로 사용</h3>
+
+<h4 id="-나쁜-예-1">❌ 나쁜 예</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># scripts/migrate.py
+</span>
+<span class="kn">from</span> <span class="n">..mypackage.models</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># ❌ 에러!
+</span></code></pre></div></div>
+
+<p><strong>에러:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ValueError: attempted relative import beyond top-level package
+</code></pre></div></div>
+
+<h4 id="-좋은-예-1">✅ 좋은 예</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># scripts/migrate.py
+</span>
+<span class="kn">from</span> <span class="n">mypackage.models</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># ✅ 절대 경로
+</span>
+<span class="c1"># 또는 sys.path 조정
+</span><span class="kn">import</span> <span class="n">sys</span>
+<span class="kn">from</span> <span class="n">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="n">sys</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nf">str</span><span class="p">(</span><span class="nc">Path</span><span class="p">(</span><span class="n">__file__</span><span class="p">).</span><span class="n">parent</span><span class="p">.</span><span class="n">parent</span><span class="p">))</span>
+
+<span class="kn">from</span> <span class="n">mypackage.models</span> <span class="kn">import</span> <span class="n">User</span>
+</code></pre></div></div>
+
+<h3 id="73-실수-3-너무-많은-점-사용">7.3 실수 3: 너무 많은 점 사용</h3>
+
+<h4 id="-나쁜-예-2">❌ 나쁜 예</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/api/v1/endpoints/users/create.py
+</span>
+<span class="kn">from</span> <span class="n">......models.user</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># ❌ 6개의 점!
+</span><span class="kn">from</span> <span class="n">.....services.user_service</span> <span class="kn">import</span> <span class="n">UserService</span>
+</code></pre></div></div>
+
+<p><strong>문제:</strong></p>
+<ul>
+  <li>가독성 극악</li>
+  <li>유지보수 어려움</li>
+</ul>
+
+<h4 id="-좋은-예-2">✅ 좋은 예</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/api/v1/endpoints/users/create.py
+</span>
+<span class="kn">from</span> <span class="n">mypackage.models.user</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># ✅ 절대 경로로
+</span><span class="kn">from</span> <span class="n">mypackage.services.user_service</span> <span class="kn">import</span> <span class="n">UserService</span>
+</code></pre></div></div>
+
+<p><strong>규칙:</strong> 3개 이상의 점이면 절대 경로로 전환 고려</p>
+
+<h3 id="74-실수-4-혼용으로-인한-혼란">7.4 실수 4: 혼용으로 인한 혼란</h3>
+
+<h4 id="-나쁜-예-3">❌ 나쁜 예</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 파일 내에서 일관성 없이 혼용
+</span><span class="kn">from</span> <span class="n">.models</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># 상대 경로
+</span><span class="kn">from</span> <span class="n">mypackage.services</span> <span class="kn">import</span> <span class="n">UserService</span>  <span class="c1"># 절대 경로
+</span><span class="kn">from</span> <span class="n">..utils</span> <span class="kn">import</span> <span class="n">helpers</span>  <span class="c1"># 상대 경로
+</span></code></pre></div></div>
+
+<h4 id="-좋은-예-3">✅ 좋은 예</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 일관성 있게 사용
+</span><span class="kn">from</span> <span class="n">mypackage.models</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="n">mypackage.services</span> <span class="kn">import</span> <span class="n">UserService</span>
+<span class="kn">from</span> <span class="n">mypackage.utils</span> <span class="kn">import</span> <span class="n">helpers</span>
+</code></pre></div></div>
+
+<h3 id="75-실수-5-순환-참조-미감지">7.5 실수 5: 순환 참조 미감지</h3>
+
+<h4 id="-나쁜-예-4">❌ 나쁜 예</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/models.py
+</span><span class="kn">from</span> <span class="n">mypackage.services</span> <span class="kn">import</span> <span class="n">validate</span>  <span class="c1"># (1)
+</span>
+<span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="c1"># mypackage/services.py
+</span><span class="kn">from</span> <span class="n">mypackage.models</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># (2)
+</span>
+<span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="n">user</span><span class="p">:</span> <span class="n">User</span><span class="p">):</span>
+    <span class="k">pass</span>
+</code></pre></div></div>
+
+<p><strong>문제:</strong> <code class="language-plaintext highlighter-rouge">ImportError: cannot import name ...</code></p>
+
+<h4 id="-해결-방법-1-지연-import">✅ 해결 방법 1: 지연 import</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/models.py
+</span><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="n">mypackage.services</span> <span class="kn">import</span> <span class="n">validate</span>  <span class="c1"># 함수 내부로
+</span>        <span class="k">return</span> <span class="nf">validate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="-해결-방법-2-type_checking">✅ 해결 방법 2: TYPE_CHECKING</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mypackage/services.py
+</span><span class="kn">from</span> <span class="n">typing</span> <span class="kn">import</span> <span class="n">TYPE_CHECKING</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="n">mypackage.models</span> <span class="kn">import</span> <span class="n">User</span>  <span class="c1"># 타입 체크용만
+</span>
+<span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="n">user</span><span class="p">:</span> <span class="s">"User"</span><span class="p">):</span>  <span class="c1"># 문자열로 타입 힌트
+</span>    <span class="k">pass</span>
+</code></pre></div></div>
+
+<h4 id="-해결-방법-3-구조-개선">✅ 해결 방법 3: 구조 개선</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 공통 인터페이스를 별도 모듈로
+# mypackage/interfaces.py
+</span><span class="kn">from</span> <span class="n">typing</span> <span class="kn">import</span> <span class="n">Protocol</span>
+
+<span class="k">class</span> <span class="nc">UserProtocol</span><span class="p">(</span><span class="n">Protocol</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="c1"># mypackage/services.py
+</span><span class="kn">from</span> <span class="n">mypackage.interfaces</span> <span class="kn">import</span> <span class="n">UserProtocol</span>
+
+<span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="n">user</span><span class="p">:</span> <span class="n">UserProtocol</span><span class="p">):</span>
+    <span class="k">pass</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="8-베스트-프랙티스">8. 베스트 프랙티스</h2>
+
+<h3 id="81-golden-rules-황금-규칙">8.1 Golden Rules (황금 규칙)</h3>
+
+<h4 id="규칙-1-__init__py는-항상-상대-경로-">규칙 1: <code class="language-plaintext highlighter-rouge">__init__.py</code>는 항상 상대 경로 ⭐</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ✅ ALWAYS
+</span><span class="kn">from</span> <span class="n">.module</span> <span class="kn">import</span> <span class="n">Class</span>
+
+<span class="c1"># ❌ NEVER
+</span><span class="kn">from</span> <span class="n">package.module</span> <span class="kn">import</span> <span class="n">Class</span>
+</code></pre></div></div>
+
+<h4 id="규칙-2-같은-패키지-내는-상대-경로-또는-절대-경로-팀-컨벤션">규칙 2: 같은 패키지 내는 상대 경로 또는 절대 경로 (팀 컨벤션)</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ✅ 옵션 1: 상대 경로
+</span><span class="kn">from</span> <span class="n">.other_module</span> <span class="kn">import</span> <span class="n">Class</span>
+
+<span class="c1"># ✅ 옵션 2: 절대 경로
+</span><span class="kn">from</span> <span class="n">package.subpackage.other_module</span> <span class="kn">import</span> <span class="n">Class</span>
+</code></pre></div></div>
+
+<h4 id="규칙-3-다른-패키지는-절대-경로-">규칙 3: 다른 패키지는 절대 경로 ⭐</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ✅ ALWAYS
+</span><span class="kn">from</span> <span class="n">package.other_package.module</span> <span class="kn">import</span> <span class="n">Class</span>
+
+<span class="c1"># ⚠️ 가능하지만 비권장
+</span><span class="kn">from</span> <span class="n">..other_package.module</span> <span class="kn">import</span> <span class="n">Class</span>
+</code></pre></div></div>
+
+<h4 id="규칙-4-테스트스크립트는-절대-경로-">규칙 4: 테스트/스크립트는 절대 경로 ⭐</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ✅ ALWAYS
+</span><span class="kn">from</span> <span class="n">package.module</span> <span class="kn">import</span> <span class="n">Class</span>
+</code></pre></div></div>
+
+<h4 id="규칙-5-3개-이상의-점이면-절대-경로로">규칙 5: 3개 이상의 점이면 절대 경로로</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ❌ 나쁜 예
+</span><span class="kn">from</span> <span class="n">....module</span> <span class="kn">import</span> <span class="n">Class</span>
+
+<span class="c1"># ✅ 좋은 예
+</span><span class="kn">from</span> <span class="n">package.module</span> <span class="kn">import</span> <span class="n">Class</span>
+</code></pre></div></div>
+
+<h3 id="82-팀-컨벤션-예시">8.2 팀 컨벤션 예시</h3>
+
+<h4 id="컨벤션-a-라이브러리-스타일">컨벤션 A: 라이브러리 스타일</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 규칙:
+# - __init__.py: 상대 경로
+# - 모든 내부 모듈: 상대 경로
+# - 외부 라이브러리만 절대 경로
+</span>
+<span class="c1"># mylib/__init__.py
+</span><span class="kn">from</span> <span class="n">.core</span> <span class="kn">import</span> <span class="n">Engine</span>
+<span class="kn">from</span> <span class="n">.utils</span> <span class="kn">import</span> <span class="n">helpers</span>
+
+<span class="c1"># mylib/core/processor.py
+</span><span class="kn">from</span> <span class="n">.validator</span> <span class="kn">import</span> <span class="n">Validator</span>
+<span class="kn">from</span> <span class="n">..utils.helpers</span> <span class="kn">import</span> <span class="n">format_output</span>
+</code></pre></div></div>
+
+<h4 id="컨벤션-b-애플리케이션-스타일">컨벤션 B: 애플리케이션 스타일</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 규칙:
+# - __init__.py: 상대 경로
+# - 모든 애플리케이션 코드: 절대 경로
+# - 명확성 우선
+</span>
+<span class="c1"># myapp/__init__.py
+</span><span class="kn">from</span> <span class="n">.models</span> <span class="kn">import</span> <span class="n">User</span>
+
+<span class="c1"># myapp/views/user_views.py
+</span><span class="kn">from</span> <span class="n">myapp.models.user</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="n">myapp.services.user_service</span> <span class="kn">import</span> <span class="n">UserService</span>
+</code></pre></div></div>
+
+<h4 id="컨벤션-c-하이브리드-스타일-추천">컨벤션 C: 하이브리드 스타일 (추천)</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 규칙:
+# - __init__.py: 상대 경로
+# - 같은 서브패키지: 상대 경로
+# - 다른 서브패키지: 절대 경로
+</span>
+<span class="c1"># myapp/__init__.py
+</span><span class="kn">from</span> <span class="n">.core</span> <span class="kn">import</span> <span class="n">Config</span>
+
+<span class="c1"># myapp/features/auth/services.py
+</span><span class="kn">from</span> <span class="n">.models</span> <span class="kn">import</span> <span class="n">AuthUser</span>  <span class="c1"># 같은 auth 패키지
+</span><span class="kn">from</span> <span class="n">myapp.core.base</span> <span class="kn">import</span> <span class="n">BaseService</span>  <span class="c1"># 다른 패키지
+</span><span class="kn">from</span> <span class="n">myapp.utils.helpers</span> <span class="kn">import</span> <span class="n">hash_password</span>
+</code></pre></div></div>
+
+<h3 id="83-체크리스트">8.3 체크리스트</h3>
+
+<h4 id="새-패키지-작성-시">새 패키지 작성 시</h4>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">__init__.py</code>에서 상대 경로 사용했는가?</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">__all__</code>을 정의했는가?</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />import 스타일이 일관성 있는가?</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />순환 참조가 없는가?</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />테스트 코드에서 절대 경로를 사용했는가?</li>
+</ul>
+
+<h4 id="코드-리뷰-시">코드 리뷰 시</h4>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">__init__.py</code>에서 절대 경로 사용했는가? (❌)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />3개 이상의 점을 사용했는가? (❌)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />같은 파일에서 혼용했는가? (❌)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />스크립트에서 상대 경로 사용했는가? (❌)</li>
+</ul>
+
+<hr />
+
+<h2 id="9-요약">9. 요약</h2>
+
+<h3 id="91-간단-요약">9.1 간단 요약</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>상황</th>
+      <th>사용 방식</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">__init__.py</code></td>
+      <td>⭐ 상대 경로</td>
+    </tr>
+    <tr>
+      <td>같은 패키지 내</td>
+      <td>상대 경로 또는 절대 경로</td>
+    </tr>
+    <tr>
+      <td>다른 패키지</td>
+      <td>⭐ 절대 경로</td>
+    </tr>
+    <tr>
+      <td>테스트/스크립트</td>
+      <td>⭐ 절대 경로</td>
+    </tr>
+    <tr>
+      <td>라이브러리 개발</td>
+      <td>상대 경로 중심</td>
+    </tr>
+    <tr>
+      <td>애플리케이션 개발</td>
+      <td>절대 경로 중심</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="92-핵심-원칙">9.2 핵심 원칙</h3>
+
+<ol>
+  <li><strong><code class="language-plaintext highlighter-rouge">__init__.py</code>는 항상 상대 경로</strong></li>
+  <li><strong>외부로 나갈 때는 절대 경로</strong></li>
+  <li><strong>일관성 유지가 가장 중요</strong></li>
+  <li><strong>팀 컨벤션을 따르기</strong></li>
+  <li><strong>3개 이상 점이면 절대 경로로</strong></li>
+</ol>
+
+<h3 id="93-최종-권장사항">9.3 최종 권장사항</h3>
+
+<p><strong>라이브러리 개발:</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ✅ 상대 경로 중심 (재사용성)
+</span><span class="kn">from</span> <span class="n">.module</span> <span class="kn">import</span> <span class="n">Class</span>
+</code></pre></div></div>
+
+<p><strong>애플리케이션 개발:</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ✅ 절대 경로 중심 (명확성)
+</span><span class="kn">from</span> <span class="n">myapp.module</span> <span class="kn">import</span> <span class="n">Class</span>
+</code></pre></div></div>
+
+<p><strong>하이브리드 (실용적):</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># __init__.py: 상대 경로
+</span><span class="kn">from</span> <span class="n">.module</span> <span class="kn">import</span> <span class="n">Class</span>
+
+<span class="c1"># 개별 모듈: 절대 경로 (다른 패키지)
+</span><span class="kn">from</span> <span class="n">myapp.other_package</span> <span class="kn">import</span> <span class="n">Class</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="10-참고-자료">10. 참고 자료</h2>
+
+<h3 id="공식-문서">공식 문서</h3>
+<ul>
+  <li><a href="https://www.python.org/dev/peps/pep-0328/">PEP 328 - Imports: Multi-Line and Absolute/Relative</a></li>
+  <li><a href="https://docs.python.org/3/tutorial/modules.html">Python Modules Documentation</a></li>
+  <li><a href="https://realpython.com/absolute-vs-relative-python-imports/">Real Python - Absolute vs Relative Imports</a></li>
+</ul>
+
+<h3 id="관련-peps">관련 PEPs</h3>
+<ul>
+  <li><strong>PEP 8</strong>: Style Guide for Python Code</li>
+  <li><strong>PEP 328</strong>: Imports: Multi-Line and Absolute/Relative</li>
+  <li><strong>PEP 366</strong>: Main Module Explicit Relative Imports</li>
+</ul>
+
+<hr />
+
+<p><strong>이 문서가 도움이 되셨나요? 피드백을 환영합니다!</strong></p>
+
+<p>Copyright (c) 2024 VCANUS. All rights reserved.</p>
+
+</div>
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+
+        <div class="col-12 col-md-4">
+          <div class="footer-info">
+            
+              <h2>VCANUS</h2>
+            
+
+            
+              <p>See beyond the data—with AI-driven intelligence.</p>
+            
+          </div>
+
+          
+            
+
+<div class="social" id="social">
+  
+  <a href="http://www.vcanus.com" target="blank" title="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Discord">
+    <i class="fab fa-discord"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Tiktok">
+    <i class="fab fa-tiktok"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Facebook">
+    <i class="fab fa-facebook-square"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Linkedin">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+</div>
+
+
+          
+          
+        </div>
+
+        <div class="col-12 col-md-8 mt-gutter mt-md-0">
+          <div class="row justify-content-end">
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                  
+                    <h3>Product</h3>
+                  
+                  
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/">Home</a>
+      </li>
+    
+      <li class="">
+        <a href="/services/">Products</a>
+      </li>
+    
+      <li class="">
+        <a href="/projects/">Solutions</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                
+                  <h3>Company</h3>
+                
+                
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/blog/">Blog</a>
+      </li>
+    
+      <li class="">
+        <a href="/career/">Career</a>
+      </li>
+    
+      <li class="">
+        <a href="/visitus/">Visit Us</a>
+      </li>
+    
+      <li class="">
+        <a href="/about/">About</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                
+                  <h3>Other</h3>
+                
+                
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/contact/">Contact</a>
+      </li>
+    
+      <li class="">
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </li>
+    
+      <li class="">
+        <a href="/terms-and-conditions/">Terms and Conditions</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+        
+          </div>
+        </div>
+      
+    </div>
+    
+    <div class="row justify-content-end mt-2">
+      <div class="col-12 col-md-4">
+        <h3>Contact Us</h3>
+        
+
+<div class="contact">
+  
+    <div class="contact-email">
+      <strong>Email:</strong>
+      <a href="mailto:info@vcanus.com">info@vcanus.com</a>
+    </div>
+  
+  
+    <div class="contact-phone">
+      <strong>Phone:</strong>
+      +82 31-719-8816</div>
+  
+  
+    <div class="contact-fax">
+      <strong>Fax:</strong>
+      +82 31-719-8817</div>
+  
+  
+    <div class="contact-address">
+      <strong>Address:</strong>
+      RoadlandEZ #603, Sungnamdaero69, Bundang-gu, Sungnam, Gyeonggi-do 13636, Republic of Korea <a href="https://maps.app.goo.gl/oB1rAc3LuXWs6Gwu7" target="_blank" rel="noreferrer">(View Map)</a> 
+    </div>
+  
+</div>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+       
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Privacy Policy">
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </li>
+    
+      <li class="menu-item-Terms and Conditions">
+        <a href="/terms-and-conditions/">Terms and Conditions</a>
+      </li>
+    
+  </ul>
+</div>
+        
+        
+        
+          <div class="copyright">© 2025 VCANUS</div>
+        
+        
+        
+          <a class="feed" href="http://localhost:4000/feed.xml">
+            <i class="fas fa-feed"></i>
+          </a>
+        
+        
+      </div>
+      
+        <div class="col-auto">
+          <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z"></path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;" version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z"></path>
+      </g>
+      <g>
+        <path d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z"></path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+        </div>
+         
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+
+
+
+</body>
+</html>
