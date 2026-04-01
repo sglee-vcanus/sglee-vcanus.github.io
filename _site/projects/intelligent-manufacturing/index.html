@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Intelligent Manufacturing - Data Innovator</title>
+
+
+  <meta name="description" content="Smart Vision. Precise Control. Seamless Automation."/>
+
+
+
+    <meta property="og:type" content="website"/>
+<meta property="og:url" content="http://localhost:4000/projects/intelligent-manufacturing/"/>
+
+
+  <meta property="og:title" content="Intelligent Manufacturing"/>
+
+
+
+  <meta property="og:description" content="Smart Vision. Precise Control. Seamless Automation."/>
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/gen/projeccts/vlap3d-large.webp"/>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@vcanus" />
+<meta name="twitter:creator" content="@vcanus" />
+    <link rel="alternate" type="application/atom+xml" title="Data Innovator" href="/feed.xml">
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+
+    
+      <script>
+          localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-bs-theme', 'dark');
+      </script>
+    
+
+    
+
+    
+
+    <link href="/assets/css/fonts.css" rel="stylesheet">
+
+
+
+
+    
+
+  </head>
+<body class="page page-projects has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+  
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-home">
+            <a href="/">Home</a>
+          </li>
+        
+          <li class="menu-item-products">
+            <a href="/services/">Products</a>
+          </li>
+        
+          <li class="menu-item-solutions">
+            <a href="/projects/">Solutions</a>
+          </li>
+        
+          <li class="menu-item-blog">
+            <a href="/blog/">Blog</a>
+          </li>
+        
+          <li class="menu-item-career">
+            <a href="/career/">Career</a>
+          </li>
+        
+          <li class="menu-item-visit us">
+            <a href="/visitus/">Visit Us</a>
+          </li>
+        
+          <li class="menu-item-about">
+            <a href="/about/">About</a>
+          </li>
+        
+      </ul>
+    
+  </div>
+
+  <div class="menu-main-mobile-bottom">
+    
+      
+
+<div class="social" id="social">
+  
+  <a href="http://www.vcanus.com" target="blank" title="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Discord">
+    <i class="fab fa-discord"></i>
+  </a>
+  
+</div>
+
+
+    
+    
+      <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z"></path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;" version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z"></path>
+      </g>
+      <g>
+        <path d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z"></path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+  </div>
+
+</div>
+
+
+
+
+<div id="header" class='header header-fixed'>
+  <div class="container">
+    <div class="logos">
+  <div class="logo logo-desktop">
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="132px" alt="Data Innovator Logo" src="/assets/images/logo/logo.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="132px" alt="Data Innovator Logo" src="/assets/images/logo/logo-invert.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="34px" alt="Data Innovator Logo" src="/assets/images/logo/logo-mobile.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="34px" alt="Data Innovator Logo" src="/assets/images/logo/logo-invert-mobile.png"/>
+        </a>
+      </div>
+    
+  
+    
+
+  </div>
+
+</div>
+
+
+    <div class="menu-main">
+  <ul>
+    
+      
+        
+        <li class=" ">
+          <a href="/" >Home</a>
+        </li>
+      
+    
+      
+
+        
+        
+
+        <li class="menu-item-dropdown menu-item-Products ">
+          <a href="/services/">Products <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/services/tsloom/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">TSLoom</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/services/deepvi/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">DeepVi</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/services/vurtx/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">VURT-X</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/services/vrcam/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">VRCAM</div>
+                  
+                </div>
+              </a>
+            
+          </div>
+
+        </li>
+      
+    
+      
+
+        
+        
+
+        <li class="menu-item-dropdown menu-item-Solutions  active ">
+          <a href="/projects/">Solutions <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/projects/edge-ai/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Edge AI</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/projects/3d-measurement-zeiss/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">3D Measurement with Zeiss</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/projects/intelligent-manufacturing/" class="dropdown-item  active ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Intelligent Manufacturing</div>
+                  
+                </div>
+              </a>
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/blog/" >Blog</a>
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/career/" >Career</a>
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/visitus/" >Visit Us</a>
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/about/" >About</a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+    
+    <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+<div id="wrapper" class="wrapper">     
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="hero 
+  
+  
+ 
+  
+" style="
+  
+ 
+  height: 600px;
+">
+  <div class="hero-background-image" style="
+  background-image: url('http://localhost:4000/assets/images/gen/projects/vlap3d-large.webp');
+  
+"></div>
+  
+  <div class="container ">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-8">
+        <div class="hero-text" style="color: #ffffff;">
+          <h1>Intelligent Manufacturing</h1>
+          <p>Smart Vision. Precise Control. Seamless Automation.</p>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="section strip-border-top">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-8">
+        
+        <div class="content"><h2 id="vcanus-intelligent-manufacturing-solutions">VCANUS Intelligent Manufacturing Solutions</h2>
+
+<p><strong>Smart Vision. Precise Control. Seamless Automation.</strong></p>
+
+<p>VCANUS delivers end-to-end Intelligent Manufacturing Solutions by integrating TSLoom, VURT-X, VRCAM, Edge AI, and 3D Measurement technologies. Our expertise spans machine vision, robotic automation, and AI-driven process optimization, enabling manufacturers to achieve real-time monitoring, predictive control, and autonomous production.
+With proven experience in roll-to-roll coating, display defect classification, machine alignment, metal 3D printing, and laser-based material processing, we empower industries to enhance quality, reduce waste, and optimize efficiency through intelligent automation.</p>
+
+<h2 id="why-vcanus-intelligent-manufacturing">Why VCANUS Intelligent Manufacturing?</h2>
+
+<p><strong>VCANUS enables manufacturers to:</strong></p>
+<ul>
+  <li>Automate complex processes using machine vision, Edge AI, and robotic systems.</li>
+  <li>Monitor and control quality in real time with adaptive feedback.</li>
+  <li>Optimize production workflows through AI-driven analytics and process simulation.</li>
+  <li>Integrate seamlessly with MES, ERP, and PLC systems for closed-loop automation.</li>
+  <li>Deploy scalable solutions tailored to specific industry needs.</li>
+</ul>
+
+<p>Our solutions combine cutting-edge technology with deep domain expertise, delivering actionable insights and tangible ROI for smart factories.</p>
+
+<h2 id="core-technologies--solutions">Core Technologies &amp; Solutions</h2>
+
+<h3 id="1-machine-vision-based-intelligent-manufacturing">1. Machine Vision-Based Intelligent Manufacturing</h3>
+<p>Leverage TSLoom and Edge AI to transform visual data into actionable intelligence:</p>
+
+<p><strong>Roll-to-Roll Coating System</strong></p>
+<ul>
+  <li>Meniscus Shape Detection: Use machine vision to detect meniscus shape characteristics.</li>
+  <li>Coating Thickness Prediction: Apply AI models to predict coating thickness in real time.</li>
+  <li>Process Optimization: Dynamically adjust coating parameters to ensure uniformity.</li>
+</ul>
+
+<p><strong>Display Defect Classification</strong></p>
+<ul>
+  <li>Defect Detection: Identify micro-defects in display panels using high-resolution cameras.</li>
+  <li>Classification &amp; Analysis: Classify defects by type, size, and location with machine learning.</li>
+  <li>Root Cause Analysis: Correlate defects with process parameters to pinpoint issues.</li>
+</ul>
+
+<p><strong>Machine Alignment</strong></p>
+<ul>
+  <li>Edge &amp; Polygon Detection: Use pattern matching and geometric alignment to set machine origins.</li>
+  <li>Automated Calibration: Achieve micrometer-level precision in machine setup.</li>
+</ul>
+
+<p><strong>Metal 3D Printing System</strong></p>
+<ul>
+  <li>Melting Pool Monitoring: Capture IR camera images of the melting pool.</li>
+  <li>Adaptive Laser Control: Adjust laser power in real time to maintain consistent melting pool size.</li>
+</ul>
+
+<h3 id="2-distance-displacement-sensor-based-manufacturing">2. Distance Displacement Sensor-Based Manufacturing</h3>
+<p>Utilize 1D/2D displacement sensors for inline inspection and 3D profiling:</p>
+
+<p><strong>Inline Part Inspection</strong></p>
+<ul>
+  <li>1D/2D Sensor Integration: Deploy sensors for real-time dimensional checks.</li>
+  <li>Defect Detection: Identify surface defects, warpage, and dimensional deviations.</li>
+</ul>
+
+<p><strong>3D Shape Measurement</strong></p>
+<ul>
+  <li>2D Sensor + Actuator Systems: Combine sensors with linear actuators to create 3D profiles of complex parts.</li>
+  <li>Automated Reporting: Generate pass/fail reports based on tolerance limits.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="/assets/images/gen/projects/2dp1.webp" width="400" /></th>
+      <th><img src="/assets/images/gen/projects/2dp2.webp" width="500" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Real-Time Dimensional Inspection</td>
+      <td>3D Profiling with Linear Actuators</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="3-advanced-robotic-applications">3. Advanced Robotic Applications</h3>
+<p>Innovate with VRCAM and VURT-X for precision material processing:</p>
+
+<p><strong>Laser-Based Material Removal System</strong></p>
+<ul>
+  <li>3D Scanning &amp; Path Planning: Use VRCAM to map part surfaces and generate optimal tool paths.</li>
+  <li>Adaptive Material Removal: Control robot-mounted lasers with VURT-X real-time control to remove material with micron-level precision.</li>
+</ul>
+
+<p><strong>Laser Sintering-Based Patterning System</strong></p>
+<ul>
+  <li>Laser Sintering Process: Create electronic circuit paths using laser sintering.</li>
+  <li>Defect Inspection: Detect circuit defects with machine vision and AI-based analysis.</li>
+</ul>
+
+<h2 id="key-benefits-of-vcanus-solutions">Key Benefits of VCANUS Solutions</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solution Area</th>
+      <th>Key Benefits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Machine Vision</td>
+      <td>Real-time monitoring, defect classification, and adaptive process control.</td>
+    </tr>
+    <tr>
+      <td>Distance Displacement Sensors</td>
+      <td>High-speed inline inspection, 3D profiling, and automated quality control.</td>
+    </tr>
+    <tr>
+      <td>Robotic Automation</td>
+      <td>Precision material processing, VRCAM path planning, and VURT-X real-time control.</td>
+    </tr>
+    <tr>
+      <td>Edge AI &amp; 3D Measurement</td>
+      <td>Predictive analytics, statistical process control, and closed-loop quality management.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="success-stories">Success Stories</h2>
+<h3 id="roll-to-roll-coating-system">Roll-to-Roll Coating System</h3>
+<ul>
+  <li>Challenge: Inconsistent coating thickness due to process variations, reflected in meniscus shape changes.</li>
+  <li>Solution: Deployed machine vision + AI models to predict and adjust coating parameters based on real-time meniscus analysis.</li>
+  <li>Result: Achieved 98% accuracy in coating thickness prediction</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="/assets/images/gen/projects/r2r1.webp" width="300" /></th>
+      <th><img src="/assets/images/gen/projects/r2r2.webp" width="300" /></th>
+      <th><img src="/assets/images/gen/projects/r2r3.webp" width="300" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Raw Image</td>
+      <td>Meniscus Shape Detection</td>
+      <td>Feature Extraction</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="display-defect-classification">Display Defect Classification</h3>
+<ul>
+  <li>Challenge: Increase accuracy of defect classification.</li>
+  <li>Solution: Enhanced defect detection performance by adding segmentation functionality and optimizing learning networks.</li>
+  <li>Result: Achieved 5% improvement in defect detection and classification accuracy.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="/assets/images/gen/projects/lcd1.webp" width="300" /></th>
+      <th><img src="/assets/images/gen/projects/lcd2.webp" width="300" /></th>
+      <th><img src="/assets/images/gen/projects/lcd3.webp" width="300" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="metal-3d-printing-system">Metal 3D Printing System</h3>
+<ul>
+  <li>Challenge: Unstable melting pool size led to part defects.</li>
+  <li>Solution: Used IR camera monitoring + adaptive laser control.</li>
+  <li>Result: Achieved 20% improvement in part quality with real-time adjustments.</li>
+</ul>
+
+<iframe height="468" width="100%" src="https://www.youtube-nocookie.com/embed/kHJCm3TZ9vo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+
+<h3 id="laser-based-material-removal">Laser-Based Material Removal</h3>
+<ul>
+  <li>Challenge: Manual material removal was inconsistent and time-consuming.</li>
+  <li>Solution: Deployed robot-mounted laser scanners + VRCAM path planning + VURT-X real-time control.</li>
+  <li>Result: Reduced cycle time by 20% and improved surface finish quality by 15%.</li>
+</ul>
+
+<h2 id="why-choose-vcanus">Why Choose VCANUS?</h2>
+
+<p>✅ Proven Expertise: Successful deployments in automotive, aerospace, electronics, and heavy industries.
+<br />
+✅ End-to-End Solutions: From sensor integration to AI analytics and robotic automation.
+<br />
+✅ Seamless Integration: Compatible with PLCs, MES, ERP, and third-party software.
+<br />
+✅ Scalable &amp; Customizable: Solutions tailored to your unique production needs.
+<br />
+✅ Future-Ready: Continuous updates with latest AI, vision, and robotic technologies.</p>
+
+<h2 id="industries-we-serve">Industries We Serve</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Industry</th>
+      <th>Application</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Automotive</td>
+      <td>Body panel inspection, coating thickness control, and robotic material removal.</td>
+    </tr>
+    <tr>
+      <td>Aerospace</td>
+      <td>Turbine blade inspection, composite material processing, and precision alignment.</td>
+    </tr>
+    <tr>
+      <td>Electronics</td>
+      <td>Display defect classification, PCB inspection, and laser sintering for circuits.</td>
+    </tr>
+    <tr>
+      <td>Heavy Machinery</td>
+      <td>Large-part 3D measurement, wear analysis, and automated welding inspection.</td>
+    </tr>
+    <tr>
+      <td>Metal 3D Printing</td>
+      <td>Melting pool monitoring, adaptive laser control, and defect detection.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="get-started-with-vcanus-intelligent-manufacturing">Get Started with VCANUS Intelligent Manufacturing</h2>
+<p>Transform your production with smart, data-driven solutions:</p>
+<ul>
+  <li>Discuss a pilot project tailored to your needs.</li>
+  <li>Schedule a demo of our machine vision, robotic, or Edge AI solutions.</li>
+  <li>Explore custom solutions for your unique manufacturing challenges.</li>
+</ul>
+</div>
+      </div>
+
+      
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+
+        <div class="col-12 col-md-4">
+          <div class="footer-info">
+            
+              <h2>VCANUS</h2>
+            
+
+            
+              <p>See beyond the data—with AI-driven intelligence.</p>
+            
+          </div>
+
+          
+            
+
+<div class="social" id="social">
+  
+  <a href="http://www.vcanus.com" target="blank" title="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Discord">
+    <i class="fab fa-discord"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Tiktok">
+    <i class="fab fa-tiktok"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Facebook">
+    <i class="fab fa-facebook-square"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+  <a href="http://www.vcanus.com" target="blank" title="Linkedin">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+</div>
+
+
+          
+          
+        </div>
+
+        <div class="col-12 col-md-8 mt-gutter mt-md-0">
+          <div class="row justify-content-end">
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                  
+                    <h3>Product</h3>
+                  
+                  
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/">Home</a>
+      </li>
+    
+      <li class="">
+        <a href="/services/">Products</a>
+      </li>
+    
+      <li class="">
+        <a href="/projects/">Solutions</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                
+                  <h3>Company</h3>
+                
+                
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/blog/">Blog</a>
+      </li>
+    
+      <li class="">
+        <a href="/career/">Career</a>
+      </li>
+    
+      <li class="">
+        <a href="/visitus/">Visit Us</a>
+      </li>
+    
+      <li class="">
+        <a href="/about/">About</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                
+                  <h3>Other</h3>
+                
+                
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/contact/">Contact</a>
+      </li>
+    
+      <li class="">
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </li>
+    
+      <li class="">
+        <a href="/terms-and-conditions/">Terms and Conditions</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+        
+          </div>
+        </div>
+      
+    </div>
+    
+    <div class="row justify-content-end mt-2">
+      <div class="col-12 col-md-4">
+        <h3>Contact Us</h3>
+        
+
+<div class="contact">
+  
+    <div class="contact-email">
+      <strong>Email:</strong>
+      <a href="mailto:info@vcanus.com">info@vcanus.com</a>
+    </div>
+  
+  
+    <div class="contact-phone">
+      <strong>Phone:</strong>
+      +82 31-719-8816</div>
+  
+  
+    <div class="contact-fax">
+      <strong>Fax:</strong>
+      +82 31-719-8817</div>
+  
+  
+    <div class="contact-address">
+      <strong>Address:</strong>
+      RoadlandEZ #603, Sungnamdaero69, Bundang-gu, Sungnam, Gyeonggi-do 13636, Republic of Korea <a href="https://maps.app.goo.gl/oB1rAc3LuXWs6Gwu7" target="_blank" rel="noreferrer">(View Map)</a> 
+    </div>
+  
+</div>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+       
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Privacy Policy">
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </li>
+    
+      <li class="menu-item-Terms and Conditions">
+        <a href="/terms-and-conditions/">Terms and Conditions</a>
+      </li>
+    
+  </ul>
+</div>
+        
+        
+        
+          <div class="copyright">© 2025 VCANUS</div>
+        
+        
+        
+          <a class="feed" href="http://localhost:4000/feed.xml">
+            <i class="fas fa-feed"></i>
+          </a>
+        
+        
+      </div>
+      
+        <div class="col-auto">
+          <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z"></path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;" version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z"></path>
+      </g>
+      <g>
+        <path d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z"></path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+        </div>
+         
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+
+
+
+</body>
+</html>

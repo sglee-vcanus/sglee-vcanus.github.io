@@ -1,0 +1,78 @@
+main:
+  - name: Home
+    url: /
+    weight: 1
+  - name: Products
+    url: /services/
+    weight: 1
+    child:
+      - name: "TSLoom"
+        url: /services/tsloom/
+      - name: "DeepVi"
+        url: /services/deepvi/
+      - name: "VURT-X"
+        url: /services/vurtx/
+      - name: "VRCAM"
+        url: /services/vrcam/
+  - name: Solutions
+    url: /projects/
+    weight: 2
+    child:
+      - name: "Edge AI"
+        url: /projects/edge-ai/
+      - name: "3D Measurement with Zeiss"
+        url: /projects/3d-measurement-zeiss/
+      - name: "Intelligent Manufacturing"
+        url: /projects/intelligent-manufacturing/
+  - name: Blog
+    url: /blog/
+    weight: 4
+  - name: Career
+    url: /career/
+    weight: 5
+  - name: Visit Us
+    url: /visitus/
+    weight: 5
+  - name: About
+    url: /about/
+    weight: 6
+footer_primary:
+  - name: Home
+    url: /
+    weight: 1
+  - name: Products
+    url: /services/
+    weight: 2
+  - name: Solutions
+    url: /projects/
+    weight: 3
+footer_secondary:
+  - name: Blog
+    url: /blog/
+    weight: 1
+  - name: Career
+    url: /career/
+    weight: 2
+  - name: Visit Us
+    url: /visitus/
+    weight: 3
+  - name: About
+    url: /about/
+    weight: 4
+footer_tertiary:
+  - name: Contact
+    url: /contact/
+    weight: 1
+  - name: Privacy Policy
+    url: /privacy-policy/
+    weight: 2
+  - name: Terms and Conditions
+    url: /terms-and-conditions/
+    weight: 3
+bottom:
+  - name: Privacy Policy
+    url: /privacy-policy/
+    weight: 3
+  - name: Terms and Conditions
+    url: /terms-and-conditions/
+    weight: 4

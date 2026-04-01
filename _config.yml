@@ -1,295 +1,212 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
-
-# Theme Settings
-#
-# Review documentation to determine if you should use `theme` or `remote_theme`
-# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
-
-# theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
-# Site Settings
-locale                   : "en-US"
-title                    : "Home"
-title_separator          : "-"
-name                     : "SG Lee"
-description              : "Technical Blog"
-url                      : "https://sglee-net.github.io"
-baseurl                  : #"/"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : #"/assets/images/500x300.jpg"
-logo                     : #"/assets/images/logo.jpg"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
-comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
-  disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-  utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
-staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
-  commitMessage          : # "New comment by {fields.name}"
-  filename               : # comment-{@timestamp}
-  format                 : # "yml"
-  moderation             : # true
-  path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : # ['name', 'email', 'message']
-  transforms:
-    email                : # "md5"
-  generatedFields:
-    date:
-      type               : # "date"
-      options:
-        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-  endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
-reCaptcha:
-  siteKey                :
-  secret                 :
-atom_feed:
-  path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
-algolia:
-  application_id         : # YOUR_APPLICATION_ID
-  index_name             : # YOUR_INDEX_NAME
-  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
-  powered_by             : # true (default), false
-google:
-  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
-  instant_search         : # false (default), true
-# SEO Related
-google_site_verification :
-bing_site_verification   :
-yandex_site_verification :
-naver_site_verification  :
-
-# Social Sharing
-twitter:
-  username               :
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 : # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
-
-# Analytics
-analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
-
-
-# Site Author
-author:
-  name             : #"SG Lee"
-  avatar           : #"/assets/images/sg.jpg"
-  bio              : #"Data Scientist"
-  location         : #"Sungnam, South Korea"
-  email            : 
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      #url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/sglee-net"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
-
-# Site Footer
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/sglee-net"
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      #url: "https://github.com"
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
-
-
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - Rakefile
-  - README
-  - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-
-# Conversion
+# -------------------
+# Jekyll Config
+# --------------------
+baseurl: ""
+url: "https://sglee-vcanus.github.io"
+permalink: pretty
 markdown: kramdown
 highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
 
 
-# Markdown Processing
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
-
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-
-# Plugins (previously gems:)
+# Plugins
 plugins:
+  - jekyll-environment-variables
   - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
 
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
+paginate: 6
+paginate_path: "/blog/page/:num"
 
+# Collections
+collections_dir: collections
+collections:
+  services:
+    output: true
+    permalink: /:collection/:path/
+  projects:
+    output: true
+    permalink: /:collection/:path/
+  team:
+    output: true
+    permalink: /:collection/:path/
+  posts:
+    output: true
+    permalink: /blog/:path/
 
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
-
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
-
-# Defaults
+# Pages
 defaults:
-  # _posts
+  - scope:
+      path: ""
+      type: services
+    values:
+      layout: service
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: team
+    values:
+      layout: team
   - scope:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: #true
-      read_time: true
-      comments: # true
-      share: #true
-      related: #true
+      layout: post
+      weight: 999
+  - scope:
+      path: "images"
+    values:
+      image: true
+  - scope:
+      path: "categories"
+    values:
+      permalink: /category/:basename/
+  - scope:
+      path: "pages"
+    values:
+      permalink: /:basename/
+
+# SCSS
+sass:
+  style: compact
+
+# Excludes
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - netlify.toml
+
+
+# -------------------
+# Theme Config
+# --------------------
+title: "Data Innovator"
+category_dir: category
+
+colors:
+  #light-mode colors
+  primary_bg: "#2b3af7"
+  primary_bg_2: "#424ff8"
+  primary_bg_3: "#702bf7"
+  primary_text: "#fdfcf9"
+  base_bg: "#ffffff"
+  base_bg_2: "#f8f9ff"
+  base_bg_3: "#eef2f9"
+  text: "#0d042b"
+  text_2: "#3b364c"
+  logo_text: "#2b3af7"
+  header_text: "#0d042b"
+
+  # dark-mode colors
+  primary_bg_dark: "#2b3af7"
+  primary_bg_2_dark: "#424ff8"
+  primary_bg_3_dark: "#702bf7"
+  primary_text_dark: "#fdfcf9"
+  base_bg_dark: "#0f0f10"
+  base_bg_2_dark: "#1a191c"
+  base_bg_3_dark: "#222124"
+  text_dark: "#f5f5ec"
+  text_2_dark: "#b6c3d6"
+  logo_text_dark: "#2b3af7"
+  header_text_dark: "#f5f5ec"
+
+fonts:
+  use_google_fonts: false
+  google_fonts_url: "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Source+Code+Pro&family=Source+Sans+3:wght@300;400;700&display=swap"
+  use_self_hosted_fonts: true # font files must be placed in /assets/fonts folder and the @font-face definitions must be added to /assets/css/fonts.css
+  heading: "Lato"
+  base: "'Source Sans 3'"
+  monospace: "'Source Code Pro'"
+  logo: "Lato"
+
+logo:
+  logo_text: "VCANUS"
+  logo_image: assets/images/logo/logo.png
+  logo_image_mobile: assets/images/logo/logo-mobile.png
+  logo_image_invert: assets/images/logo/logo-invert.png
+  logo_image_invert_mobile: assets/images/logo/logo-invert-mobile.png
+  logo_image_desktop_height: "30px"
+  logo_image_desktop_width: "132px"
+  logo_image_mobile_height: "30px"
+  logo_image_mobile_width: "34px"
+  show_logo_image_on_mobile: true
+  show_logo_image_on_desktop: true
+  show_logo_text_on_mobile: false
+  show_logo_text_on_desktop: false
+
+header: 
+  fixed: true
+
+open_graph:
+  meta_opengraph_type: "website"
+  meta_twitter_card: "summary"
+  meta_twitter_site: "@vcanus"
+  meta_twitter_creator: "@vcanus"
+
+darkmode:
+  enable_dark_mode: true
+  show_dark_mode_toggle_in_header: false
+  show_dark_mode_toggle_in_bottom: true
+  show_dark_mode_toggle_in_mobile_menu: true
+
+cookie_banner:
+  enabled: false
+  show_manage_cookies_at_bottom: false
+
+analytics:
+  google_analytics_id: "G-SL5FWY00S6" # G-XXXXXXXXXX
+  gtm_id: "" # GTM-XXXXXXXX
+  plausible_data_domain: "" # example: mywebsite.com
+  umami_data_website_id: "" # example: "ddd14336-5fb0-4cdd-8f32-e1bfa906cc2b"
+  umami_src: "" # "https://analytics.eu.umami.is/script.js"
+
+comments:
+  commento:
+    enabled: true # you must have a commento account and be on the correct domain. does not work locally.
+  disqus:
+    shortname: "" # Your disqus shortcode for example "zerostatic". leave this blank ie "" to disable.
+
+newsletter:
+  mailchimp:
+    form_action_url: https://zerostatic.us21.list-manage.com/subscribe/post?u=798e19886b83aaab346734382&amp;id=f1c526a772&amp;f_id=0027e3e6f0
+    form_title: "Let's keep in touch"
+
+contact_form: 
+  use_netlify_form: true
+  use_formspree_form: false
+  formspree_endpoint: https://formspree.io/f/moqyklqv
+  netlify_form_name: "contact"
+
+menu: 
+  show_dropdown_items_in_mobile_menu: false
+  show_social_media_in_mobile_menu: true
+
+footer:
+  enable_footer: true # show/hide the entire footer
+  footer_title: "VCANUS"
+  footer_description: "See beyond the data—with AI-driven intelligence."
+  enable_social_media_icons: true
+  enable_contact_details: true
+  enable_menu_footer_primary: true
+  enable_menu_footer_secondary: true
+  enable_menu_footer_tertiary: true
+  footer_primary_menu_title: "Product"
+  footer_secondary_menu_title: "Company"
+  footer_tertiary_menu_title: "Other"
+
+bottom:
+  enable_bottom: true # show/hide the entire bottom (below the footer)
+  enable_bottom_menu: true # if enabled, the bottom menu can be edited in `_data/menu.yml`
+  copyright_text: "© 2025 VCANUS"
+  show_rss_icon: true
+
+sidebar:
+  enable_sidebar_services: true
+  enable_breadcrumbs_services: true
+  enable_sidebar_projects: false
+  enable_breadcrumbs_projects: true
+
