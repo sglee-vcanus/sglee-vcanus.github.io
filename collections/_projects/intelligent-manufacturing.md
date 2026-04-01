@@ -1,6 +1,6 @@
 ---
 title: "Intelligent Manufacturing"
-description: "Smart Vision. Precise Control. Seamless Automation."
+description: "스마트 비전. 정밀 제어. 원활한 자동화."
 date: 2018-12-20
 weight: 3
 header_transparent: false
@@ -11,7 +11,7 @@ client: ""
 hero:
   enabled: true
   heading: "Intelligent Manufacturing"
-  sub_heading: "Smart Vision. Precise Control. Seamless Automation."
+  sub_heading: "스마트 비전. 정밀 제어. 원활한 자동화."
   text_color: "#ffffff"
   background_color: ""
   background_gradient: false
@@ -32,137 +32,137 @@ hero:
         style: "primary"
 ---
 
-## VCANUS Intelligent Manufacturing Solutions
+## VCANUS 지능형 제조 솔루션
 
-**Smart Vision. Precise Control. Seamless Automation.**
+**스마트 비전. 정밀 제어. 원활한 자동화.**
 
-VCANUS delivers end-to-end Intelligent Manufacturing Solutions by integrating TSLoom, VURT-X, VRCAM, Edge AI, and 3D Measurement technologies. Our expertise spans machine vision, robotic automation, and AI-driven process optimization, enabling manufacturers to achieve real-time monitoring, predictive control, and autonomous production.
-With proven experience in roll-to-roll coating, display defect classification, machine alignment, metal 3D printing, and laser-based material processing, we empower industries to enhance quality, reduce waste, and optimize efficiency through intelligent automation.
+VCANUS는 TSLoom, VURT-X, VRCAM, Edge AI, 3D 측정 기술을 통합하여 엔드투엔드 지능형 제조 솔루션을 제공합니다. 머신 비전, 로봇 자동화, AI 기반 공정 최적화에 대한 당사의 전문성은 제조업체가 실시간 모니터링, 예측 제어, 자율 생산을 실현할 수 있도록 합니다.
+롤투롤 코팅, 디스플레이 결함 분류, 기계 정렬, 금속 3D 프린팅, 레이저 기반 재료 가공에서의 검증된 경험을 바탕으로 지능형 자동화를 통해 품질 향상, 낭비 감소, 효율성 최적화를 실현합니다.
 
-## Why VCANUS Intelligent Manufacturing?
+## VCANUS 지능형 제조를 선택하는 이유
 
-**VCANUS enables manufacturers to:**
-- Automate complex processes using machine vision, Edge AI, and robotic systems.
-- Monitor and control quality in real time with adaptive feedback.
-- Optimize production workflows through AI-driven analytics and process simulation.
-- Integrate seamlessly with MES, ERP, and PLC systems for closed-loop automation.
-- Deploy scalable solutions tailored to specific industry needs.
+**VCANUS는 제조업체가 다음을 실현할 수 있도록 합니다:**
+- 머신 비전, Edge AI, 로봇 시스템을 사용하여 복잡한 공정을 자동화합니다.
+- 적응형 피드백으로 실시간 품질을 모니터링하고 제어합니다.
+- AI 기반 분석 및 공정 시뮬레이션을 통해 생산 워크플로우를 최적화합니다.
+- 폐루프 자동화를 위해 MES, ERP, PLC 시스템과 원활하게 통합합니다.
+- 특정 산업 요구에 맞춘 확장 가능한 솔루션을 배포합니다.
 
-Our solutions combine cutting-edge technology with deep domain expertise, delivering actionable insights and tangible ROI for smart factories.
+당사의 솔루션은 최첨단 기술과 깊은 도메인 전문성을 결합하여 스마트 팩토리에 실행 가능한 인사이트와 실질적인 ROI를 제공합니다.
 
-## Core Technologies & Solutions
+## 핵심 기술 & 솔루션
 
-### 1. Machine Vision-Based Intelligent Manufacturing
-Leverage TSLoom and Edge AI to transform visual data into actionable intelligence:
+### 1. 머신 비전 기반 지능형 제조
+TSLoom과 Edge AI를 활용하여 시각 데이터를 실행 가능한 인텔리전스로 전환합니다:
 
-**Roll-to-Roll Coating System**
-- Meniscus Shape Detection: Use machine vision to detect meniscus shape characteristics.
-- Coating Thickness Prediction: Apply AI models to predict coating thickness in real time.
-- Process Optimization: Dynamically adjust coating parameters to ensure uniformity.
+**롤투롤 코팅 시스템**
+- 메니스커스 형상 감지: 머신 비전으로 메니스커스 형상 특성을 감지합니다.
+- 코팅 두께 예측: AI 모델을 적용하여 실시간으로 코팅 두께를 예측합니다.
+- 공정 최적화: 균일성을 보장하기 위해 코팅 파라미터를 동적으로 조정합니다.
 
-**Display Defect Classification**
-- Defect Detection: Identify micro-defects in display panels using high-resolution cameras.
-- Classification & Analysis: Classify defects by type, size, and location with machine learning.
-- Root Cause Analysis: Correlate defects with process parameters to pinpoint issues.
+**디스플레이 결함 분류**
+- 결함 감지: 고해상도 카메라로 디스플레이 패널의 미세 결함을 식별합니다.
+- 분류 & 분석: 머신러닝으로 결함을 유형, 크기, 위치별로 분류합니다.
+- 근본 원인 분석: 결함과 공정 파라미터를 상관하여 문제를 정확히 파악합니다.
 
-**Machine Alignment**
-- Edge & Polygon Detection: Use pattern matching and geometric alignment to set machine origins.
-- Automated Calibration: Achieve micrometer-level precision in machine setup.
+**기계 정렬**
+- 에지 & 다각형 감지: 패턴 매칭과 기하학적 정렬을 사용하여 기계 원점을 설정합니다.
+- 자동화된 캘리브레이션: 마이크로미터 수준의 정밀도로 기계 설정을 달성합니다.
 
-**Metal 3D Printing System**
-- Melting Pool Monitoring: Capture IR camera images of the melting pool.
-- Adaptive Laser Control: Adjust laser power in real time to maintain consistent melting pool size.
+**금속 3D 프린팅 시스템**
+- 용융 풀 모니터링: IR 카메라로 용융 풀 이미지를 캡처합니다.
+- 적응형 레이저 제어: 일관된 용융 풀 크기를 유지하기 위해 실시간으로 레이저 출력을 조정합니다.
 
-### 2. Distance Displacement Sensor-Based Manufacturing
-Utilize 1D/2D displacement sensors for inline inspection and 3D profiling:
+### 2. 거리 변위 센서 기반 제조
+인라인 검사 및 3D 프로파일링을 위해 1D/2D 변위 센서를 활용합니다:
 
-**Inline Part Inspection**
-- 1D/2D Sensor Integration: Deploy sensors for real-time dimensional checks.
-- Defect Detection: Identify surface defects, warpage, and dimensional deviations.
+**인라인 부품 검사**
+- 1D/2D 센서 통합: 실시간 치수 검사를 위한 센서를 배포합니다.
+- 결함 감지: 표면 결함, 휨, 치수 편차를 식별합니다.
 
-**3D Shape Measurement**
-- 2D Sensor + Actuator Systems: Combine sensors with linear actuators to create 3D profiles of complex parts.
-- Automated Reporting: Generate pass/fail reports based on tolerance limits.
+**3D 형상 측정**
+- 2D 센서 + 액추에이터 시스템: 센서와 선형 액추에이터를 결합하여 복잡한 부품의 3D 프로파일을 생성합니다.
+- 자동화된 보고: 공차 한계에 따른 합격/불합격 보고서를 생성합니다.
 
 |<img src="/assets/images/gen/projects/2dp1.webp" width="400">|<img src="/assets/images/gen/projects/2dp2.webp" width="500">|
 |---|---|
-| Real-Time Dimensional Inspection | 3D Profiling with Linear Actuators |
+| 실시간 치수 검사 | 선형 액추에이터를 활용한 3D 프로파일링 |
 
-### 3. Advanced Robotic Applications
-Innovate with VRCAM and VURT-X for precision material processing:
+### 3. 고급 로봇 응용
+정밀 재료 가공을 위해 VRCAM과 VURT-X로 혁신합니다:
 
-**Laser-Based Material Removal System**
-- 3D Scanning & Path Planning: Use VRCAM to map part surfaces and generate optimal tool paths.
-- Adaptive Material Removal: Control robot-mounted lasers with VURT-X real-time control to remove material with micron-level precision.
+**레이저 기반 재료 제거 시스템**
+- 3D 스캐닝 & 경로 계획: VRCAM을 사용하여 부품 표면을 매핑하고 최적 공구 경로를 생성합니다.
+- 적응형 재료 제거: VURT-X 실시간 제어로 로봇 장착 레이저를 제어하여 마이크론 수준의 정밀도로 재료를 제거합니다.
 
-**Laser Sintering-Based Patterning System**
-- Laser Sintering Process: Create electronic circuit paths using laser sintering.
-- Defect Inspection: Detect circuit defects with machine vision and AI-based analysis.
+**레이저 소결 기반 패터닝 시스템**
+- 레이저 소결 공정: 레이저 소결을 사용하여 전자 회로 경로를 생성합니다.
+- 결함 검사: 머신 비전과 AI 기반 분석으로 회로 결함을 감지합니다.
 
-## Key Benefits of VCANUS Solutions
+## VCANUS 솔루션의 주요 이점
 
-| Solution Area | Key Benefits |
+| 솔루션 영역 | 주요 이점 |
 |---|---|
-| Machine Vision | Real-time monitoring, defect classification, and adaptive process control. |
-| Distance Displacement Sensors | High-speed inline inspection, 3D profiling, and automated quality control. |
-| Robotic Automation | Precision material processing, VRCAM path planning, and VURT-X real-time control. |
-| Edge AI & 3D Measurement | Predictive analytics, statistical process control, and closed-loop quality management. |
+| 머신 비전 | 실시간 모니터링, 결함 분류, 적응형 공정 제어. |
+| 거리 변위 센서 | 고속 인라인 검사, 3D 프로파일링, 자동화된 품질 관리. |
+| 로봇 자동화 | 정밀 재료 가공, VRCAM 경로 계획, VURT-X 실시간 제어. |
+| Edge AI & 3D 측정 | 예측 분석, 통계적 공정 관리, 폐루프 품질 관리. |
 
-## Success Stories
-### Roll-to-Roll Coating System
-- Challenge: Inconsistent coating thickness due to process variations, reflected in meniscus shape changes.
-- Solution: Deployed machine vision + AI models to predict and adjust coating parameters based on real-time meniscus analysis.
-- Result: Achieved 98% accuracy in coating thickness prediction
+## 성공 사례
+### 롤투롤 코팅 시스템
+- 과제: 메니스커스 형상 변화에 반영된 공정 변동으로 인한 불일치한 코팅 두께.
+- 솔루션: 머신 비전 + AI 모델을 배포하여 실시간 메니스커스 분석을 기반으로 코팅 파라미터를 예측하고 조정.
+- 결과: 코팅 두께 예측 98% 정확도 달성.
 
 |<img src="/assets/images/gen/projects/r2r1.webp" width="300">|<img src="/assets/images/gen/projects/r2r2.webp" width="300">|<img src="/assets/images/gen/projects/r2r3.webp" width="300">|
 |---|---|---|
-| Raw Image | Meniscus Shape Detection | Feature Extraction |
+| 원시 이미지 | 메니스커스 형상 감지 | 특징 추출 |
 
-### Display Defect Classification
-- Challenge: Increase accuracy of defect classification.
-- Solution: Enhanced defect detection performance by adding segmentation functionality and optimizing learning networks.
-- Result: Achieved 5% improvement in defect detection and classification accuracy.
+### 디스플레이 결함 분류
+- 과제: 결함 분류 정확도 향상.
+- 솔루션: 세그멘테이션 기능 추가 및 학습 네트워크 최적화로 결함 감지 성능 향상.
+- 결과: 결함 감지 및 분류 정확도 5% 향상 달성.
 
 |<img src="/assets/images/gen/projects/lcd1.webp" width="300">|<img src="/assets/images/gen/projects/lcd2.webp" width="300">|<img src="/assets/images/gen/projects/lcd3.webp" width="300">|
 |---|---|---|
 ||||
 
-### Metal 3D Printing System
-- Challenge: Unstable melting pool size led to part defects.
-- Solution: Used IR camera monitoring + adaptive laser control.
-- Result: Achieved 20% improvement in part quality with real-time adjustments.
+### 금속 3D 프린팅 시스템
+- 과제: 불안정한 용융 풀 크기로 인한 부품 결함.
+- 솔루션: IR 카메라 모니터링 + 적응형 레이저 제어 활용.
+- 결과: 실시간 조정으로 부품 품질 20% 향상 달성.
 
 {% include framework/shortcodes/youtube.html id='kHJCm3TZ9vo' %}
 
-### Laser-Based Material Removal
-- Challenge: Manual material removal was inconsistent and time-consuming.
-- Solution: Deployed robot-mounted laser scanners + VRCAM path planning + VURT-X real-time control.
-- Result: Reduced cycle time by 20% and improved surface finish quality by 15%.
+### 레이저 기반 재료 제거
+- 과제: 수동 재료 제거의 불일관성과 높은 시간 소요.
+- 솔루션: 로봇 장착 레이저 스캐너 + VRCAM 경로 계획 + VURT-X 실시간 제어 배포.
+- 결과: 사이클 타임 20% 단축, 표면 마감 품질 15% 향상 달성.
 
-## Why Choose VCANUS?
+## VCANUS를 선택하는 이유
 
-✅ Proven Expertise: Successful deployments in automotive, aerospace, electronics, and heavy industries.
+✅ 검증된 전문성: 자동차, 항공우주, 전자제품, 중공업 분야에서의 성공적인 배포.
 <br>
-✅ End-to-End Solutions: From sensor integration to AI analytics and robotic automation.
+✅ 엔드투엔드 솔루션: 센서 통합부터 AI 분석 및 로봇 자동화까지.
 <br>
-✅ Seamless Integration: Compatible with PLCs, MES, ERP, and third-party software.
+✅ 원활한 통합: PLC, MES, ERP, 서드파티 소프트웨어와 호환.
 <br>
-✅ Scalable & Customizable: Solutions tailored to your unique production needs.
+✅ 확장 가능 & 맞춤화: 고유한 생산 요구에 맞춘 솔루션.
 <br>
-✅ Future-Ready: Continuous updates with latest AI, vision, and robotic technologies.
+✅ 미래 대응: 최신 AI, 비전, 로봇 기술로 지속적인 업데이트.
 
-## Industries We Serve
+## 서비스 산업
 
-| Industry | Application |
+| 산업 | 적용 사례 |
 |---|---|
-| Automotive | Body panel inspection, coating thickness control, and robotic material removal. |
-| Aerospace |Turbine blade inspection, composite material processing, and precision alignment. |
-| Electronics | Display defect classification, PCB inspection, and laser sintering for circuits. |
-| Heavy Machinery | Large-part 3D measurement, wear analysis, and automated welding inspection. |
-| Metal 3D Printing | Melting pool monitoring, adaptive laser control, and defect detection. |
+| 자동차 | 차체 패널 검사, 코팅 두께 제어, 로봇 재료 제거. |
+| 항공우주 | 터빈 블레이드 검사, 복합 재료 가공, 정밀 정렬. |
+| 전자제품 | 디스플레이 결함 분류, PCB 검사, 회로용 레이저 소결. |
+| 중공업 | 대형 부품 3D 측정, 마모 분석, 자동화된 용접 검사. |
+| 금속 3D 프린팅 | 용융 풀 모니터링, 적응형 레이저 제어, 결함 감지. |
 
-## Get Started with VCANUS Intelligent Manufacturing
-Transform your production with smart, data-driven solutions:
-- Discuss a pilot project tailored to your needs.
-- Schedule a demo of our machine vision, robotic, or Edge AI solutions.
-- Explore custom solutions for your unique manufacturing challenges.
+## VCANUS 지능형 제조 시작하기
+스마트하고 데이터 기반의 솔루션으로 생산을 혁신하세요:
+- 귀사의 필요에 맞춘 파일럿 프로젝트 협의.
+- 머신 비전, 로봇, Edge AI 솔루션 데모 일정 예약.
+- 고유한 제조 과제를 위한 커스텀 솔루션 검토.

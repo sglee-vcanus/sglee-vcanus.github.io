@@ -8,8 +8,8 @@ header_transparent: true
 
 hero:
   enabled: true
-  heading: "Solutions"
-  sub_heading: "We deliver cutting-edge solutions backed by decades of industrial expertise."
+  heading: "솔루션"
+  sub_heading: "수십 년의 산업 전문성을 바탕으로 최첨단 솔루션을 제공합니다."
   text_color: "#FFFFFF"
   background_color: false
   background_gradient: true
@@ -61,12 +61,12 @@ outro:
   enabled: true
   align: left
   image: false
-  heading: "Solve complex challenges with our data-driven expertise."
-  sub_heading: "We turn your vision into intelligent solutions—from concept to deployment."
+  heading: "데이터 기반 전문성으로 복잡한 과제를 해결하세요."
+  sub_heading: "개념에서 배포까지—여러분의 비전을 지능형 솔루션으로 전환합니다."
   buttons:
     enabled: true
     list:
-      - text: "Contact Us Today"
+      - text: "지금 문의하기"
         url: "/contact"
         external: false
         fa_icon: false

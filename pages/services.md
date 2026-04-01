@@ -7,8 +7,8 @@ header_transparent: true
 
 hero:
   enabled: true
-  heading: "Products"
-  sub_heading: "Our products empower customers to achieve business success."
+  heading: "제품"
+  sub_heading: "우리의 제품은 고객이 비즈니스 성공을 달성할 수 있도록 지원합니다."
   text_color: "#FFFFFF"
   background_color: false
   background_gradient: true
@@ -53,12 +53,12 @@ outro:
   enabled: true
   align: left
   image: false
-  heading: "Solve complex challenges with our data-driven expertise."
-  sub_heading: "We turn your vision into intelligent solutions—from concept to deployment."
+  heading: "데이터 기반 전문성으로 복잡한 과제를 해결하세요."
+  sub_heading: "개념에서 배포까지—여러분의 비전을 지능형 솔루션으로 전환합니다."
   buttons:
     enabled: true
     list:
-      - text: "Contact Us Today"
+      - text: "지금 문의하기"
         url: "/contact"
         external: false
         fa_icon: false
