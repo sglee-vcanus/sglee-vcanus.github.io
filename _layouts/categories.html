@@ -1,42 +1,42 @@
 ---
-layout: archive
+layout: default
+title: Categories
+body_classes: page-categories
 ---
 
-{{ content }}
-
-{% assign categories_max = 0 %}
-{% for category in site.categories %}
-  {% if category[1].size > categories_max %}
-    {% assign categories_max = category[1].size %}
-  {% endif %}
-{% endfor %}
-
-<ul class="taxonomy__index">
-  {% for i in (1..categories_max) reversed %}
-    {% for category in site.categories %}
-      {% if category[1].size == i %}
-        <li>
-          <a href="#{{ category[0] | slugify }}">
-            <strong>{{ category[0] }}</strong> <span class="taxonomy__count">{{ i }}</span>
-          </a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-</ul>
-
-{% for i in (1..categories_max) reversed %}
-  {% for category in site.categories %}
-    {% if category[1].size == i %}
-      <section id="{{ category[0] | slugify | downcase }}" class="taxonomy__section">
-        <h2 class="archive__subtitle">{{ category[0] }}</h2>
-        <div class="entries-{{ page.entries_layout | default: 'list' }}">
-          {% for post in category.last %}
-            {% include archive-single.html type=page.entries_layout %}
-          {% endfor %}
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <h1>{{ page.title }}
+        </h1>
+        <h2>{{ page.description }}</h2>
+      </div>
+      {% if page.image %}
+        <div class="col-12 col-lg-12">
+          <img class="img-fluid" src={{ page.image | relative_url }}/>
         </div>
-        <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
-      </section>
-    {% endif %}
-  {% endfor %}
-{% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="section strip-base">
+  <div class="container">
+    <div class="row">
+        {% for category in site.categories %}
+          {% assign category_name = category | first %}
+          {% assign category_slug = category_name | slugify %}
+          <div class="col-12 col-md-8 mb-2">
+            <h3 id="#{{ category_slug }}">{{ category_name }}</h3>
+            {% for post in site.categories[category_name] %}
+              <div>
+                <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
