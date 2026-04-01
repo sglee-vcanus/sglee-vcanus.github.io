@@ -16,7 +16,7 @@ hero:
   text_color: "#ffffff"
   background_color: ""
   background_gradient: true
-  background_image_blend_mode: false" # "overlay", "multiply", "screen"
+  background_image_blend_mode: false # "overlay", "multiply", "screen"
   background_image: "/assets/images/gen/services/service-7.webp"
   fullscreen_mobile: false
   fullscreen_desktop: false
@@ -70,7 +70,7 @@ hero:
 ## 적용 분야
 
 ### 🏭 Manufacturing (제조·품질검사)
-> ❌ 육안 검사 피로·오판 / 숙련 인력 필수 → ✅ **24h 카메라 실시간 탐지** / **불량 위치·유형 정밀 분류**
+> ❌ 육안 검사 피로·오판 / 숙련 인력 필수<br>→ ✅ **24h 카메라 실시간 탐지** / **불량 위치·유형 정밀 분류**
 
 - **육안 검사의 피로 없이** 정밀 자동 품질검사
 - **무인 검사 라인 24h** 이상 운영
@@ -79,7 +79,7 @@ hero:
 - 검사 결과 이력 자동 DB 저장·조회
 
 ### 🌱 Smart Farm (스마트팜)
-> ❌ 병해충 발견 후 이미 확산 / 대면적 모니터링 인력 부족 → ✅ **조기 병해충 자동 탐지** / **광범위 실시간 모니터링**
+> ❌ 병해충 발견 후 이미 확산 / 대면적 모니터링 인력 부족<br>→ ✅ **조기 병해충 자동 탐지** / **광범위 실시간 모니터링**
 
 - **병해충 조기 탐지**로 위치·종류 자동 식별
 - 식물 성장 단계별 **Segmentation 분석**
@@ -87,7 +87,7 @@ hero:
 - 데이터 기반 **생육도·수량 정기 예측**
 
 ### 🚚 Logistics (유통·물류)
-> ❌ 분류·검수 대규모 인력 / 바코드 손상 시 수작업 → ✅ **컨베이어 카메라 실시간 자동 분류** / **라벨·바코드 불량 자동 탐지**
+> ❌ 분류·검수 대규모 인력 / 바코드 손상 시 수작업<br>→ ✅ **컨베이어 카메라 실시간 자동 분류** / **라벨·바코드 불량 자동 탐지**
 
 - **상품 자동 분류** — 컨베이어 카메라 실시간 연동
 - **바코드·라벨 불량 탐지** 및 이력 DB 자동 저장
@@ -95,7 +95,7 @@ hero:
 - 설비별 결함 발생 이력 **조건 검색 기능**
 
 ### 🔒 Security (보안·모니터링)
-> ❌ CCTV 전담 인력 상시 배치 / 이상 행동 실시간 감지 불가 → ✅ **이상 행동·객체 자동 감지** / **무인 24시간 CCTV 자동 분류**
+> ❌ CCTV 전담 인력 상시 배치 / 이상 행동 실시간 감지 불가<br>→ ✅ **이상 행동·객체 자동 감지** / **무인 24시간 CCTV 자동 분류**
 
 - **이상 행동 실시간 감지** — 신뢰도 필터링 적용
 - **무인 24시간 CCTV 분석** 및 이벤트 유형 자동 분류
@@ -111,7 +111,7 @@ hero:
 | 비교 항목 | AutoML 플랫폼 | 비전 전문 툴 | **DeepVi**  |
 |---|:---:|:---:|:---:|
 | 코딩 필요성 | ⚠️ 부분 필요 | ❌ 불필요 | **완전 No-Code** (라벨링·학습·배포 통합) |
-| 학습 속도 | ✅ 빠름 | ⚠️ 보통 | **사이클 내 해결** |
+| 학습 속도 | 빠름 | ⚠️ 보통 | **사이클 내 해결** |
 | 클라우드 의존성 | ❌ 완전 의존 | ⚠️ 부분 의존 | **On-Premise · Cloud 모두 지원** |
 | 데이터 보안 | ❌ 외부 전송 | ❌ 외부 전송 | **내부 서버 자체 처리** (외부 전송 없음) |
 | 자동 재학습 | ❌ 미지원 | ⚠️ 일부 | **운전 데이터 자동 누적, 주기적 재학습 배포** |
@@ -122,6 +122,9 @@ hero:
 
 ## 주요 기능
 
+<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1;" markdown="1">
+
 ### Storage (데이터 관리)
 - **Web / FTP** 이미지 일괄 업로드
 - **NAS · File Server** 원격 보관
@@ -130,12 +133,30 @@ hero:
 - **원본 데이터 영구 보관** · 재사용 용이
 - 데이터셋 추가 시 **스토리지 용량 불변**
 
+</div>
+<div style="flex-shrink:0;">
+<img src="/assets/images/gen/services/deepvi_storage.webp" width="320">
+</div>
+</div>
+
+<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1;" markdown="1">
+
 ### Dataset (라벨링)
-- Classification / Detection / Segmentation **3종 라벨링 통합 지원 환경**
+- Classification / Detection / Segmentation<br>**3종 라벨링 통합 지원 환경**
 - **BBox·Mask** 정밀 라벨링 툴 통합 제공
 - **결함 유형별 카테고리** 분류 체계 관리
 - **픽셀단위 학습**으로 성능 향상
 - **데이터셋 분할·병합**으로 다양한 학습 구성
+
+</div>
+<div style="flex-shrink:0;">
+<img src="/assets/images/gen/services/deepvi_dataset.webp" width="320">
+</div>
+</div>
+
+<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1;" markdown="1">
 
 ### Inline Processing (실시간 영상처리)
 - **차원 · Template Matching**
@@ -143,12 +164,30 @@ hero:
 - **참조영상** 등록 및 관리
 - **이동 · 회전 값** 자동 산출
 
+</div>
+<div style="flex-shrink:0;">
+<img src="/assets/images/gen/services/service-7.webp" width="320">
+</div>
+</div>
+
+<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1;" markdown="1">
+
 ### Model (학습 · 검증)
 - **Pre-trained / Custom Model** 지원
 - **하이퍼파라미터 · 데이터 분배 설정** 후 **원클릭 학습**
 - **Transfer Learning · Early Stop** 설정
 - **Confusion Matrix · mAP · Loss** 실시간 모니터링
 - **Best Weight** 자동 저장 · 체크포인트 다운로드
+
+</div>
+<div style="flex-shrink:0;">
+<img src="/assets/images/gen/services/deepvi_model1.webp" width="320">
+</div>
+</div>
+
+<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1;" markdown="1">
 
 ### Inference (실시간 추론)
 - **카메라 · 파일 이미지** 실시간 연동 추론
@@ -158,6 +197,15 @@ hero:
 - **과거 이력 조건 검색 · 조회** 기능
 - **Workflow 기반** 빠른 알고리즘 구성
 
+</div>
+<div style="flex-shrink:0;">
+<img src="/assets/images/gen/services/deepvi_inference.webp" width="320">
+</div>
+</div>
+
+<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1;" markdown="1">
+
 ### Review (모델 개선)
 - **오탐 검토 · 재라벨링 · 코멘트**로 추가 학습 데이터 누적
 - 신규 모델 자동 생성 후 **성능 비교 후 배포 교체**
@@ -166,9 +214,11 @@ hero:
 - **자연어 기반** 유사 결함 원인 분석
 - **데이터 열화 감지** 및 극복
 
-|<img src="/assets/images/gen/services/deepvi_storage.webp" width="160">|<img src="/assets/images/gen/services/deepvi_dataset.webp" width="160">|<img src="/assets/images/gen/services/deepvi_model1.webp" width="160">|<img src="/assets/images/gen/services/deepvi_inference.webp" width="160">|<img src="/assets/images/gen/services/deepvi_review.webp" width="160">|
-|:---:|:---:|:---:|:---:|:---:|
-||||||
+</div>
+<div style="flex-shrink:0;">
+<img src="/assets/images/gen/services/deepvi_review.webp" width="320">
+</div>
+</div>
 
 ---
 
