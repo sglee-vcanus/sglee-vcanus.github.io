@@ -138,7 +138,7 @@ hero:
 - **데이터셋 분할·병합**으로 다양한 학습 구성
 
 ### Inline Processing (실시간 영상처리)
-- 차원 · Template Matching
+- **차원 · Template Matching**
 - **화질 개선 · Align 보정**으로 학습 정확도 향상
 - **참조영상** 등록 및 관리
 - **이동 · 회전 값** 자동 산출
