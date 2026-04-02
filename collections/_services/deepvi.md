@@ -159,14 +159,14 @@ hero:
 <div style="flex:1;" markdown="1">
 
 ### Inline Processing (실시간 영상처리)
-- **차원 · Template Matching**
-- **화질 개선 · Align 보정**으로 학습 정확도 향상
+- **화질 개선 · Template Matching 등 영상 처리**
+- **Align 기능(Rotation, Translation)**
 - **참조영상** 등록 및 관리
 - **이동 · 회전 값** 자동 산출
 
 </div>
 <div style="flex-shrink:0;">
-<img src="/assets/images/gen/services/service-7.webp" width="320">
+<img src="/assets/images/gen/services/deepvi_review2.webp" width="320">
 </div>
 </div>
 
@@ -220,8 +220,7 @@ hero:
 </div>
 </div>
 
----
-
+<!--
 ## 주요 화면 흐름
 
 > Dataset → Training → Inference → Review 4단계 화면 의 핵심 기능
@@ -285,3 +284,5 @@ hero:
 <img src="/assets/images/gen/services/deepvi_review1.webp" width="320">
 </div>
 </div>
+
+-->
