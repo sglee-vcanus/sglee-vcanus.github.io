@@ -226,11 +226,23 @@ hero:
 
 > Dataset → Training → Inference → Review 4단계 화면 의 핵심 기능
 
+<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1;" markdown="1">
+
 ### Step 1 — Dataset · Labeling (데이터 라벨링)
 - **웹 기반 UI**로 비전문가도 즉시 라벨링 가능
 - Classification / Detection / Segmentation **3종 라벨링 통합**
 - **데이터셋 분할·병합**으로 산업별 맞춤 구성
 - 라벨 데이터 **버전 관리 · 이력 추적**
+
+</div>
+<div style="flex-shrink:0;">
+<img src="/assets/images/gen/services/deepvi_dataset1.webp" width="320">
+</div>
+</div>
+
+<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1;" markdown="1">
 
 ### Step 2 — Model · Training View (학습 모니터링)
 - Epoch별 mAP·Loss **실시간 차트 모니터링**
@@ -238,14 +250,38 @@ hero:
 - 학습 중단 없이 **상태 확인**
 - **모델 비교 · Best 모델 자동 선택**
 
+</div>
+<div style="flex-shrink:0;">
+<img src="/assets/images/gen/services/service-7.webp" width="320">
+</div>
+</div>
+
+<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1;" markdown="1">
+
 ### Step 3 — Inference · 실시간 탐지 (카메라 연동 추론)
 - 학습 완료 즉시 **카메라 연결·실시간 추론 시작**
 - **결함 위치와 분류 신뢰도** 실시간 화면 표시
 - 결과 자동 저장으로 **이력 관리**
 - **멀티 카메라 동시 모니터링**
 
+</div>
+<div style="flex-shrink:0;">
+<img src="/assets/images/gen/services/service-7.webp" width="320">
+</div>
+</div>
+
+<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1;" markdown="1">
+
 ### Step 4 — Review · 재학습 루프 (오탐 수정 · Retrain)
 - 기존 데이터셋 병합 후 **자동 재학습**
 - 신규 모델 생성 후 **성능 비교 후 운전 모델 자동 교체**
 - 확장 데이터 누적으로 **모델 정확도 지속 향상**
 - **지속적 개선 루프**로 자동화
+
+</div>
+<div style="flex-shrink:0;">
+<img src="/assets/images/gen/services/deepvi_review1.webp" width="320">
+</div>
+</div>
