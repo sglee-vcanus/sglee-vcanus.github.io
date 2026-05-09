@@ -152,62 +152,7 @@ CoaXPress-12 인터페이스 기반 고성능 엣지 컴퓨터, 10GigE 옵션 �
 
 Gidel 제품군은 결정론적 실시간 성능과 멀티카메라 동기화가 필수적인 다양한 산업 분야에서 활용됩니다.
 
-### 🏭 산업용 비전 & 이미지 처리
-> 고속 라인의 프레임 누락 / CPU 병목 → **Zero Frame Loss · FPGA 실시간 압축으로 해결**
-
-- HawkEye PCIe 프레임 그래버 + FPGA 압축 IP
-- 대용량 이미지 실시간 처리 및 저장
-- 고속 생산라인 100% 검사
-
-### 🚁 UAV / 드론 영상 시스템
-> 데이터 전송 대역폭 부족 / 진동·충격 환경 → **FPGA 압축으로 대역폭 절감 · 내환경 설계**
-
-- FantoVision 탑재로 드론 환경 대응
-- 소형·저전력 설계
-- 가혹 환경(I/R 옵션) 대응
-
-### 🛡️ 방산 · 항공 영상 시스템
-> 다중 카메라 동기화 정밀도 / 군용 인증 요건 → **InfiniVision 동기화 · 군용 내환경 옵션**
-
-- HawkEye / FantoVision 결정론적 FPGA 처리
-- ROI 추출 + FPGA 압축으로 통신 대역폭 절감
-- 모듈형 설계로 장기 시스템 수명 주기 지원
-
-### 🏥 의료 영상 시스템
-> 고동적 범위 영상 / 다각도 내시경 제어 → **HDR IP 코어 · 소형 엣지 AI 통합**
-
-- FantoVision (Jetson AI 추론 + FPGA 영상 취득)
-- HDR IP 코어로 복잡한 조명 환경 대응
-- 소형 폼팩터로 의료 장비 직접 통합
-
-### 🔬 광학 선별 시스템
-> 다중 채널 동기 수집 / 커스텀 검사 알고리즘 → **HawkEye 다채널 + ProcVision Suite**
-
-- HawkEye 다중 채널 동시 취득
-- FPGA 압축 IP로 실시간 처리
-- ProcVision Suite 커스텀 알고리즘 개발
-
-### 🎬 체적 영상 & 증강 현실 (Volumetric / AR)
-> 100대 이상 카메라 동기화 / 고화질 체적 영상 → **InfiniVision 100+ 카메라 · HDR + GIL Recording**
-
-- InfiniVision 100대 이상 카메라 동기화
-- HDR + GIL Recording으로 고화질 체적 영상
-- Intel FreeD / TrueView 프로토콜 지원
-- NFL · 올림픽 등 글로벌 스포츠 AR 검증
-
-### 🤖 임베디드 비전 시스템
-> SWaP 제약 / 실시간 결정론적 성능 → **소형 FPGA 모듈 · OEM/ODM 지원**
-
-- FDB FPGA 모듈 / FantoVision
-- 소형 · 저전력 · OEM/ODM 지원
-- 커스텀 FPGA 로직으로 특정 응용 최적화
-
-### 🔬 자동 시험 장비 (ATE)
-> 장시간 연속 운용 / 다양한 디바이스 대응 → **HawkEye + FantoVision Mini · ProcVision Suite**
-
-- 고대역폭 신뢰성 취득
-- 실시간 온보드 압축으로 다중 카메라 운용
-- 모듈식 설계로 다양한 디바이스 타입 대응
+<img src="/assets/images/gen/projects/machine-vision-applications.svg" alt="Gidel 제품군 적용 분야 — 8개 산업" style="display:block; width:100%; height:auto; max-width:1100px; margin:0 auto;">
 
 ---
 
@@ -215,26 +160,4 @@ Gidel 제품군은 결정론적 실시간 성능과 멀티카메라 동기화가
 
 VCANUS는 Gidel 제품의 단순 공급에 그치지 않고, **자체 데이터 플랫폼 (TSLoom)** 및 **AI 비전 플랫폼 (DeepVi)** 과 결합하여 **End-to-End 산업 비전 솔루션**으로 제공합니다.
 
-**고속 · 대용량 이미지 분산 처리 시나리오**
-
-`고속 카메라 → Gidel FantoVision (고속 수신·버퍼링) → VCANUS Flowbroker (지능형 작업 분배) → 분산 처리 노드 1~N → 통합 분석 결과`
-
-- 데이터 손실 없는 고속 수신
-- 자동 부하 분산 처리
-- 처리 노드 추가만으로 선형 확장
-
-**스테이지 연동 정밀 촬영 및 이미지 병합 시나리오**
-
-`엔코더 → FPGA HawkEye (위치 분석·트리거 생성) → 카메라 + 조명 (동시 트리거) → DMA 버퍼 (Zero Copy) → 병합 영상`
-
-- 위치 기반 정밀 트리거
-- 조명 · 카메라 동기화
-- 실시간 이미지 병합
-
-**초저지연 웹 기반 모니터링 + AI 실시간 분석**
-
-`카메라 → 현장 AI 처리 (FantoVision) → 지능형 분석 → 초저지연 전송 → 웹 대시보드`
-
-- 현장 밀착형 AI 처리
-- 초저지연 웹 모니터링
-- 24시간 무인 자동 감시
+<img src="/assets/images/gen/projects/machine-vision-solutions.svg" alt="VCANUS + Gidel 통합 솔루션 시나리오 3종" style="display:block; width:100%; height:auto; max-width:1100px; margin:0 auto;">
