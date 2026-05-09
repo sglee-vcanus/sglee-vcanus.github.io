@@ -27,16 +27,15 @@ hero:
 
 ## 연락처
 
- - 전화 : +82-31-719-8816
- - 팩스 : +82-31-719-8817
- - 이메일 : info@vcanus.co.kr
+ - Phone : +82-31-888-5293
+ - Email : sales@vcanus.co.kr
 
 
 ## 주소
 
 ### 본사, 연구개발
-경기도 성남시 분당구 성남대로 69 로드랜드이지 603호 (우편번호 13636)
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.0018328930432!2d127.1081274!3d37.34246529999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5962e5208497%3A0x18cfc7f7dbde09ad!2sVCANUS!5e0!3m2!1sko!2skr!4v1757478236369!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+경기도 수원시 영통구 광교로 105 경기R&DB센터 528호 (우편번호 16229)
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.149749649561!2d127.04208377671411!3d37.29158457211108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b59ea40c8d5ab%3A0xe5e4a5fe781cf52e!2z7KO87Iud7ZqM7IKsIOu5hOy5tOuIhOyKpA!5e0!3m2!1sko!2skr!4v1778295377683!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 ### 수원 공장
 경기도 수원시 영통구 매영로 159-19 광교더퍼스트지식산업센터 402호 (우편번호 16521)
