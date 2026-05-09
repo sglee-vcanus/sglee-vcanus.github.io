@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
+  <rect width="1100" height="380" fill="#fef2f2"/>
+  <text x="550" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#991b1b">Low-Latency &amp; High Throughput</text>
+  <text x="550" y="60" text-anchor="middle" font-size="13" fill="#7f1d1d">초저지연 고처리량 실시간 데이터 처리 — &lt; 5ms Latency, 1M msg/sec Throughput</text>
+
+  <!-- KPI cards -->
+  <g>
+    <rect x="40" y="100" width="220" height="120" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <text x="150" y="135" text-anchor="middle" font-size="13" fill="#7f1d1d" font-weight="600">Latency</text>
+    <text x="150" y="180" text-anchor="middle" font-size="36" font-weight="700" fill="#dc2626">&lt; 5ms</text>
+    <text x="150" y="205" text-anchor="middle" font-size="11" fill="#7f1d1d">메시지 전달 보장</text>
+
+    <rect x="280" y="100" width="220" height="120" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <text x="390" y="135" text-anchor="middle" font-size="13" fill="#7f1d1d" font-weight="600">Throughput</text>
+    <text x="390" y="180" text-anchor="middle" font-size="36" font-weight="700" fill="#dc2626">1M msg/s</text>
+    <text x="390" y="205" text-anchor="middle" font-size="11" fill="#7f1d1d">단일 노드 기준</text>
+
+    <rect x="520" y="100" width="220" height="120" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <text x="630" y="135" text-anchor="middle" font-size="13" fill="#7f1d1d" font-weight="600">Channels</text>
+    <text x="630" y="180" text-anchor="middle" font-size="36" font-weight="700" fill="#dc2626">10K × 32ch</text>
+    <text x="630" y="205" text-anchor="middle" font-size="11" fill="#7f1d1d">동시 실시간 처리</text>
+  </g>
+
+  <!-- vs general -->
+  <rect x="760" y="100" width="300" height="120" rx="12" fill="#0f172a"/>
+  <text x="910" y="125" text-anchor="middle" font-size="12" font-weight="600" fill="#fca5a5">TSLoom vs 일반 솔루션</text>
+  <text x="780" y="150" font-size="12" fill="#cbd5e1">TSLoom</text>
+  <text x="1040" y="150" font-size="12" fill="#fca5a5" text-anchor="end">1M / &lt; 5ms</text>
+  <line x1="780" y1="158" x2="1040" y2="158" stroke="#475569"/>
+  <text x="780" y="180" font-size="12" fill="#cbd5e1">일반</text>
+  <text x="1040" y="180" font-size="12" fill="#fca5a5" text-anchor="end">~400K / &gt; 10ms</text>
+  <line x1="780" y1="188" x2="1040" y2="188" stroke="#475569"/>
+  <text x="910" y="210" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">Latency 2× ↑   Throughput 2.5× ↑</text>
+
+  <!-- features -->
+  <g>
+    <rect x="40" y="245" width="330" height="110" rx="10" fill="#ffffff" stroke="#fca5a5"/>
+    <text x="55" y="270" font-size="14" font-weight="700" fill="#991b1b">처리 성능</text>
+    <text x="55" y="293" font-size="11" fill="#7f1d1d">• 특허 기반 메시지 라우팅</text>
+    <text x="55" y="312" font-size="11" fill="#7f1d1d">• 인라인 필터링 · 집계 · 변환</text>
+    <text x="55" y="331" font-size="11" fill="#7f1d1d">• 이벤트 기반 트리거 / 조건부 라우팅</text>
+
+    <rect x="385" y="245" width="330" height="110" rx="10" fill="#ffffff" stroke="#fca5a5"/>
+    <text x="400" y="270" font-size="14" font-weight="700" fill="#991b1b">다중 스트림 통합 처리</text>
+    <text x="400" y="293" font-size="11" fill="#7f1d1d">• 슬라이딩·텀블링 윈도우 통계</text>
+    <text x="400" y="312" font-size="11" fill="#7f1d1d">• 계층적 다중 소스 통합 관리</text>
+    <text x="400" y="331" font-size="11" fill="#7f1d1d">• 대용량 메시지 자동 분할·복원</text>
+
+    <rect x="730" y="245" width="330" height="110" rx="10" fill="#ffffff" stroke="#fca5a5"/>
+    <text x="745" y="270" font-size="14" font-weight="700" fill="#991b1b">시간 동기화 · 데이터 신뢰성</text>
+    <text x="745" y="293" font-size="11" fill="#7f1d1d">• 다중 스트림 시간축 정렬 / TS 정확도</text>
+    <text x="745" y="312" font-size="11" fill="#7f1d1d">• 결측·이상값 실시간 감지·보정</text>
+    <text x="745" y="331" font-size="11" fill="#7f1d1d">• 메시지 순서 보장 · 무손실 수집</text>
+  </g>
+</svg>

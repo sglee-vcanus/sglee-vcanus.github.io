@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
+  <rect width="1100" height="380" fill="#ecfeff"/>
+  <text x="550" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#0e7490">Visual Workflow &amp; Auto-Operations</text>
+  <text x="550" y="60" text-anchor="middle" font-size="13" fill="#0891b2">비주얼 워크플로우 오케스트레이션 및 운영 자동화 — No Code / Auto-Operations</text>
+
+  <!-- Canvas -->
+  <rect x="40" y="90" width="600" height="270" rx="10" fill="#0f172a"/>
+  <text x="55" y="115" font-size="12" font-weight="700" fill="#67e8f9">Workflow Orchestrator</text>
+
+  <!-- Node 1 (Source) -->
+  <rect x="70" y="140" width="110" height="50" rx="8" fill="#06b6d4"/>
+  <text x="125" y="160" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">Source</text>
+  <text x="125" y="178" text-anchor="middle" font-size="10" fill="#cffafe">EtherCAT</text>
+
+  <!-- Node 2 (Filter) -->
+  <rect x="220" y="140" width="110" height="50" rx="8" fill="#0891b2"/>
+  <text x="275" y="160" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">Filter</text>
+  <text x="275" y="178" text-anchor="middle" font-size="10" fill="#cffafe">전처리</text>
+
+  <!-- Node 3 (ML) -->
+  <rect x="370" y="140" width="110" height="50" rx="8" fill="#7c3aed"/>
+  <text x="425" y="160" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">ML Inference</text>
+  <text x="425" y="178" text-anchor="middle" font-size="10" fill="#e9d5ff">v2.1</text>
+
+  <!-- Node 4 (Sink) -->
+  <rect x="520" y="140" width="100" height="50" rx="8" fill="#10b981"/>
+  <text x="570" y="160" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">Dashboard</text>
+
+  <!-- connections -->
+  <line x1="180" y1="165" x2="220" y2="165" stroke="#67e8f9" stroke-width="2"/>
+  <line x1="330" y1="165" x2="370" y2="165" stroke="#67e8f9" stroke-width="2"/>
+  <line x1="480" y1="165" x2="520" y2="165" stroke="#67e8f9" stroke-width="2"/>
+
+  <!-- node status row -->
+  <text x="55" y="225" font-size="12" font-weight="700" fill="#67e8f9">Auto Scale-Out / In · Failover</text>
+  <g>
+    <rect x="70" y="240" width="100" height="60" rx="8" fill="#1e293b" stroke="#22c55e"/>
+    <text x="120" y="260" text-anchor="middle" font-size="11" fill="#86efac">● Node 1</text>
+    <text x="120" y="278" text-anchor="middle" font-size="10" fill="#cbd5e1">저부하</text>
+    <text x="120" y="295" text-anchor="middle" font-size="10" fill="#86efac">healthy</text>
+
+    <rect x="180" y="240" width="100" height="60" rx="8" fill="#1e293b" stroke="#eab308"/>
+    <text x="230" y="260" text-anchor="middle" font-size="11" fill="#fde68a">● Node 2</text>
+    <text x="230" y="278" text-anchor="middle" font-size="10" fill="#cbd5e1">중부하</text>
+    <text x="230" y="295" text-anchor="middle" font-size="10" fill="#fde68a">healthy</text>
+
+    <rect x="290" y="240" width="100" height="60" rx="8" fill="#1e293b" stroke="#ef4444"/>
+    <text x="340" y="260" text-anchor="middle" font-size="11" fill="#fca5a5">✕ Node 3</text>
+    <text x="340" y="278" text-anchor="middle" font-size="10" fill="#cbd5e1">장애</text>
+    <text x="340" y="295" text-anchor="middle" font-size="10" fill="#fca5a5">↺ Failover</text>
+
+    <rect x="400" y="240" width="100" height="60" rx="8" fill="#1e293b" stroke="#06b6d4" stroke-dasharray="4,4"/>
+    <text x="450" y="260" text-anchor="middle" font-size="11" fill="#67e8f9">+ Node 4</text>
+    <text x="450" y="278" text-anchor="middle" font-size="10" fill="#cbd5e1">동적 추가</text>
+    <text x="450" y="295" text-anchor="middle" font-size="10" fill="#67e8f9">scaling-out</text>
+
+    <rect x="510" y="240" width="110" height="60" rx="8" fill="#1e293b" stroke="#0d9488" stroke-dasharray="4,4"/>
+    <text x="565" y="260" text-anchor="middle" font-size="11" fill="#5eead4">+ Node 5+</text>
+    <text x="565" y="278" text-anchor="middle" font-size="10" fill="#cbd5e1">고부하 대응</text>
+    <text x="565" y="295" text-anchor="middle" font-size="10" fill="#5eead4">on demand</text>
+  </g>
+
+  <text x="55" y="335" font-size="11" fill="#cbd5e1">SPOF-free · 자동 Failover · 무중단 롤링 업데이트 · 장애 복구 감사 로그</text>
+
+  <!-- features -->
+  <rect x="660" y="90" width="400" height="270" rx="10" fill="#ffffff" stroke="#0891b2"/>
+  <text x="675" y="115" font-size="14" font-weight="700" fill="#0e7490">워크플로우 설계 · 운영</text>
+  <text x="675" y="135" font-size="11" fill="#155e75">• Drag &amp; Drop 로우코드 편집기</text>
+  <text x="675" y="153" font-size="11" fill="#155e75">• 수집→처리→추론→시각화 단일 캔버스</text>
+  <text x="675" y="171" font-size="11" fill="#155e75">• 비개발자도 활용 가능한 노코드 환경</text>
+  <text x="675" y="189" font-size="11" fill="#155e75">• 재사용 워크플로우 템플릿 라이브러리</text>
+  <text x="675" y="207" font-size="11" fill="#155e75">• 버전 관리·롤백 · 원클릭 배포</text>
+
+  <text x="675" y="235" font-size="14" font-weight="700" fill="#0e7490">고가용성 분산 인프라</text>
+  <text x="675" y="255" font-size="11" fill="#155e75">• Orchestrator 기반 동적 노드 분산 배치</text>
+  <text x="675" y="273" font-size="11" fill="#155e75">• 리소스 기반 최적 배치 (GPU·CPU·NW)</text>
+  <text x="675" y="291" font-size="11" fill="#155e75">• 부하 기반 Auto Scale-Out / In</text>
+  <text x="675" y="309" font-size="11" fill="#155e75">• 신규 노드 무중단 온보딩</text>
+  <text x="675" y="327" font-size="11" fill="#155e75">• 자동 Failover · 장애 노드 격리</text>
+  <text x="675" y="345" font-size="11" fill="#155e75">• 노드 출력값·상태·로그 실시간 추적</text>
+</svg>

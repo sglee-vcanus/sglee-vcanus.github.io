@@ -108,6 +108,8 @@ hero:
 
 > AutoML / 비전 툴 대비 DeepVi의 핵심 차별점
 
+<div style="overflow-x:auto;">
+
 | 비교 항목 | AutoML 플랫폼 | 비전 전문 툴 | **DeepVi**  |
 |---|:---:|:---:|:---:|
 | 코딩 필요성 | ⚠️ 부분 필요 | ❌ 불필요 | **완전 No-Code** (라벨링·학습·배포 통합) |
@@ -118,12 +120,14 @@ hero:
 | 커스터마이징 | ⚠️ 제한적 | ⚠️ 제한적 | **산업별 완전 맞춤** |
 | 비용 구조 | ❌ 종량제 | ❌ API 종량제 | **정액 라이선스** (사용량 과금 없음) |
 
+</div>
+
 ---
 
 ## 주요 기능
 
-<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1;" markdown="1">
+<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1 1 280px; min-width:280px;" markdown="1">
 
 ### Storage (데이터 관리)
 - **Web / FTP** 이미지 일괄 업로드
@@ -134,13 +138,13 @@ hero:
 - 데이터셋 추가 시 **스토리지 용량 불변**
 
 </div>
-<div style="flex-shrink:0;">
-<img src="/assets/images/gen/services/deepvi_storage.webp" width="320">
+<div style="flex:1 1 280px; max-width:320px; min-width:0;">
+<img src="/assets/images/gen/services/deepvi_storage.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
 </div>
 </div>
 
-<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1;" markdown="1">
+<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1 1 280px; min-width:280px;" markdown="1">
 
 ### Dataset (라벨링)
 - Classification / Detection / Segmentation<br>**3종 라벨링 통합 지원 환경**
@@ -150,13 +154,13 @@ hero:
 - **데이터셋 분할·병합**으로 다양한 학습 구성
 
 </div>
-<div style="flex-shrink:0;">
-<img src="/assets/images/gen/services/deepvi_dataset.webp" width="320">
+<div style="flex:1 1 280px; max-width:320px; min-width:0;">
+<img src="/assets/images/gen/services/deepvi_dataset.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
 </div>
 </div>
 
-<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1;" markdown="1">
+<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1 1 280px; min-width:280px;" markdown="1">
 
 ### Inline Processing (실시간 영상처리)
 - **화질 개선 · Template Matching 등 영상 처리**
@@ -165,13 +169,13 @@ hero:
 - **이동 · 회전 값** 자동 산출
 
 </div>
-<div style="flex-shrink:0;">
-<img src="/assets/images/gen/services/deepvi_review2.webp" width="320">
+<div style="flex:1 1 280px; max-width:320px; min-width:0;">
+<img src="/assets/images/gen/services/deepvi_review2.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
 </div>
 </div>
 
-<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1;" markdown="1">
+<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1 1 280px; min-width:280px;" markdown="1">
 
 ### Model (학습 · 검증)
 - **Pre-trained / Custom Model** 지원
@@ -181,13 +185,13 @@ hero:
 - **Best Weight** 자동 저장 · 체크포인트 다운로드
 
 </div>
-<div style="flex-shrink:0;">
-<img src="/assets/images/gen/services/deepvi_model1.webp" width="320">
+<div style="flex:1 1 280px; max-width:320px; min-width:0;">
+<img src="/assets/images/gen/services/deepvi_model1.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
 </div>
 </div>
 
-<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1;" markdown="1">
+<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1 1 280px; min-width:280px;" markdown="1">
 
 ### Inference (실시간 추론)
 - **카메라 · 파일 이미지** 실시간 연동 추론
@@ -198,13 +202,13 @@ hero:
 - **Workflow 기반** 빠른 알고리즘 구성
 
 </div>
-<div style="flex-shrink:0;">
-<img src="/assets/images/gen/services/deepvi_inference.webp" width="320">
+<div style="flex:1 1 280px; max-width:320px; min-width:0;">
+<img src="/assets/images/gen/services/deepvi_inference.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
 </div>
 </div>
 
-<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1;" markdown="1">
+<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1 1 280px; min-width:280px;" markdown="1">
 
 ### Review (모델 개선)
 - **오탐 검토 · 재라벨링 · 코멘트**로 추가 학습 데이터 누적
@@ -215,8 +219,8 @@ hero:
 - **데이터 열화 감지** 및 극복
 
 </div>
-<div style="flex-shrink:0;">
-<img src="/assets/images/gen/services/deepvi_review.webp" width="320">
+<div style="flex:1 1 280px; max-width:320px; min-width:0;">
+<img src="/assets/images/gen/services/deepvi_review.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
 </div>
 </div>
 
@@ -225,8 +229,8 @@ hero:
 
 > Dataset → Training → Inference → Review 4단계 화면 의 핵심 기능
 
-<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1;" markdown="1">
+<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1 1 280px; min-width:280px;" markdown="1">
 
 ### Step 1 — Dataset · Labeling (데이터 라벨링)
 - **웹 기반 UI**로 비전문가도 즉시 라벨링 가능
@@ -235,13 +239,13 @@ hero:
 - 라벨 데이터 **버전 관리 · 이력 추적**
 
 </div>
-<div style="flex-shrink:0;">
-<img src="/assets/images/gen/services/deepvi_dataset1.webp" width="320">
+<div style="flex:1 1 280px; max-width:320px; min-width:0;">
+<img src="/assets/images/gen/services/deepvi_dataset1.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
 </div>
 </div>
 
-<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1;" markdown="1">
+<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1 1 280px; min-width:280px;" markdown="1">
 
 ### Step 2 — Model · Training View (학습 모니터링)
 - Epoch별 mAP·Loss **실시간 차트 모니터링**
@@ -250,13 +254,13 @@ hero:
 - **모델 비교 · Best 모델 자동 선택**
 
 </div>
-<div style="flex-shrink:0;">
-<img src="/assets/images/gen/services/service-7.webp" width="320">
+<div style="flex:1 1 280px; max-width:320px; min-width:0;">
+<img src="/assets/images/gen/services/service-7.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
 </div>
 </div>
 
-<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1;" markdown="1">
+<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1 1 280px; min-width:280px;" markdown="1">
 
 ### Step 3 — Inference · 실시간 탐지 (카메라 연동 추론)
 - 학습 완료 즉시 **카메라 연결·실시간 추론 시작**
@@ -265,13 +269,13 @@ hero:
 - **멀티 카메라 동시 모니터링**
 
 </div>
-<div style="flex-shrink:0;">
-<img src="/assets/images/gen/services/service-7.webp" width="320">
+<div style="flex:1 1 280px; max-width:320px; min-width:0;">
+<img src="/assets/images/gen/services/service-7.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
 </div>
 </div>
 
-<div style="display:flex; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1;" markdown="1">
+<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1 1 280px; min-width:280px;" markdown="1">
 
 ### Step 4 — Review · 재학습 루프 (오탐 수정 · Retrain)
 - 기존 데이터셋 병합 후 **자동 재학습**
@@ -280,8 +284,8 @@ hero:
 - **지속적 개선 루프**로 자동화
 
 </div>
-<div style="flex-shrink:0;">
-<img src="/assets/images/gen/services/deepvi_review1.webp" width="320">
+<div style="flex:1 1 280px; max-width:320px; min-width:0;">
+<img src="/assets/images/gen/services/deepvi_review1.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
 </div>
 </div>
 
