@@ -149,13 +149,6 @@ TSLoom은 데이터 수집·통합의 어려움, 분석 환경 구축 부담, �
 - 줌 · 패닝 · 구간 선택 인터랙티브 탐색
 - DB 히스토리 조회 및 CSV / Excel 내보내기
 
-<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:12px; margin: 1rem 0;">
-  <img src="/assets/images/gen/services/tsloom1.webp" alt="TSLoom 시각화 화면 1" style="width:100%; height:auto; border-radius:6px;">
-  <img src="/assets/images/gen/services/tsloom2.webp" alt="TSLoom 시각화 화면 2" style="width:100%; height:auto; border-radius:6px;">
-  <img src="/assets/images/gen/services/tsloom3.webp" alt="TSLoom 시각화 화면 3" style="width:100%; height:auto; border-radius:6px;">
-  <img src="/assets/images/gen/services/tsloom4.webp" alt="TSLoom 시각화 화면 4" style="width:100%; height:auto; border-radius:6px;">
-</div>
-
 ---
 
 ## 핵심 기능 4 — Collaborative Edge AI & MLOps
@@ -183,10 +176,6 @@ TSLoom은 데이터 수집·통합의 어려움, 분석 환경 구축 부담, �
 - 모델 성능 자동 모니터링 (정확도 · 드리프트)
 - 자동 재학습 및 점진적 배포 (**A/B 테스트**)
 - 모델 버전 **롤백** 지원
-
-> **MLOps(Machine Learning Operations)**는 머신러닝, 데이터 엔지니어링, IT 운영을 결합하여 데이터 수집 · 모델 학습 · 배포 · 지속적 모니터링까지 ML 라이프사이클 전체를 자동화합니다. TSLoom은 종합적인 엔드투엔드 MLOps 기능을 제공하여 **공장, 스마트시티, 맞춤형 애플리케이션** 등 다양한 환경에서 ML 솔루션을 손쉽게 운영하고 확장할 수 있도록 합니다.
->
-> <img src="/assets/images/gen/services/mlops.webp" alt="MLOps" style="max-width:240px; width:100%; height:auto;"> *[MLOps에 대해 Wikipedia에서 더 알아보기](https://en.wikipedia.org/wiki/MLOps)*
 
 ---
 
@@ -245,31 +234,6 @@ TSLoom은 데이터 수집·통합의 어려움, 분석 환경 구축 부담, �
 - 사용자 행위 이력 추적
 - 보안 이벤트 알람 및 리포트
 - **백업 및 재해복구 (DR)** 지원
-
----
-
-## 워크플로우 요약 — 데이터에서 실행까지
-
-<img src="/assets/images/gen/services/tsloom-flow.webp" alt="TSLoom 데이터 흐름" style="display:block; width:100%; max-width:800px; height:auto; margin:0 auto;">
-
-TSLoom을 통해 사용자는 다음을 수행할 수 있습니다.
-
-**데이터 파이프라인 구성**
-- 산업용 PLC, IoT 기기, 데이터베이스, 엔터프라이즈 시스템에서 **실시간 데이터 수집**
-- 소스에서 싱크까지 **빠르고 원활한 데이터 전송**
-- 즉각적인 분석 및 의사결정을 위한 **자동화된 데이터 처리**
-- 비주얼 프로그래밍 인터페이스를 활용한 **워크플로우 설계 및 자동화**
-- 데이터베이스로 **데이터 로딩** / 인터랙티브 대시보드를 통한 **데이터 시각화**
-
-**ML 기반 데이터 분석**
-- 단순하거나 특수한 케이스를 위한 **규칙 기반 모델링**
-- 예측 · 분류 · 이상 탐지를 위한 **사전 구축 ML 모델**
-- 고유한 비즈니스 요구에 맞춘 **커스텀 ML 모델 개발**
-
-**모델 & 워크플로우 관리**
-- ML 모델 학습 및 테스트
-- 워크플로우 배포 및 라이프사이클 관리
-- 실시간 워크플로우 모니터링 및 실행
 
 ---
 
