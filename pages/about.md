@@ -71,5 +71,5 @@ VCANUS의 데이터 처리 및 AI 역량은 다음 분야에도 적용됩니다:
 
 개념에서 현실까지—함께 지능형 솔루션을 만들어 갑시다.
 <br>
-📧 info@vcanus.com | 🌐 http://www.vcanus.com
+📧 sales@vcanus.com
 
