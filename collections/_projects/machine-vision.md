@@ -1,6 +1,6 @@
 ---
-title: "Machine Vision Solutionss"
-description: "Gidel 사 FPGA 기반 머신비전 솔루션 — 한국 공식 총판"
+title: "Machine Vision"
+description: "Gidel 사 FPGA 기반 머신비전 솔루션 — 한국 공식 총판 비카누스"
 date: 2019-10-03
 weight: 2
 header_transparent: false
@@ -18,7 +18,7 @@ hero:
   background_image_blend_mode: false
   fullscreen_mobile: false
   fullscreen_desktop: false
-  height: 660px
+  height: "660px"
   buttons:
     enabled: false
     list:
