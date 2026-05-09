@@ -1,80 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
-  <rect width="1100" height="520" fill="#ffffff"/>
-  <text x="550" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">TSLoom — Business Value &amp; Capabilities</text>
-  <text x="550" y="62" text-anchor="middle" font-size="13" fill="#475569">반도체 · 배터리 · 스마트팩토리 도입 효과 및 핵심 기능</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
+  <rect width="1100" height="470" fill="#ffffff"/>
+  <text x="550" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">TSLoom — 도입 효과 개요</text>
+  <text x="550" y="62" text-anchor="middle" font-size="13" fill="#475569">반도체 · 배터리 · 스마트팩토리 등 산업 전반의 디지털 전환 지원</text>
 
   <!-- column headers -->
   <rect x="40" y="90" width="320" height="40" rx="8" fill="#fee2e2"/>
-  <text x="200" y="116" text-anchor="middle" font-size="14" font-weight="700" fill="#b91c1c">Pain Points · 현장의 핵심 문제</text>
+  <text x="200" y="116" text-anchor="middle" font-size="14" font-weight="700" fill="#b91c1c">현장의 핵심 과제</text>
 
   <rect x="390" y="90" width="320" height="40" rx="8" fill="#1e3a8a"/>
-  <text x="550" y="116" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">TSLoom · 제공 기능</text>
+  <text x="550" y="116" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">TSLoom 제공 가치</text>
 
   <rect x="740" y="90" width="320" height="40" rx="8" fill="#dcfce7"/>
-  <text x="900" y="116" text-anchor="middle" font-size="14" font-weight="700" fill="#15803d">Outcome · 도입 후 기대 효과</text>
+  <text x="900" y="116" text-anchor="middle" font-size="14" font-weight="700" fill="#15803d">도입 후 기대 효과</text>
 
   <!-- Row 1: Data integration -->
   <rect x="40" y="145" width="320" height="80" rx="8" fill="#fef2f2" stroke="#fca5a5"/>
-  <text x="55" y="170" font-size="13" font-weight="700" fill="#991b1b">데이터 수집·통합의 어려움</text>
-  <text x="55" y="190" font-size="11" fill="#7f1d1d">• 이기종 장비/프로토콜 통합 복잡</text>
-  <text x="55" y="208" font-size="11" fill="#7f1d1d">• 신규 장비 연동마다 수 주 소요</text>
+  <text x="55" y="170" font-size="13" font-weight="700" fill="#991b1b">데이터 통합의 어려움</text>
+  <text x="55" y="190" font-size="11" fill="#7f1d1d">• 이기종 장비/시스템 통합의 복잡성</text>
+  <text x="55" y="208" font-size="11" fill="#7f1d1d">• 신규 장비 연동에 소요되는 시간</text>
 
   <rect x="390" y="145" width="320" height="80" rx="8" fill="#eff6ff" stroke="#1e40af"/>
-  <text x="405" y="170" font-size="13" font-weight="700" fill="#1e3a8a">Multi-Source &amp; Extensibility</text>
-  <text x="405" y="190" font-size="11" fill="#1e40af">• 10+ 산업용 프로토콜 플러그인</text>
-  <text x="405" y="208" font-size="11" fill="#1e40af">• Multi-Infra · Plugin 생태계</text>
+  <text x="405" y="170" font-size="13" font-weight="700" fill="#1e3a8a">다양한 데이터 연결성</text>
+  <text x="405" y="190" font-size="11" fill="#1e40af">• 산업 장비 · IT 시스템 통합 연결</text>
+  <text x="405" y="208" font-size="11" fill="#1e40af">• 플러그인 기반 확장 생태계</text>
 
   <rect x="740" y="145" width="320" height="80" rx="8" fill="#f0fdf4" stroke="#86efac"/>
-  <text x="755" y="170" font-size="13" font-weight="700" fill="#15803d">결함 분류 정확도 95%+</text>
-  <text x="755" y="190" font-size="11" fill="#166534">• 이상 감지: 수 분 → 수 초</text>
-  <text x="755" y="208" font-size="11" fill="#166534">• 비계획 다운타임 대폭 감소</text>
+  <text x="755" y="170" font-size="13" font-weight="700" fill="#15803d">현장 통합·진단 고도화</text>
+  <text x="755" y="190" font-size="11" fill="#166534">• 이상 감지 시간의 단축</text>
+  <text x="755" y="208" font-size="11" fill="#166534">• 비계획 다운타임 감소</text>
 
   <!-- Row 2: Analysis -->
   <rect x="40" y="240" width="320" height="80" rx="8" fill="#fef2f2" stroke="#fca5a5"/>
   <text x="55" y="265" font-size="13" font-weight="700" fill="#991b1b">분석 환경 구축 부담</text>
-  <text x="55" y="285" font-size="11" fill="#7f1d1d">• ML 모델 개발·배포 전문 인력 부족</text>
-  <text x="55" y="303" font-size="11" fill="#7f1d1d">• 파이프라인 구축 평균 3~6개월</text>
+  <text x="55" y="285" font-size="11" fill="#7f1d1d">• ML 모델 개발·배포의 진입 장벽</text>
+  <text x="55" y="303" font-size="11" fill="#7f1d1d">• 분석 파이프라인 구축의 장기화</text>
 
   <rect x="390" y="240" width="320" height="80" rx="8" fill="#eff6ff" stroke="#1e40af"/>
-  <text x="405" y="265" font-size="13" font-weight="700" fill="#1e3a8a">Visualization · Edge AI · MLOps</text>
-  <text x="405" y="285" font-size="11" fill="#1e40af">• GPU 가속 차트 / 실시간 대시보드</text>
-  <text x="405" y="303" font-size="11" fill="#1e40af">• 계층적 추론 + 모델 자동 관리</text>
+  <text x="405" y="265" font-size="13" font-weight="700" fill="#1e3a8a">시각화 · 엣지 AI · MLOps 통합</text>
+  <text x="405" y="285" font-size="11" fill="#1e40af">• 가속 기반 시각화와 대시보드</text>
+  <text x="405" y="303" font-size="11" fill="#1e40af">• 엣지·중앙 통합 추론 + 자동 운영</text>
 
   <rect x="740" y="240" width="320" height="80" rx="8" fill="#f0fdf4" stroke="#86efac"/>
-  <text x="755" y="265" font-size="13" font-weight="700" fill="#15803d">샘플링비용 –30%, 품질정확도 +15%</text>
-  <text x="755" y="285" font-size="11" fill="#166534">• Virtual Metrology로 비용 절감</text>
+  <text x="755" y="265" font-size="13" font-weight="700" fill="#15803d">공정 예측 · 품질 향상</text>
+  <text x="755" y="285" font-size="11" fill="#166534">• 가상 계측 등 분석 자동화</text>
   <text x="755" y="303" font-size="11" fill="#166534">• 공정 변수 예측 정확도 향상</text>
 
   <!-- Row 3: Operations -->
   <rect x="40" y="335" width="320" height="80" rx="8" fill="#fef2f2" stroke="#fca5a5"/>
-  <text x="55" y="360" font-size="13" font-weight="700" fill="#991b1b">운영 효율성 한계</text>
-  <text x="55" y="380" font-size="11" fill="#7f1d1d">• 수동 모니터링으로 이상 감지 지연</text>
-  <text x="55" y="398" font-size="11" fill="#7f1d1d">• 레거시 SCADA·MES 확장 한계</text>
+  <text x="55" y="360" font-size="13" font-weight="700" fill="#991b1b">운영 효율성의 한계</text>
+  <text x="55" y="380" font-size="11" fill="#7f1d1d">• 수동 모니터링으로 인한 대응 지연</text>
+  <text x="55" y="398" font-size="11" fill="#7f1d1d">• 레거시 시스템 확장의 제약</text>
 
   <rect x="390" y="335" width="320" height="80" rx="8" fill="#eff6ff" stroke="#1e40af"/>
-  <text x="405" y="360" font-size="13" font-weight="700" fill="#1e3a8a">Visual Workflow + Auto Failover</text>
+  <text x="405" y="360" font-size="13" font-weight="700" fill="#1e3a8a">비주얼 워크플로우 + 운영 자동화</text>
   <text x="405" y="380" font-size="11" fill="#1e40af">• 노코드 워크플로우 편집기</text>
-  <text x="405" y="398" font-size="11" fill="#1e40af">• RBAC · 암호화 · 감사 로그</text>
+  <text x="405" y="398" font-size="11" fill="#1e40af">• 엔터프라이즈 보안 · 감사 체계</text>
 
   <rect x="740" y="335" width="320" height="80" rx="8" fill="#f0fdf4" stroke="#86efac"/>
-  <text x="755" y="360" font-size="13" font-weight="700" fill="#15803d">구축기간 –90%, 배포속도 7×</text>
-  <text x="755" y="380" font-size="11" fill="#166534">• 파이프라인: 수개월 → 수일</text>
-  <text x="755" y="398" font-size="11" fill="#166534">• ML 배포 주기: 주 → 일 단위</text>
-
-  <!-- KPI strip -->
-  <rect x="40" y="445" width="1020" height="55" rx="10" fill="#0f172a"/>
-  <g font-family="-apple-system" fill="#ffffff">
-    <text x="120" y="475" text-anchor="middle" font-size="22" font-weight="700">95%+</text>
-    <text x="120" y="492" text-anchor="middle" font-size="11" fill="#cbd5e1">결함 정확도</text>
-    <text x="290" y="475" text-anchor="middle" font-size="22" font-weight="700">–80%</text>
-    <text x="290" y="492" text-anchor="middle" font-size="11" fill="#cbd5e1">감지 지연</text>
-    <text x="460" y="475" text-anchor="middle" font-size="22" font-weight="700">–30%</text>
-    <text x="460" y="492" text-anchor="middle" font-size="11" fill="#cbd5e1">샘플링 비용</text>
-    <text x="630" y="475" text-anchor="middle" font-size="22" font-weight="700">+15%</text>
-    <text x="630" y="492" text-anchor="middle" font-size="11" fill="#cbd5e1">품질 정확도</text>
-    <text x="800" y="475" text-anchor="middle" font-size="22" font-weight="700">–90%</text>
-    <text x="800" y="492" text-anchor="middle" font-size="11" fill="#cbd5e1">구축 기간</text>
-    <text x="970" y="475" text-anchor="middle" font-size="22" font-weight="700">7×</text>
-    <text x="970" y="492" text-anchor="middle" font-size="11" fill="#cbd5e1">배포 속도</text>
-  </g>
+  <text x="755" y="360" font-size="13" font-weight="700" fill="#15803d">구축 기간 · 배포 주기 단축</text>
+  <text x="755" y="380" font-size="11" fill="#166534">• 분석 파이프라인 구축 기간 단축</text>
+  <text x="755" y="398" font-size="11" fill="#166534">• ML 모델 배포 주기 단축</text>
 </svg>
