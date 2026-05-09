@@ -1,6 +1,6 @@
 ---
-title: "Machine Vision Solution"
-description: "Gidel 사 FPGA 기반 머신비전 솔루션 — VCANUS 한국 공식 총판"
+title: "Machine Vision Solutions"
+description: "Gidel 사 FPGA 기반 머신비전 솔루션 — 한국 공식 총판"
 date: 2019-10-03
 weight: 2
 header_transparent: false
@@ -11,8 +11,8 @@ image: "/assets/images/gen/projects/machine-vision.webp"
 
 hero:
   enabled: true
-  heading: "Machine Vision Solution"
-  sub_heading: "Gidel 사 FPGA 기반 머신비전 솔루션 · 한국 공식 총판 비카누스"
+  heading: "Machine Vision Solutions"
+  sub_heading: "Gidel 사 FPGA 기반 머신비전 솔루션"
   text_color: "#ffffff"
   background_color: ""
   background_gradient: true
