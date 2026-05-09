@@ -1,23 +1,23 @@
 ---
-title: "Gidel"
+title: "Machine Vision Solution"
 description: "Gidel 사 FPGA 기반 머신비전 솔루션 — VCANUS 한국 공식 총판"
 date: 2019-10-03
-weight: 5
+weight: 2
 header_transparent: false
 fa_icon: false
 icon: "assets/images/icons/icons8-merge-git-100.png"
-thumbnail: "/assets/images/gen/services/service-8-thumbnail.webp"
-image: "/assets/images/gen/services/service-8.webp"
+thumbnail: "/assets/images/gen/projects/machine-vision-thumbnail.webp"
+image: "/assets/images/gen/projects/machine-vision.webp"
 
 hero:
   enabled: true
-  heading: "Gidel"
-  sub_heading: "Gidel 사 FPGA 기반 머신비전 솔루션 · VCANUS 한국 공식 총판"
+  heading: "Machine Vision Solution"
+  sub_heading: "Gidel 사 FPGA 기반 머신비전 솔루션 · 한국 공식 총판 비카누스"
   text_color: "#ffffff"
   background_color: ""
   background_gradient: true
   background_image_blend_mode: false # "overlay", "multiply", "screen"
-  background_image: "/assets/images/gen/services/service-8.webp"
+  background_image: "/assets/images/gen/projects/machine-vision.webp"
   fullscreen_mobile: false
   fullscreen_desktop: false
   height: 660px
@@ -65,19 +65,19 @@ hero:
 
 산업용 GigE Vision 카메라를 단일 카드로 다채널 동시 수신.
 
-<img src="/assets/images/gen/services/gidel-hawkeye-gige.png" alt="HawkEye GigE Vision Frame Grabber" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
+<img src="/assets/images/gen/projects/gidel-hawkeye-gige.png" alt="HawkEye GigE Vision Frame Grabber" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
 
 ### CoaXPress 모델
 
 CoaXPress-12 인터페이스로 고대역폭 산업용 카메라 연동.
 
-<img src="/assets/images/gen/services/gidel-hawkeye-cxp.png" alt="HawkEye CoaXPress Frame Grabber" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
+<img src="/assets/images/gen/projects/gidel-hawkeye-cxp.png" alt="HawkEye CoaXPress Frame Grabber" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
 
 ### Camera Link 모델
 
 Camera Link Deca / Full / Medium / Base 인터페이스 지원.
 
-<img src="/assets/images/gen/services/gidel-hawkeye-cl.png" alt="HawkEye Camera Link Frame Grabber" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
+<img src="/assets/images/gen/projects/gidel-hawkeye-cl.png" alt="HawkEye Camera Link Frame Grabber" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
 
 ---
 
@@ -97,13 +97,13 @@ Camera Link Deca / Full / Medium / Base 인터페이스 지원.
 
 GigE Vision · Camera Link 인터페이스 기반 컴팩트 엣지 컴퓨터.
 
-<img src="/assets/images/gen/services/gidel-fantovision20.png" alt="FantoVision 20 Series" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
+<img src="/assets/images/gen/projects/gidel-fantovision20.png" alt="FantoVision 20 Series" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
 
 ### FantoVision 40 시리즈
 
 CoaXPress-12 인터페이스 기반 고성능 엣지 컴퓨터, 10GigE 옵션 포함.
 
-<img src="/assets/images/gen/services/gidel-fantovision40.png" alt="FantoVision 40 Series" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
+<img src="/assets/images/gen/projects/gidel-fantovision40.png" alt="FantoVision 40 Series" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
 
 ---
 
@@ -121,9 +121,9 @@ CoaXPress-12 인터페이스 기반 고성능 엣지 컴퓨터, 10GigE 옵션 �
 - 결정론적 테스트로 버그 원인 특정
 - 하드웨어 없는 사전 개발 · 테스트
 
-<img src="/assets/images/gen/services/gidel-camsim.png" alt="CamSim Camera Simulator" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
+<img src="/assets/images/gen/projects/gidel-camsim.png" alt="CamSim Camera Simulator" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
 
-<img src="/assets/images/gen/services/gidel-camsim-diagram.png" alt="CamSim System Diagram" style="display:block; width:100%; max-width:700px; height:auto; margin:1rem auto;">
+<img src="/assets/images/gen/projects/gidel-camsim-diagram.png" alt="CamSim System Diagram" style="display:block; width:100%; max-width:700px; height:auto; margin:1rem auto;">
 
 ---
 

@@ -2,7 +2,7 @@
 title: "3D Measurement with Zeiss"
 description: "스마트 팩토리 3D 스캐닝: VURT-X 기반 Zeiss ATOS"
 date: 2018-12-20
-weight: 2
+weight: 1
 header_transparent: false
 thumbnail: "/assets/images/gen/projects/atos5-thumbnail.webp"
 image: "/assets/images/gen/projects/atos5-large.webp"
