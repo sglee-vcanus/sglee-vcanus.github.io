@@ -63,19 +63,19 @@ hero:
 
 산업용 GigE Vision 카메라를 단일 카드로 다채널 동시 수신.
 
-<img src="/assets/images/gen/projects/gidel-hawkeye-gige.png" alt="HawkEye GigE Vision Frame Grabber" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
+<img src="/assets/images/gen/projects/gidel-hawkeye-gige.png" alt="HawkEye GigE Vision Frame Grabber" style="display:block; width:100%; max-width:720px; height:auto; margin:0 auto;">
 
 ### CoaXPress 모델
 
 CoaXPress-12 인터페이스로 고대역폭 산업용 카메라 연동.
 
-<img src="/assets/images/gen/projects/gidel-hawkeye-cxp.png" alt="HawkEye CoaXPress Frame Grabber" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
+<img src="/assets/images/gen/projects/gidel-hawkeye-cxp.png" alt="HawkEye CoaXPress Frame Grabber" style="display:block; width:100%; max-width:720px; height:auto; margin:0 auto;">
 
 ### Camera Link 모델
 
 Camera Link Deca / Full / Medium / Base 인터페이스 지원.
 
-<img src="/assets/images/gen/projects/gidel-hawkeye-cl.png" alt="HawkEye Camera Link Frame Grabber" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
+<img src="/assets/images/gen/projects/gidel-hawkeye-cl.png" alt="HawkEye Camera Link Frame Grabber" style="display:block; width:100%; max-width:720px; height:auto; margin:0 auto;">
 
 ---
 
@@ -95,13 +95,13 @@ Camera Link Deca / Full / Medium / Base 인터페이스 지원.
 
 GigE Vision · Camera Link 인터페이스 기반 컴팩트 엣지 컴퓨터.
 
-<img src="/assets/images/gen/projects/gidel-fantovision20.png" alt="FantoVision 20 Series" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
+<img src="/assets/images/gen/projects/gidel-fantovision20.png" alt="FantoVision 20 Series" style="display:block; width:100%; max-width:720px; height:auto; margin:0 auto;">
 
 ### FantoVision 40 시리즈
 
 CoaXPress-12 인터페이스 기반 고성능 엣지 컴퓨터, 10GigE 옵션 포함.
 
-<img src="/assets/images/gen/projects/gidel-fantovision40.png" alt="FantoVision 40 Series" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
+<img src="/assets/images/gen/projects/gidel-fantovision40.png" alt="FantoVision 40 Series" style="display:block; width:100%; max-width:720px; height:auto; margin:0 auto;">
 
 ---
 
@@ -119,9 +119,9 @@ CoaXPress-12 인터페이스 기반 고성능 엣지 컴퓨터, 10GigE 옵션 �
 - 결정론적 테스트로 버그 원인 특정
 - 하드웨어 없는 사전 개발 · 테스트
 
-<img src="/assets/images/gen/projects/gidel-camsim.png" alt="CamSim Camera Simulator" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto;">
+<img src="/assets/images/gen/projects/gidel-camsim.png" alt="CamSim Camera Simulator" style="display:block; width:100%; max-width:720px; height:auto; margin:0 auto;">
 
-<img src="/assets/images/gen/projects/gidel-camsim-diagram.png" alt="CamSim System Diagram" style="display:block; width:100%; max-width:700px; height:auto; margin:1rem auto;">
+<img src="/assets/images/gen/projects/gidel-camsim-diagram.png" alt="CamSim System Diagram" style="display:block; width:100%; max-width:560px; height:auto; margin:1rem auto;">
 
 ---
 
