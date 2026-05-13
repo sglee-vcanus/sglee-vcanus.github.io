@@ -7,6 +7,15 @@ permalink: pretty
 markdown: kramdown
 highlighter: rouge
 
+# -------------------
+# Language settings (for EN/KO toggle)
+# --------------------
+lang: ko
+alt_lang:
+  code: en
+  label: "ENG"
+  url: "https://vcanus.github.io"
+
 
 # Plugins
 plugins:
