@@ -1,14 +1,18 @@
 <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="{{ site.contact_form.formspree_endpoint }}" method="post">
   <fieldset id="fs-frm-inputs">
-    <label for="full-name">Full Name</label>
-    <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-    <label for="email-address">Email Address</label>
-    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
-    <label for="message">Message</label>
-    <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
-    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+    <label for="full-name">이름</label>
+    <input type="text" name="name" id="full-name" placeholder="성함을 입력해 주세요" required="">
+    <label for="email-address">이메일</label>
+    <input type="email" name="_replyto" id="email-address" placeholder="example@domain.com" required="">
+    <label for="company">회사 / 소속 (선택)</label>
+    <input type="text" name="company" id="company" placeholder="소속 기관이나 회사명을 입력해 주세요">
+    <label for="message">문의 내용</label>
+    <textarea rows="5" name="message" id="message" placeholder="문의하실 내용을 자유롭게 작성해 주세요. 영업일 기준 1~2일 내에 회신드리겠습니다." required=""></textarea>
+    <input type="hidden" name="_subject" id="email-subject" value="[VCANUS 홈페이지] 신규 문의가 접수되었습니다">
+    <input type="hidden" name="_next" value="{{ '/contact/success' | absolute_url }}">
+    <input type="text" name="_gotcha" style="display:none">
   </fieldset>
-  <input type="submit" value="Submit">
+  <input type="submit" value="문의 보내기">
 </form><style>/* reset */
 
 #fs-frm input,

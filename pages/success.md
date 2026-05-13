@@ -1,8 +1,14 @@
 ---
-title: "Success"
+title: "문의가 접수되었습니다"
 date: 2018-02-22
 layout: basic
 permalink: "/contact/success"
 ---
 
-## Your form was submitted
+## 문의가 정상적으로 전송되었습니다
+
+소중한 문의 감사합니다. 영업일 기준 1~2일 내에 담당자가 회신드리겠습니다.
+
+문의 내용이 긴급한 경우 회사 대표 이메일 또는 전화로 직접 연락 주시면 빠르게 도움드리겠습니다.
+
+[홈으로 돌아가기](/)
