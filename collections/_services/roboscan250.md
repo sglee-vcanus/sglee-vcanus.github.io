@@ -104,13 +104,20 @@ hero:
 - 매뉴얼 충전 기구 제공
 
 ### 6축 다관절 로봇
-- **제조사**: 두산로보틱스 (A-Series)
+
+고객 요구에 따라 아래 **두산로보틱스**와 **뉴로메카** 두 모델 중 하나를 선택할 수 있습니다.
+
+**두산로보틱스 (A-Series)**
 - **Axis**: 6축 / **Payload**: 9 kg / **Reach**: 1,200 mm / **Repeatability**: ±0.05 mm
 - **직류 제어기 제공** — DC Converter 불필요
 - **PDB 보드** — 회로 보호, 전원 입력 24~48V, 모델 MDROBOT PDIST80, 최대 80A
 - **액세서리** — 범용 어댑터, AMR 장착 프레임 및 커버
 
-> 고객 요청 시 협의 후 뉴로메카 모델(Payload 7 kg, Reach 1,210 mm, Repeatability 0.1 mm)로 변경 가능합니다.
+**뉴로메카**
+- **Axis**: 6축 / **Payload**: 7 kg / **Reach**: 1,210 mm / **Repeatability**: ±0.1 mm
+- **DC-AC 인버터** — AMR DC 전원 → 로봇 AC 전원 변환, 모델 DK4830, 입력 48V DC / 출력 220V AC, 정격 3kW
+- **PDB 보드** — 회로 보호, 전원 입력 24~48V, 모델 MDROBOT PDIST80, 최대 80A
+- **액세서리** — 범용 어댑터, AMR 장착 프레임 및 커버
 
 ### 디지털 측정 센서 (ZEISS ARAMIS)
 - **제조사**: ZEISS
