@@ -127,6 +127,19 @@ hero:
 - **프로세싱 컴퓨터**: Intel Core i9-13950HX, RAM 64GB DDR5, NVIDIA RTX 3500 Ada 12GB, 17" 디스플레이, 1TB SSD, Windows 11
 - USB 3m 케이블, Single macro lens 1개 포함
 
+**ARAMIS 활용 예시 — 인장 시편의 변형률 풀필드(Full-field) 측정**
+
+<div style="display:flex; flex-wrap:wrap; gap:1.5rem; align-items:flex-start; margin:1.5rem 0;">
+<div style="flex:2 1 420px; min-width:300px;">
+<img src="/assets/images/gen/services/roboscan-aramis-usage.webp" alt="ARAMIS 활용 — ZEISS INSPECT에서 인장 시편 변형률 풀필드 측정" style="display:block; width:100%; height:auto;">
+</div>
+<div style="flex:1 1 220px; min-width:200px;">
+<img src="/assets/images/gen/services/roboscan-aramis-result.webp" alt="ARAMIS 변형률 측정 결과 — 변형 집중 영역 시각화" style="display:block; width:100%; height:auto;">
+</div>
+</div>
+
+ARAMIS는 측정 대상 표면의 변위·변형률을 픽셀 단위로 산출해, 변형이 집중되는 영역을 색상 맵으로 시각화합니다. 정적·동적 하중 시험에서 균열·네킹·국부 변형 거동을 정량 분석할 수 있습니다.
+
 ### 통합 운영 컴퓨터
 - **CPU**: Ultra7-265 (20 Core / 20 Threads) / **Memory**: 32GB DDR5 / **Storage**: 1TB SSD
 - **Power**: 80+ 700W ATX
