@@ -93,7 +93,6 @@ hero:
 ## 시스템 구성
 
 ### 이동형 로봇 (AMR)
-- **제조사**: FAROBOT (Adlink 합작)
 - **Dimension**: 870 x 600 x 265 mm
 - **Speed**: 1.5 m/s (Max)
 - **Weight**: 130 kg
@@ -105,18 +104,18 @@ hero:
 
 ### 6축 다관절 로봇
 
-고객 요구에 따라 아래 **두산로보틱스**와 **뉴로메카** 두 모델 중 하나를 선택할 수 있습니다.
+고객 요구에 따라 아래 두 가지 6축 협동 로봇 모델 중 하나를 선택할 수 있습니다.
 
-**두산로보틱스 (A-Series)**
+**Type A**
 - **Axis**: 6축 / **Payload**: 9 kg / **Reach**: 1,200 mm / **Repeatability**: ±0.05 mm
 - **직류 제어기 제공** — DC Converter 불필요
-- **PDB 보드** — 회로 보호, 전원 입력 24~48V, 모델 MDROBOT PDIST80, 최대 80A
+- **PDB 보드** — 회로 보호, 전원 입력 24~48V, 최대 80A
 - **액세서리** — 범용 어댑터, AMR 장착 프레임 및 커버
 
-**뉴로메카**
+**Type B**
 - **Axis**: 6축 / **Payload**: 7 kg / **Reach**: 1,210 mm / **Repeatability**: ±0.1 mm
-- **DC-AC 인버터** — AMR DC 전원 → 로봇 AC 전원 변환, 모델 DK4830, 입력 48V DC / 출력 220V AC, 정격 3kW
-- **PDB 보드** — 회로 보호, 전원 입력 24~48V, 모델 MDROBOT PDIST80, 최대 80A
+- **DC-AC 인버터** — AMR DC 전원 → 로봇 AC 전원 변환, 입력 48V DC / 출력 220V AC, 정격 3kW
+- **PDB 보드** — 회로 보호, 전원 입력 24~48V, 최대 80A
 - **액세서리** — 범용 어댑터, AMR 장착 프레임 및 커버
 
 ### 디지털 측정 센서 (ZEISS ARAMIS)
@@ -129,11 +128,10 @@ hero:
 - USB 3m 케이블, Single macro lens 1개 포함
 
 ### 통합 운영 컴퓨터
-- **제조사**: Advantech
 - **CPU**: Ultra7-265 (20 Core / 20 Threads) / **Memory**: 32GB DDR5 / **Storage**: 1TB SSD
 - **Power**: 80+ 700W ATX
 - **OS**: Linux (ARAMIS 처리 컴퓨터는 Windows)
-- **모니터**: Dell P2725, 27", 1920 x 1080, HDMI / Keyboard·Mouse 포함
+- **모니터**: 27", 1920 x 1080, HDMI / Keyboard·Mouse 포함
 
 ---
 
