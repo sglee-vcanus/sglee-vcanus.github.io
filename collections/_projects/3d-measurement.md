@@ -141,13 +141,25 @@ VCANUS는 원시 3D 데이터를 실행 가능한 인사이트로 변환하는 �
 측정 방식에 따라 다양한 산업 현장에 적용됩니다.
 
 ### 광학 풀필드 스캔(ATOS5) 응용
+
+<img src="/assets/images/gen/projects/atos-application-domains.svg" alt="ATOS5 응용 분야 — 주조·단조, 판금 성형, 플라스틱, 적층 제조, 자동차, 항공우주" style="display:block; width:100%; height:auto; max-width:1100px; margin:1.5rem auto;">
+
 - **주조·단조**: 사형·다이캐스팅·정밀주조 및 단조 부품의 측정·검사 시간 단축
 - **판금 성형**: 금형 제작·시작(try-out), 초도품 검사(FAI), 양산 검사, 조립까지 품질 관리
 - **플라스틱**: 사출·블로우·열성형 전 공정의 형상 최적화
 - **적층 제조(AM)**: 고해상도 폴리곤 메시(STL) 기반 3D 프린팅·밀링·치수 검사
 - **리버스 엔지니어링**: 실물 형상의 3D 디지털화 및 CAD 복원
 
+<img src="/assets/images/gen/projects/atos-applications.webp" alt="ATOS 실제 적용 예 — 자동차 차체 패널 편차 검사 및 항공기 구조 검사" style="display:block; width:100%; height:auto; max-width:1000px; margin:1.5rem auto;">
+
+*실제 적용 예 — 자동차 차체 패널 편차(갭·플러시) 검사 · 항공기 구조 검사*
+
 ### 프로파일 변위 센서 응용 (인라인 3D 검사)
+
+<img src="/assets/images/gen/projects/measurement-applications.webp" alt="프로파일 변위 센서 3D 측정 결과 예시 — 주조 하우징, 전자부품·PCB, IC 트레이, 표면 변형 맵" style="display:block; width:100%; height:auto; max-width:1100px; margin:1.5rem auto;">
+
+*예시: 부품별 3D 측정·검사 결과 — 형상·높이·변형을 색상 맵으로 정량 분석*
+
 - **치수·형상 검사**: 높이·깊이·단차·부피·폭·두께·평면도·각도·변형
 - **외관 검사**: 버(burr)·찍힘·이물·균열·칩핑 검출
 - **존재·조립 검사**: 들뜸·뒤집힘·휨·갭·카운트
