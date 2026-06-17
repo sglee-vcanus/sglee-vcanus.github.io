@@ -60,6 +60,16 @@ TSLoom과 Edge AI를 활용하여 시각 데이터를 실행 가능한 인텔리
 - 코팅 두께 예측: AI 모델을 적용하여 실시간으로 코팅 두께를 예측합니다.
 - 공정 최적화: 균일성을 보장하기 위해 코팅 파라미터를 동적으로 조정합니다.
 
+코팅 롤 측면(축 방향)에 카메라를 배치해 다이 립과 웹 사이 메니스커스(코팅 비드) 단면을 실시간 관측하고, 형상 감지 → AI 두께 예측 → 파라미터 동적 조정으로 이어지는 폐루프로 도막 균일성을 확보합니다.
+
+|<img src="/assets/images/gen/projects/r2r-mon-setup.webp" width="560">|
+|---|
+| 측면 카메라 배치: 코팅 롤 측면에서 메니스커스 단면을 축 방향으로 관측 |
+
+|<img src="/assets/images/gen/projects/r2r-mon-loop.webp" width="560">|
+|---|
+| 폐루프 제어: 측면 카메라 → 메니스커스 형상 감지 → AI 두께 예측 → 파라미터 최적화 |
+
 **디스플레이 결함 분류**
 - 결함 감지: 고해상도 카메라로 디스플레이 패널의 미세 결함을 식별합니다.
 - 분류 & 분석: 머신러닝으로 결함을 유형, 크기, 위치별로 분류합니다.
@@ -111,9 +121,9 @@ TSLoom과 Edge AI를 활용하여 시각 데이터를 실행 가능한 인텔리
 - 실시간 동적 초점 제어: 이송량 보정(X·Y)과 표면 높이 추종(Z)을 동시에 수행하며, z-shifter(다이내믹 포커싱 모듈)로 곡면·단차·원통면에서도 초점이 항상 표면에 맺히도록 실시간 제어합니다.
 - 정밀 동기화: 엔코더 위치·스캐너 좌표·가공물 3D 형상 간 좌표계를 정합하고 동기화 지연을 보상하여, 고속 이송 중에도 가공 정밀도를 유지합니다.
 
-|<img src="/assets/images/gen/projects/otf-2d.webp" width="430">|<img src="/assets/images/gen/projects/otf-3d.webp" width="430">|
-|---|---|
-| 2D On-The-Fly 구성: 2축 갈바노 스캔 헤드 + 엔코더 위치 피드백 (평면 대상) | 3D On-The-Fly 구성: Z 동적 초점 모듈이 곡면 표면을 따라 초점(Δz)을 추종 |
+|<img src="/assets/images/gen/projects/otf-2d.webp" width="430">|<span style="display:inline-block;width:50px">&nbsp;</span>|<img src="/assets/images/gen/projects/otf-3d.webp" width="430">|
+|---|:---:|---|
+| **2D On-The-Fly 구성**<br>2축 갈바노 스캔 헤드 + 엔코더 위치 피드백 (평면 대상) | | **3D On-The-Fly 구성**<br>Z 동적 초점 모듈이 곡면 표면을 따라 초점(Δz)을 추종 |
 
 ## VCANUS 솔루션의 주요 이점
 
