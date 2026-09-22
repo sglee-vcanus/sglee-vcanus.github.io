@@ -30,8 +30,8 @@
   <text x="942" y="161" text-anchor="middle" font-size="12" font-weight="600" fill="#1e3a8a">✅ 완전 No-Code</text>
 
   <!-- Row 2: 라벨링 3종 통합 -->
-  <text x="60" y="194" font-size="12" font-weight="600" fill="#0f172a">라벨링 3종 통합</text>
-  <text x="60" y="208" font-size="9" fill="#64748b">Cls · Det · Seg</text>
+  <text x="60" y="187" font-size="12" font-weight="600" fill="#0f172a">라벨링 3종 통합</text>
+  <text x="60" y="200" font-size="9" fill="#64748b">Cls · Det · Seg</text>
   <text x="522" y="194" text-anchor="middle" font-size="13" fill="#d97706">⚠️ 플랫폼별 상이</text>
   <text x="722" y="194" text-anchor="middle" font-size="13" fill="#16a34a">✅ 라벨링 강점</text>
   <rect x="825" y="178" width="235" height="28" rx="4" fill="#dbeafe"/>
@@ -44,20 +44,21 @@
   <rect x="825" y="213" width="235" height="28" rx="4" fill="#dbeafe"/>
   <text x="942" y="231" text-anchor="middle" font-size="12" font-weight="600" fill="#1e3a8a">✅ 즉시 연동</text>
 
-  <!-- Row 4: 학습 속도 -->
-  <text x="60" y="264" font-size="12" font-weight="600" fill="#0f172a">학습 속도</text>
-  <text x="522" y="264" text-anchor="middle" font-size="13" fill="#16a34a">✅ 빠름</text>
-  <text x="722" y="264" text-anchor="middle" font-size="13" fill="#d97706">⚠️ 보통</text>
+  <!-- Row 4: 정밀 검사 -->
+  <text x="60" y="257" font-size="12" font-weight="600" fill="#0f172a">정밀 검사</text>
+  <text x="60" y="270" font-size="9" fill="#64748b">Align · 계측 · 판독</text>
+  <text x="522" y="264" text-anchor="middle" font-size="13" fill="#dc2626">❌ 별도 툴</text>
+  <text x="722" y="264" text-anchor="middle" font-size="13" fill="#d97706">⚠️ 제한적</text>
   <rect x="825" y="248" width="235" height="28" rx="4" fill="#dbeafe"/>
-  <text x="942" y="266" text-anchor="middle" font-size="12" font-weight="600" fill="#1e3a8a">✅ 수일 내 완결</text>
+  <text x="942" y="266" text-anchor="middle" font-size="12" font-weight="600" fill="#1e3a8a">✅ 딥러닝과 통합</text>
 
-  <!-- Row 5: 자동 재학습 루프 -->
-  <text x="60" y="299" font-size="12" font-weight="600" fill="#0f172a">자동 재학습 루프</text>
-  <text x="60" y="313" font-size="9" fill="#64748b">오탐 → Retrain</text>
+  <!-- Row 5: 재학습 루프 -->
+  <text x="60" y="292" font-size="12" font-weight="600" fill="#0f172a">재학습 루프</text>
+  <text x="60" y="305" font-size="9" fill="#64748b">오탐 → Retrain</text>
   <text x="522" y="299" text-anchor="middle" font-size="13" fill="#dc2626">❌ 미지원</text>
   <text x="722" y="299" text-anchor="middle" font-size="13" fill="#d97706">⚠️ 분리된 워크플로우</text>
   <rect x="825" y="283" width="235" height="28" rx="4" fill="#dbeafe"/>
-  <text x="942" y="301" text-anchor="middle" font-size="12" font-weight="600" fill="#1e3a8a">✅ Inference Review</text>
+  <text x="942" y="301" text-anchor="middle" font-size="12" font-weight="600" fill="#1e3a8a">✅ Review → Retrain 내장</text>
 
   <!-- Row 6: 클라우드 의존성 -->
   <text x="60" y="334" font-size="12" font-weight="600" fill="#0f172a">클라우드 의존성</text>
@@ -93,6 +94,6 @@
 
   <!-- Bottom summary -->
   <rect x="40" y="440" width="1020" height="55" rx="10" fill="#0f172a"/>
-  <text x="550" y="465" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">DeepVi의 결정적 차별점 — End-to-End No-Code · 실시간 카메라 추론 · 오탐 자동 재학습 루프</text>
+  <text x="550" y="465" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">DeepVi의 결정적 차별점 — End-to-End No-Code · 딥러닝 + 정밀 검사 통합 · 오탐 재학습 루프</text>
   <text x="550" y="485" text-anchor="middle" font-size="12" fill="#94a3b8">현장 담당자가 직접 운영하는 AI 비전 플랫폼 · 데이터 외부 전송 없는 내부 완결 처리</text>
 </svg>

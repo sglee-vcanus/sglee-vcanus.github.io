@@ -22,7 +22,7 @@
     <text x="117" y="158" text-anchor="middle" font-size="11" fill="#dbeafe">데이터 관리</text>
     <text x="117" y="183" text-anchor="middle" font-size="10" fill="#ffffff">대용량 이미지 일괄</text>
     <text x="117" y="198" text-anchor="middle" font-size="10" fill="#ffffff">업로드 · 영구 보관</text>
-    <text x="117" y="218" text-anchor="middle" font-size="10" fill="#bfdbfe">NAS · File Server</text>
+    <text x="117" y="218" text-anchor="middle" font-size="10" fill="#bfdbfe">폴더 · 썸네일 관리</text>
 
     <!-- Dataset -->
     <rect x="210" y="110" width="155" height="120" rx="10" fill="url(#ovGrad)"/>
@@ -32,37 +32,37 @@
     <text x="287" y="198" text-anchor="middle" font-size="10" fill="#ffffff">Detection · Segmentation</text>
     <text x="287" y="218" text-anchor="middle" font-size="10" fill="#bfdbfe">통합 라벨링 환경</text>
 
-    <!-- Inline Processing -->
+    <!-- Training -->
     <rect x="380" y="110" width="155" height="120" rx="10" fill="url(#ovGrad)"/>
-    <text x="457" y="138" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">③  Inline Processing</text>
-    <text x="457" y="158" text-anchor="middle" font-size="11" fill="#dbeafe">실시간 영상 처리</text>
-    <text x="457" y="183" text-anchor="middle" font-size="10" fill="#ffffff">화질 개선 · Align</text>
-    <text x="457" y="198" text-anchor="middle" font-size="10" fill="#ffffff">Template Matching</text>
-    <text x="457" y="218" text-anchor="middle" font-size="10" fill="#bfdbfe">참조영상 등록</text>
+    <text x="457" y="138" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">③  Training</text>
+    <text x="457" y="158" text-anchor="middle" font-size="11" fill="#dbeafe">워크플로 학습</text>
+    <text x="457" y="183" text-anchor="middle" font-size="10" fill="#ffffff">Workflow 내장</text>
+    <text x="457" y="198" text-anchor="middle" font-size="10" fill="#ffffff">Fast · Standard 모델</text>
+    <text x="457" y="218" text-anchor="middle" font-size="10" fill="#bfdbfe">mAP · Loss 모니터링</text>
 
-    <!-- Model -->
+    <!-- Align · Inspection -->
     <rect x="550" y="110" width="155" height="120" rx="10" fill="url(#ovGrad)"/>
-    <text x="627" y="138" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">④  Model</text>
-    <text x="627" y="158" text-anchor="middle" font-size="11" fill="#dbeafe">학습 · 검증</text>
-    <text x="627" y="183" text-anchor="middle" font-size="10" fill="#ffffff">Pre-trained / Custom</text>
-    <text x="627" y="198" text-anchor="middle" font-size="10" fill="#ffffff">원클릭 학습</text>
-    <text x="627" y="218" text-anchor="middle" font-size="10" fill="#bfdbfe">mAP · Loss 모니터링</text>
+    <text x="627" y="138" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">④  Align · Inspection</text>
+    <text x="627" y="158" text-anchor="middle" font-size="11" fill="#dbeafe">정밀 검사</text>
+    <text x="627" y="183" text-anchor="middle" font-size="10" fill="#ffffff">이동·회전 보정</text>
+    <text x="627" y="198" text-anchor="middle" font-size="10" fill="#ffffff">계측 · 코드 판독</text>
+    <text x="627" y="218" text-anchor="middle" font-size="10" fill="#bfdbfe">공차 기반 OK/NG</text>
 
     <!-- Inference -->
     <rect x="720" y="110" width="155" height="120" rx="10" fill="url(#ovGrad)"/>
     <text x="797" y="138" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">⑤  Inference</text>
     <text x="797" y="158" text-anchor="middle" font-size="11" fill="#dbeafe">실시간 추론</text>
     <text x="797" y="183" text-anchor="middle" font-size="10" fill="#ffffff">카메라 · 파일 연동</text>
-    <text x="797" y="198" text-anchor="middle" font-size="10" fill="#ffffff">결함 좌표 · 시각</text>
-    <text x="797" y="218" text-anchor="middle" font-size="10" fill="#bfdbfe">DB 자동 저장</text>
+    <text x="797" y="198" text-anchor="middle" font-size="10" fill="#ffffff">결과 자동 저장</text>
+    <text x="797" y="218" text-anchor="middle" font-size="10" fill="#bfdbfe">이력 조회</text>
 
     <!-- Review -->
     <rect x="890" y="110" width="170" height="120" rx="10" fill="url(#ovGrad)"/>
     <text x="975" y="138" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">⑥  Review</text>
     <text x="975" y="158" text-anchor="middle" font-size="11" fill="#dbeafe">모델 개선</text>
     <text x="975" y="183" text-anchor="middle" font-size="10" fill="#ffffff">오탐 검토 · 재라벨링</text>
-    <text x="975" y="198" text-anchor="middle" font-size="10" fill="#ffffff">자동 재학습</text>
-    <text x="975" y="218" text-anchor="middle" font-size="10" fill="#bfdbfe">MLOps Loop</text>
+    <text x="975" y="198" text-anchor="middle" font-size="10" fill="#ffffff">데이터셋 반영</text>
+    <text x="975" y="218" text-anchor="middle" font-size="10" fill="#bfdbfe">재학습 루프</text>
   </g>
 
   <!-- forward arrows between boxes -->

@@ -12,7 +12,7 @@ image: "/assets/images/gen/services/deepvi-hero.webp"
 hero:
   enabled: true
   heading: "AI 기반 비전 분석 플랫폼"
-  sub_heading: "이미지 수집부터 ML 모델 활용 및 배포 과정을 DeepVi 플랫폼에서 수행"
+  sub_heading: "이미지 수집부터 모델 학습·정밀 검사·배포까지 DeepVi 플랫폼에서 수행"
   text_color: "#ffffff"
   background_color: ""
   background_gradient: true
@@ -35,7 +35,7 @@ hero:
 
 ## AI 기반 비전 분석 플랫폼
 
-**DeepVi**는 **데이터 수집부터 모델 배포·자동 재학습까지** 하나의 플랫폼에서 처리하는 **No-Code End-to-End AI 비전 플랫폼**입니다. **별도 개발 인력 없이** 현장 담당자가 직접 라벨링·학습·추론·리뷰 사이클을 운영할 수 있으며, **온프레미스 또는 클라우드** 환경을 선택할 수 있습니다. 제조·스마트팜·물류·보안 등 **다양한 산업 환경에 즉시 적용 가능**한 범용 파이프라인을 제공합니다.
+**DeepVi**는 **데이터 수집부터 모델 학습·정밀 검사·배포·재학습까지** 하나의 플랫폼에서 처리하는 **No-Code End-to-End AI 비전 플랫폼**입니다. 학습·추론 과정은 **내장 워크플로**로 한눈에 확인·제어하고, 워크플로 확장·편집은 VCANUS의 워크플로 편집 소프트웨어 **Flowbroker**로 수행합니다. 딥러닝(Classification · Detection · Segmentation)과 함께 이미지 분석에 많이 쓰는 **Align · Inspection(정합·계측·판독)** 기능을 탑재해 **별도 개발 인력 없이** 현장 담당자가 라벨링·학습·검사·추론·리뷰 사이클을 직접 운영할 수 있으며, **온프레미스 또는 클라우드** 환경을 선택할 수 있습니다. 제조·스마트팜·물류·보안 등 **다양한 산업 환경에 즉시 적용 가능**한 범용 파이프라인을 제공합니다.
 
 <img src="/assets/images/gen/services/deepvi-overview.svg" alt="DeepVi 전체 파이프라인 개요" style="display:block; width:100%; height:auto; max-width:1100px; margin:1.5rem auto;">
 
@@ -69,16 +69,16 @@ hero:
 <div style="flex:1 1 280px; min-width:280px;" markdown="1">
 
 ### Storage (데이터 관리)
-- **Web / FTP** 이미지 일괄 업로드
-- **NAS · File Server** 원격 보관
+- **웹 일괄 업로드**로 대량 이미지 등록
+- **폴더 기반 관리** — 생성·이동·삭제, 다중 선택 일괄 이동
 - 전용 썸네일 자동 생성으로 **대용량 데이터 고속 탐색**
-- 다중 이미지 **일괄 삭제·이동 배치 처리**
+- **스토리지 사용량** 한눈에 확인
 - **원본 데이터 영구 보관** · 재사용 용이
-- 데이터셋 추가 시 **스토리지 용량 불변**
+- 데이터셋은 원본을 참조 — 추가해도 **스토리지 용량 불변**
 
 </div>
-<div style="flex:1 1 280px; max-width:320px; min-width:0;">
-<img src="/assets/images/gen/services/deepvi_storage.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
+<div style="flex:1 1 280px; max-width:420px; min-width:0;">
+<img src="/assets/images/gen/services/deepvi_storage.webp" alt="DeepVi Storage 화면" style="display:block; width:100%; max-width:420px; height:auto;">
 </div>
 </div>
 
@@ -87,45 +87,47 @@ hero:
 
 ### Dataset (라벨링)
 - Classification / Detection / Segmentation<br>**3종 라벨링 통합 지원 환경**
-- **BBox·Mask** 정밀 라벨링 툴 통합 제공
-- **결함 유형별 카테고리** 분류 체계 관리
-- **픽셀단위 학습**으로 성능 향상
-- **데이터셋 분할·병합**으로 다양한 학습 구성
+- **BBox · Polygon · Mask** 정밀 라벨링 툴
+- **SAM2 보조 분할 · Auto Labeling**으로 라벨링 시간 단축
+- **COCO 등 표준 포맷** 가져오기·내보내기, 카테고리 템플릿
+- **학습 데이터 스냅샷**(train/val/test 분할 확정)으로 재현 가능한 학습
 
 </div>
-<div style="flex:1 1 280px; max-width:320px; min-width:0;">
-<img src="/assets/images/gen/services/deepvi_dataset.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
-</div>
-</div>
-
-<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1 1 280px; min-width:280px;" markdown="1">
-
-### Inline Processing (실시간 영상처리)
-- **화질 개선 · Template Matching 등 영상 처리**
-- **Align 기능(Rotation, Translation)**
-- **참조영상** 등록 및 관리
-- **이동 · 회전 값** 자동 산출
-
-</div>
-<div style="flex:1 1 280px; max-width:320px; min-width:0;">
-<img src="/assets/images/gen/services/deepvi_review2.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
+<div style="flex:1 1 280px; max-width:420px; min-width:0;">
+<img src="/assets/images/gen/services/deepvi_dataset.webp" alt="DeepVi Dataset 라벨링 화면" style="display:block; width:100%; max-width:420px; height:auto;">
 </div>
 </div>
 
 <div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
 <div style="flex:1 1 280px; min-width:280px;" markdown="1">
 
-### Model (학습 · 검증)
-- **Pre-trained / Custom Model** 지원
-- **하이퍼파라미터 · 데이터 분배 설정** 후 **원클릭 학습**
-- **Transfer Learning · Early Stop** 설정
-- **Confusion Matrix · mAP · Loss** 실시간 모니터링
-- **Best Weight** 자동 저장 · 체크포인트 다운로드
+### Training · Model (워크플로 학습 · 검증)
+- **워크플로 탑재** — 학습 흐름·노드 상태·로그를 한 화면에서 확인
+- 노드 단위 **실행 · 일시정지 · 재개**, 파라미터 조정
+- 워크플로 확장·편집은 **VCANUS Flowbroker** 연동
+- **Fast · Standard 2계열 모델** 지원, 모델 계열 추가 가능
+- **Transfer Learning · Early Stop**, Loss 실시간 차트
+- **Confusion Matrix · mAP** 성능 평가, **체크포인트 · ONNX** 내보내기
 
 </div>
-<div style="flex:1 1 280px; max-width:320px; min-width:0;">
-<img src="/assets/images/gen/services/deepvi_model1.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
+<div style="flex:1 1 280px; max-width:420px; min-width:0;">
+<img src="/assets/images/gen/services/deepvi_training.webp" alt="DeepVi Training 워크플로 화면" style="display:block; width:100%; max-width:420px; height:auto;">
+</div>
+</div>
+
+<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
+<div style="flex:1 1 280px; min-width:280px;" markdown="1">
+
+### Align · Inspection (정밀 검사)
+- **기준 이미지 등록** 및 Align 모델 원클릭 생성
+- **이동 · 회전 자동 보정**(Align)
+- **Caliper · Circle · Distance · Angle · Code · Template** 6종 검사 도구
+- **공차 기반 OK/NG 판정**, 기준 이미지 사전 검증(Dry-run)
+- 추론 워크플로에서 **딥러닝 결과와 함께 실시간 판정**
+
+</div>
+<div style="flex:1 1 280px; max-width:420px; min-width:0;">
+<img src="/assets/images/gen/services/deepvi_inspection.webp" alt="DeepVi Align · Inspection 화면" style="display:block; width:100%; max-width:420px; height:auto;">
 </div>
 </div>
 
@@ -134,15 +136,14 @@ hero:
 
 ### Inference (실시간 추론)
 - **카메라 · 파일 이미지** 실시간 연동 추론
-- **Inference 결과 모니터링**
-- **신뢰도** 낮은 결과 자동 필터링
-- **결함 종류 · 좌표 · 시각 정보** 자동 DB 저장
-- **과거 이력 조건 검색 · 조회** 기능
-- **Workflow 기반** 빠른 알고리즘 구성
+- **Workflow 기반** 빠른 알고리즘 구성 (사용자 정의 노드 추가)
+- 탐지 결과·신뢰도 실시간 표시 + **전처리·추론·후처리 시간 분석**
+- 검출·분할·분류 결과와 **Align·Inspection OK/NG 통합 표시**
+- **결과·좌표·시각 자동 저장**, 조건 필터로 **이력 조회**
 
 </div>
-<div style="flex:1 1 280px; max-width:320px; min-width:0;">
-<img src="/assets/images/gen/services/deepvi_inference.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
+<div style="flex:1 1 280px; max-width:420px; min-width:0;">
+<img src="/assets/images/gen/services/deepvi_inference.webp" alt="DeepVi Inference 화면" style="display:block; width:100%; max-width:420px; height:auto;">
 </div>
 </div>
 
@@ -151,15 +152,14 @@ hero:
 
 ### Review (모델 개선)
 - **오탐 검토 · 재라벨링 · 코멘트**로 추가 학습 데이터 누적
-- 신규 모델 자동 생성 후 **성능 비교 후 배포 교체**
-- **MLOps 기반 자동 재학습** 및 배포 파이프라인
-- **데이터 이상 감지 · 극복** 지속 성능 유지
-- **자연어 기반** 유사 결함 원인 분석
-- **데이터 열화 감지** 및 극복
+- **검수 상태 관리** — 승인·거부(사유 코드)·폐기, 항목별 이력 조회
+- 원본 예측과 검수 라벨 **비교 편집**
+- 검수 완료 데이터를 **데이터셋에 반영 → 재학습**
+- 성능 평가 후 **검증된 모델로 운영 모델 교체**
 
 </div>
-<div style="flex:1 1 280px; max-width:320px; min-width:0;">
-<img src="/assets/images/gen/services/deepvi_review.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
+<div style="flex:1 1 280px; max-width:420px; min-width:0;">
+<img src="/assets/images/gen/services/deepvi_review.webp" alt="DeepVi Review 화면" style="display:block; width:100%; max-width:420px; height:auto;">
 </div>
 </div>
 
@@ -169,71 +169,4 @@ hero:
 
 > **코딩 없이, 하나의 플랫폼에서 — AI 도입의 모든 장벽을 해결합니다.**
 
-DeepVi는 데이터 수집(Storage) → 라벨링(Dataset) → 실시간 영상 처리(Inline Processing) → 학습·검증(Model) → 실시간 추론(Inference) → 모델 개선(Review)까지 **End-to-End AI 비전 파이프라인**을 단일 플랫폼에서 완결합니다. 산업이 달라도 동일한 파이프라인 — **클래스명과 데이터만 바꾸면** 제조 · 스마트팜 · 유통 · 보안 · 의료 등 어떤 분야에도 즉시 적용됩니다.
-
-<!--
-## 주요 화면 흐름
-
-> Dataset → Training → Inference → Review 4단계 화면 의 핵심 기능
-
-<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1 1 280px; min-width:280px;" markdown="1">
-
-### Step 1 — Dataset · Labeling (데이터 라벨링)
-- **웹 기반 UI**로 비전문가도 즉시 라벨링 가능
-- Classification / Detection / Segmentation **3종 라벨링 통합**
-- **데이터셋 분할·병합**으로 산업별 맞춤 구성
-- 라벨 데이터 **버전 관리 · 이력 추적**
-
-</div>
-<div style="flex:1 1 280px; max-width:320px; min-width:0;">
-<img src="/assets/images/gen/services/deepvi_dataset1.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
-</div>
-</div>
-
-<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1 1 280px; min-width:280px;" markdown="1">
-
-### Step 2 — Model · Training View (학습 모니터링)
-- Epoch별 mAP·Loss **실시간 차트 모니터링**
-- **Early Stop · Transfer Learning**으로 학습 최적화
-- 학습 중단 없이 **상태 확인**
-- **모델 비교 · Best 모델 자동 선택**
-
-</div>
-<div style="flex:1 1 280px; max-width:320px; min-width:0;">
-<img src="/assets/images/gen/services/deepvi-hero.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
-</div>
-</div>
-
-<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1 1 280px; min-width:280px;" markdown="1">
-
-### Step 3 — Inference · 실시간 탐지 (카메라 연동 추론)
-- 학습 완료 즉시 **카메라 연결·실시간 추론 시작**
-- **결함 위치와 분류 신뢰도** 실시간 화면 표시
-- 결과 자동 저장으로 **이력 관리**
-- **멀티 카메라 동시 모니터링**
-
-</div>
-<div style="flex:1 1 280px; max-width:320px; min-width:0;">
-<img src="/assets/images/gen/services/deepvi-hero.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
-</div>
-</div>
-
-<div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
-<div style="flex:1 1 280px; min-width:280px;" markdown="1">
-
-### Step 4 — Review · 재학습 루프 (오탐 수정 · Retrain)
-- 기존 데이터셋 병합 후 **자동 재학습**
-- 신규 모델 생성 후 **성능 비교 후 운전 모델 자동 교체**
-- 확장 데이터 누적으로 **모델 정확도 지속 향상**
-- **지속적 개선 루프**로 자동화
-
-</div>
-<div style="flex:1 1 280px; max-width:320px; min-width:0;">
-<img src="/assets/images/gen/services/deepvi_review1.webp" alt="DeepVi" style="display:block; width:100%; max-width:320px; height:auto;">
-</div>
-</div>
-
--->
+DeepVi는 데이터 수집(Storage) → 라벨링(Dataset) → 워크플로 학습(Training) → 정밀 검사(Align · Inspection) → 실시간 추론(Inference) → 모델 개선(Review)까지 **End-to-End AI 비전 파이프라인**을 단일 플랫폼에서 완결합니다. 산업이 달라도 동일한 파이프라인 — **클래스명과 데이터만 바꾸면** 제조 · 스마트팜 · 유통 · 보안 · 의료 등 어떤 분야에도 즉시 적용됩니다.
