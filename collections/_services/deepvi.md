@@ -88,7 +88,7 @@ hero:
 ### Dataset (라벨링)
 - Classification / Detection / Segmentation<br>**3종 라벨링 통합 지원 환경**
 - **BBox · Polygon · Mask** 정밀 라벨링 툴
-- **SAM2 보조 분할 · Auto Labeling**으로 라벨링 시간 단축
+- **AI 보조 분할 · Auto Labeling**으로 라벨링 시간 단축
 - **COCO 등 표준 포맷** 가져오기·내보내기, 카테고리 템플릿
 - **학습 데이터 스냅샷**(train/val/test 분할 확정)으로 재현 가능한 학습
 
