@@ -35,7 +35,7 @@ hero:
 
 ## AI 기반 비전 분석 플랫폼
 
-**DeepVi**는 **데이터 수집부터 모델 학습·정밀 검사·배포·재학습까지** 하나의 플랫폼에서 처리하는 **No-Code End-to-End AI 비전 플랫폼**입니다. 학습·추론 과정은 **내장 워크플로**로 한눈에 확인·제어하고, 워크플로 확장·편집은 VCANUS의 워크플로 편집 소프트웨어 **Flowbroker**로 수행합니다. 딥러닝(Classification · Detection · Segmentation)과 함께 이미지 분석에 많이 쓰는 **Align · Inspection(정합·계측·판독)** 기능을 탑재해 **별도 개발 인력 없이** 현장 담당자가 라벨링·학습·검사·추론·리뷰 사이클을 직접 운영할 수 있으며, **온프레미스 또는 클라우드** 환경을 선택할 수 있습니다. 제조·스마트팜·물류·보안 등 **다양한 산업 환경에 즉시 적용 가능**한 범용 파이프라인을 제공합니다.
+**DeepVi**는 **데이터 수집부터 모델 학습·정밀 검사·배포·재학습까지** 하나의 플랫폼에서 처리하는 **No-Code End-to-End AI 비전 플랫폼**입니다. 학습·추론 과정은 **내장 워크플로**로 한눈에 확인·제어하고, 워크플로 확장·편집은 VCANUS의 **워크플로 편집기**로 수행합니다. 딥러닝(Classification · Detection · Segmentation)과 함께 이미지 분석에 많이 쓰는 **Align · Inspection(정합·계측·판독)** 기능을 탑재해 **별도 개발 인력 없이** 현장 담당자가 라벨링·학습·검사·추론·리뷰 사이클을 직접 운영할 수 있으며, **온프레미스 또는 클라우드** 환경을 선택할 수 있습니다. 제조·스마트팜·물류·보안 등 **다양한 산업 환경에 즉시 적용 가능**한 범용 파이프라인을 제공합니다.
 
 <img src="/assets/images/gen/services/deepvi-overview.svg" alt="DeepVi 전체 파이프라인 개요" style="display:block; width:100%; height:auto; max-width:1100px; margin:1.5rem auto;">
 
@@ -104,8 +104,9 @@ hero:
 ### Training · Model (워크플로 학습 · 검증)
 - **워크플로 탑재** — 학습 흐름·노드 상태·로그를 한 화면에서 확인
 - 노드 단위 **실행 · 일시정지 · 재개**, 파라미터 조정
-- 워크플로 확장·편집은 **VCANUS Flowbroker** 연동
+- 워크플로 확장·편집은 **VCANUS 워크플로 편집기** 연동
 - **Fast · Standard 2계열 모델** 지원, 모델 계열 추가 가능
+- **이상 탐지(Anomaly Detection)** — 구조적 · 논리적 이상 탐지 학습 지원
 - **Transfer Learning · Early Stop**, Loss 실시간 차트
 - **Confusion Matrix · mAP** 성능 평가, **체크포인트 · ONNX** 내보내기
 
@@ -140,6 +141,7 @@ hero:
 - 탐지 결과·신뢰도 실시간 표시 + **전처리·추론·후처리 시간 분석**
 - 검출·분할·분류 결과와 **Align·Inspection OK/NG 통합 표시**
 - **결과·좌표·시각 자동 저장**, 조건 필터로 **이력 조회**
+- **결과 기반 액션** — 판정 결과로 설비 제어 · 데이터 기록 · 알림 등 워크플로 액션 자동 실행
 
 </div>
 <div style="flex:1 1 280px; max-width:420px; min-width:0;">
