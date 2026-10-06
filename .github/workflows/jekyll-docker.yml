@@ -1,3 +1,6 @@
+# 빌드 확인 (2026-10-06) — jekyll/builder:latest 이미지가 Ruby 3.4 · Jekyll 4.4 로 바뀌어
+# Gemfile.lock(Jekyll 4.3.2) 의 gem 을 못 찾고 실패하던 것을, lock 그대로 설치하는 방식으로 바꾼다.
+# (vcanus/vcanus.github.io 의 pages.yml 빌드 단계와 같다. 배포는 이 저장소의 Pages 설정이 맡는다.)
 name: Jekyll site CI
 
 on:
@@ -6,15 +9,19 @@ on:
   pull_request:
     branches: [ "master" ]
 
+permissions:
+  contents: read
+
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+      - name: Build
+        run: bundle exec jekyll build --future
+        env:
+          JEKYLL_ENV: production
