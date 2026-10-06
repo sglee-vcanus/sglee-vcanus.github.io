@@ -56,14 +56,6 @@ hero:
 
 ---
 
-## 경쟁사 대비 강점
-
-> 범용 AutoML 플랫폼(Vertex AI · SageMaker · Azure Custom Vision 등) 및 Vision 전문 툴(Roboflow · Label Studio · Labelbox 등) 대비 DeepVi의 핵심 차별점
-
-<img src="/assets/images/gen/services/deepvi-comparison.svg" alt="DeepVi 경쟁사 대비 강점 비교 매트릭스" style="display:block; width:100%; height:auto; max-width:1100px; margin:0 auto;">
-
----
-
 ## 주요 기능
 
 <div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start; margin-bottom:2rem;">
