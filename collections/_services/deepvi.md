@@ -30,7 +30,7 @@ hero:
         fa_icon: false
         size: large
         outline: false
-        style: "primary"
+        style: "light"
 ---
 
 ## AI 기반 비전 분석 플랫폼
@@ -164,3 +164,8 @@ hero:
 > **코딩 없이, 하나의 플랫폼에서 — AI 도입의 모든 장벽을 해결합니다.**
 
 DeepVi는 데이터 수집(Storage) → 라벨링(Dataset) → 워크플로 학습(Training) → 정밀 검사(Align · Inspection) → 실시간 추론(Inference) → 모델 개선(Review)까지 **End-to-End AI 비전 파이프라인**을 단일 플랫폼에서 완결합니다. 산업이 달라도 동일한 파이프라인 — **클래스명과 데이터만 바꾸면** 제조 · 스마트팜 · 유통 · 보안 · 의료 등 어떤 분야에도 즉시 적용됩니다.
+
+<div style="text-align:center; margin:2.5rem 0 1rem;">
+<p style="margin-bottom:1rem;">지금 베타 기간 동안 무료로 사용해 보세요.</p>
+{% include framework/button.html text="DeepVi 베타 시작하기" url="https://www.deepvi.app/?utm_source=vcanus_home&utm_medium=product_bottom" external=true size="large" style="primary" %}
+</div>
